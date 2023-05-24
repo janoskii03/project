@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SeeSea-B&B</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&family=Noto+Serif+TC:wght@200;400;700&display=swap"
+      rel="stylesheet">
+      <style>
+      * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        font-family: 'Noto Serif TC', serif;
+        }
+
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+
+      body {
+               position: relative;
+        background-image: url("background.jpg");
+        background-size:cover
+            }
+
+h2{
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+      /*導覽列*/
+      .main-header {
+        width: 100%;
+        position: fixed;
+        z-index: 999;
+        box-shadow: 2px 2px 5px #c5c4c4;
+        background-color: rgba(255, 255, 255);
+      }
+
+      .main-header .container {
+        width: 100%;
+        display: flex;
+        margin: auto;
+        justify-content: space-between;
+        
+      }
+
+      .main-header .container .main-logo{
+        width: 91px;
+             }
+      
+
+      .main-header .container img {
+        width: 100%;
+      vertical-align: middle;
+        margin: 0.5em 0 0.5em 2em;
+            }
+
+      .main-header .main-header-nav {
+        margin: auto 5em ;
+      }
+
+      .main-header .main-header-nav a {
+        font-size: 18px;
+        text-decoration: none;
+        padding: 1em;
+        color: black;
+        margin-right: 3em;
+        transition: .5s;
+      }
+
+      .main-header .main-header-nav a:hover {
+       color:#7097a8;
+      }
+
+     /*banner*/
+
+     .banner{
+      margin-bottom: 3em;
+     }
+
+      
+      
+
+      /*首頁天氣*/
+
+      .home .home-weather {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 3em;
+        margin-bottom: 5em;
+      }
+
+      .home .container{
+        width: 1280px;
+        margin: auto;
+      }
+
+      .home .container>h3{
+        text-align: center;
+        margin-bottom: 3em;
+        padding-bottom: 2em;
+        border-bottom: 5px solid #7097a8;
+      }
+
+      .home-weather .home-weather-current {
+        width: 40%;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+      }
+
+      .home-weather .home-weather-current .weather-current-top {
+        display: flex;
+        align-items: center;
+      }
+
+      .home-weather-current .weather-current-info {
+        display: flex;
+        align-items: center;
+        margin: 1em 0;
+        gap: 2em;
+      }
+      .home-weather-current .weather-current-info .weather-current-tep h3 {
+        margin-bottom: 0.5em;
+      }
+      .home-weather-current .weather-current-info .weather-current-sunrise h3 {
+        margin-bottom: 0.5em;
+      }
+      .home-weather .home-weather-others {
+        width: 60%;
+        display: flex;
+        gap: 3em;
+        flex-wrap: wrap;
+      }
+
+      .home-weather .home-weather-others .weather-others-card>h4{
+        margin: 0.5em 0 1em 0;
+      }
+      .home-weather .home-weather-others .weather-others-card {
+        width: 25%;
+        background-color: #fff;
+        text-align: center;
+        padding: 2em 0 3em 0;
+      }
+
+      .home-weather-others .weather-others-card .others-card-pic {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1.5em;
+       
+      }
+      .weather-others-card .others-card-pic .card-pic-txt {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5em;
+        margin-left: 1em;
+            }
+
+      .weather-others-card .others-card-pic .card-txt-pic {
+        display: flex;
+        gap: 0.5em;
+      }
+
+      /*最新消息*/
+
+      .home-news .home-news-container{
+        width: 1280px;
+        margin: auto;
+        margin-bottom: 5em;
+        display: flex;
+        flex-direction: column;
+              }
+
+
+      .home-news .home-news-container>h3{
+        margin-bottom: 3em;
+        text-align: center;
+      }
+
+      .home-news .news-card-list{
+        display: flex;
+        gap: 2em;
+        justify-content: center;
+        margin-bottom: 3em;
+      }
+
+
+      .home-news .news-card-list .news-card{
+        display: flex;
+        flex-direction: column;
+        padding: 1em 2em;
+        background-color: #ffffff;
+        transform: translateY(0px);
+        transition: .5s;
+      }
+
+      .news-card-list .news-card .news-pic{
+        width: 100%;
+      }
+      .news-card-list .news-card .news-txt{
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+      .news-card-list .news-card .news-txt p{
+        font-size: 18px;
+        flex-grow: 1;
+        margin: 1em 0;
+      }
+      .news-card-list .news-card .news-txt .news-bottom{
+        display: flex;
+        align-items: center;
+      }
+
+
+      .news-card-list .news-card .news-txt .news-bottom>span{
+        margin-left: 0.5em;
+      }
+      
+      .home-news .news-card-list .news-card:hover{
+        transform: translateY(-20px);
+      }
+
+      .home-news .home-news-container button{
+       align-self: center;
+       padding: 1em 2em;
+       background-color: #7097a8;
+       border: 1px solid transparent;
+      }
+
+      .home-news .home-news-container button a{
+        color: #fff;
+        font-size: 18px;
+      }
+      
+      .home-news .home-news-container button:hover{
+        background-color: rgba(112, 151, 168,.5);
+      }
+
+   
+      /*鄰近景點*/
+
+      .home-spot{
+        margin-bottom: 3em;
+      }
+
+
+     .home-spot .spot-area-list{
+      display: flex;
+      gap: 1em;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 8em;
+         }
+
+     .home-spot .spot-area-list .home-spot-area{
+      width: 400px;
+           text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+          }
+
+          .home-spot .spot-area-list .home-spot-area p{
+            font-size: 20px;
+          }
+
+      .spot-area-list .home-spot-area .spot-area-pic img{
+        width: 100%;
+margin-bottom: 1em;
+
+     }
+
+    
+     .spot-area-pic{
+      width: 355px;
+      height: 255px;
+      overflow: hidden;
+      margin-bottom: 1em;
+     }
+
+
+     .home-spot .spot-area-list .home-spot-area:hover img{
+      transform: scale(1.1);
+     }
+
+     
+.home-spot .home-spot-youtube iframe{
+  margin: 0 1em 4em 1em;
+}
+     
+      /*美食佳餚*/
+
+      .home-food .container{
+        width: 1280px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15em;
+      }
+
+      .home-food h3{
+       
+        margin-bottom: 3em;
+        border-bottom: 5px solid #7097a8;
+      }
+
+      .home-food .home-food-area{
+        display: flex;
+       
+      }
+      .home-food .home-food-pic{
+        width: 70%;
+        display: flex;
+        margin-right: 3em;
+      }
+
+      .home-food .home-food-pic img{
+        width: 100%;
+        position: relative;
+       
+      }
+
+      .home-food .home-food-pic img:nth-child(1){
+        left: 100px;
+        z-index: 1;
+        
+      }
+      .home-food .home-food-pic img:nth-child(2){
+top: 100px;
+z-index: 0;
+      }
+      .home-food .home-food-pic img:nth-child(3){
+        left:-100px;
+        z-index: -1;
+      }
+      
+      
+      .home-food .home-food-txt{
+        font-size: 18px;
+        width: 240px;
+        font-weight: 400;
+        align-self: center;
+        text-align: center;
+        margin-left: 5em;
+      }
+      /*房型介紹*/
+
+      .home-room .container{
+        width: 1280px;
+        margin: auto;
+      }
+
+      
+      .home-room .room-card-list{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      
+      }
+
+      .home-room .room-card-list h3{
+        font-size: 18px;
+        text-align: center;
+        padding-bottom: 2em;
+        margin-bottom: 3em;
+        border-bottom: 5px solid #7097a8;
+      }
+
+
+      .home-room .room-card-list .room-card{
+        width: 960px;
+        display: flex;
+        margin:0 0 6em 0;
+        align-items: center;
+        justify-content:space-evenly;
+        
+      }
+
+      .home-room .room-card-list .room-card:nth-child(2) .room-card-pic {
+      order: 1;
+
+      }
+       
+        
+       .room-card .room-card-pic img{
+        width: 100%;
+       border-radius: 20px;
+      }
+
+      .room-card .room-card-txt{
+        display: flex;
+        flex-direction: column;
+        margin-left: 2em;
+        gap: 3em;
+        text-align: center;
+      }
+
+      .room-card .room-card-txt{
+        font-size: 18px;
+      }
+
+
+      .room-card .room-card-txt button{
+        font-size: 18px;
+        padding: 1em 2em;
+        background-color: #7097a8;
+        border: 1px solid transparent;
+
+      }
+      .room-card .room-card-txt h4{
+        font-size: 20px;
+      }
+      .room-card .room-card-txt a{
+        color: #fff;
+      }
+
+      .room-card .room-card-txt button:hover{
+        background-color: rgba(112, 151, 168,.5);
+      }
+
+
+
+      /*google 地圖*/
+
+      .map {
+        margin-bottom: 3em;
+      }
+
+      .map h2 {
+        font-size: 32px;
+        text-align: center;
+        padding-bottom: 1em;
+      }
+
+      .map .container {
+        width: 1280px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        gap: 5em;
+        border-top: 5px solid #7097a8;
+        padding-top: 2em;
+      }
+
+      .map .map-txt {
+        background-color: #7097a8;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        line-height: 1.5;
+        font-size: 20px;
+        width: 30%;
+        padding: 1em;
+
+        box-sizing: border-box;
+      }
+
+      .map .container iframe{
+            margin-top: 2em;
+        }
+
+      .map .map-txt h3 {
+        margin-bottom: 2em;
+        text-align: center;
+      }
+
+      .map .map-txt ul li {
+        margin-bottom: 2em;
+      }
+
+      /*聯絡我們*/
+
+      .about {
+        margin-bottom: 3em;
+      }
+
+      .about .container {
+        width: 600px;
+        background-color: #b8e1f3;
+        margin: auto;
+      }
+
+      .about .container h3 {
+        font-size: 20px;
+        margin: 2em 0;
+        
+      }
+
+      .about label{
+        font-size: 18px;
+      }
+
+      .about .container form {
+        width: 400px;
+                    display: flex;
+              flex-direction: column;
+       align-items: center;
+   margin: auto;
+     
+           }
+           .about .container .about-group{
+                       display: flex;
+            justify-content: center;
+            margin-bottom: 2em;
+           }
+
+           .about .container .about-group label {
+    margin-right: 0.5em;
+        
+       
+  } 
+
+      .about .container .about-type {
+        
+           display: flex;
+      margin-bottom: 2em;
+    
+    
+            }
+
+            .about .container .about-type label{
+              margin-left: 0.5em;
+            }
+
+            .about .container .about-type input{
+              margin-right: 1em;
+            }
+
+      .about .container textarea {
+        width: 300px;
+        height: 100px;
+        
+      }
+
+      .about .container button {
+       
+        background-color: #7097a8;
+        border: 1px solid transparent;
+        padding: 0.5em 1em;
+        margin-bottom: 1em;
+        align-self: center;
+      }
+
+      .about .container a {
+        font-size: 16px;
+        color: #fff;
+      }
+
+      .about .container button:hover{
+        background-color: rgba(112, 151, 168,.5);
+      }
+
+      .about .container .illustrate {
+        display: flex;
+        gap: 0.5em;
+        margin-bottom: 1em;
+      }
+
+      
+
+      
+
+      /*頁尾*/
+      
+      .footer {
+        width: 100%;
+      }
+
+      .footer .container {
+        width: 100%;
+        background-color: #2a5cb4;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+
+      .footer h4{
+        font-size: 18px;
+                font-weight: 400;
+      }
+      .footer .container .footer-logo img {
+        width: 100%;
+        margin: 1em 0 1em 0;
+      }
+
+      .footer .container .footer-txt {
+        display: flex;
+        gap: 3em;
+      }
+
+      .footer .container .footer-address {
+        text-align: center;
+      }
+
+      .footer .container .footer-address h4 {
+        margin-bottom: 0.5em;
+        color: #fff;
+      }
+
+      .footer .container .footer-social img {
+        width: 40px;
+        margin: 0.5em;
+      }
+
+      .footer .container .footer-txt a{
+        color: #fff;
+      }
+
+      .footer .copyright {
+        background-color: #2a5cb4;
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+        padding-bottom: 1em;
+      }
+
+      /*加入line好友*/
+
+      .add-friend {
+        width: 150px;
+        height: 200px;
+        border: 1px solid #666;
+        text-align: center;
+        position: fixed;
+        bottom: 10em;
+        right: 2em;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        font-size: 16px;
+        padding: 0 1em;
+        box-sizing: border-box;
+      }
+
+      .add-friend img {
+        width: 50px;
+        margin-top: 1em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="main-header">
+      <div class="container">
+
+        <a href="index.html">
+          <div class="main-logo">
+            <img src="logo.png" alt="seesea-logo"/>
+          </div>
+          
+        </a>
+        <nav class="main-header-nav">
+          <a href="news.html">最新消息</a>
+          <a href="q&a.html">常見問題</a>
+          <a href="aboutus.html">關於我們</a>
+          <a href="tour.html">周邊景點</a>
+          <a href="room.html">房型介紹</a>
+          <a href="online.html">線上訂房</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="banner">
+      <video autoPlay muted width="100%" height="100%" >
+        <source
+          src="coverr-philippine-islands-2985-1080p.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+
+    <section class="home">
+      <div class="container">
+        <h2>一周天氣</h2>
+        <div class="home-weather">
+          <div class="home-weather-current">
+            <div class="weather-current-top">
+              <h3>5/15</h3>
+              <h3>星期一</h3>
+              <img src="index/cloud-moon-solid 1.svg" alt="cloud-moon" />
+              <h3>多雲時晴</h3>
+            </div>
+            <div class="weather-current-info">
+              <div class="weather-current-tep">
+                <h3>氣溫:19~25℃</h3>
+                <h3>降雨機率: 10%</h3>
+                <h3>紫外線:低量級</h3>
+              </div>
+              <div class="weather-current-sunrise">
+                <h3>日出時刻05:17</h3>
+                <h3>日沒時刻18:27</h3>
+                <h3>月出時刻00:10</h3>
+                <h3>日沒時刻11:15</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="home-weather-others">
+            <div class="weather-others-card">
+              <h4>5/16星期二</h4>
+              <div class="others-card-pic">
+                <img
+                  src="index/cloud-moon-rain-solid 1.svg"
+                  alt="cloud-moon-rain"
+                />
+                <div class="card-pic-txt">
+                  <h4>20℃</h4>
+                  <div class="card-txt-pic">
+                    <img src="index/umbrella-solid 2.svg" alt="umbrella" />
+                    <h4>70%</h4>
+                  </div>
+                </div>
+              </div>
+              <h4>紫外線:低量級</h4>
+            </div>
+
+            <div class="weather-others-card">
+              <h4>5/17星期三</h4>
+              <div class="others-card-pic">
+                <img
+                  src="index/cloud-rain-solid 1.svg"
+                  alt="cloud-moon-rain"
+                />
+                <div class="card-pic-txt">
+                  <h4>19℃</h4>
+                  <div class="card-txt-pic">
+                    <img src="index/umbrella-solid 2.svg" alt="umbrella" />
+                    <h4>90%</h4>
+                  </div>
+                </div>
+              </div>
+              <h4>紫外線:低量級</h4>
+            </div>
+
+            <div class="weather-others-card">
+              <h4>5/18星期四</h4>
+              <div class="others-card-pic">
+                <img
+                  src="index/cloud-sun-solid 1.svg"
+                  alt="cloud-moon-rain"
+                />
+                <div class="card-pic-txt">
+                  <h4>23℃</h4>
+                  <div class="card-txt-pic">
+                    <img src="index/umbrella-solid 2.svg" alt="umbrella" />
+                    <h4>10%</h4>
+                  </div>
+                </div>
+              </div>
+              <h4>紫外線:中量級</h4>
+            </div>
+
+            <div class="weather-others-card">
+              <h4>5/19星期五</h4>
+              <div class="others-card-pic">
+                <img
+                  src="index/cloud-moon-solid 1.svg"
+                  alt="cloud-moon-rain"
+                />
+                <div class="card-pic-txt">
+                  <h4>25℃</h4>
+                  <div class="card-txt-pic">
+                    <img src="index/umbrella-solid 2.svg" alt="umbrella" />
+                    <h4>20%</h4>
+                  </div>
+                </div>
+              </div>
+              <h4>紫外線:中量級</h4>
+            </div>
+
+            <div class="weather-others-card">
+              <h4>5/20星期六</h4>
+              <div class="others-card-pic">
+                <img
+                  src="index/cloud-sun-solid 1.svg"
+                  alt="cloud-moon-rain"
+                />
+                <div class="card-pic-txt">
+                  <h4>27℃</h4>
+                  <div class="card-txt-pic">
+                    <img src="index/umbrella-solid 2.svg" alt="umbrella" />
+                    <h4>10%</h4>
+                  </div>
+                </div>
+              </div>
+              <h4>紫外線:中量級</h4>
+            </div>
+
+            <div class="weather-others-card">
+              <h4>5/21星期日</h4>
+              <div class="others-card-pic">
+                <img
+                  src="index/cloud-sun-solid 1.svg"
+                  alt="cloud-moon-rain"
+                />
+                <div class="card-pic-txt">
+                  <h4>29℃</h4>
+                  <div class="card-txt-pic">
+                    <img src="index/umbrella-solid 2.svg" alt="umbrella" />
+                    <h4>0%</h4>
+                  </div>
+                </div>
+              </div>
+              <h4>紫外線:中量級</h4>
+            </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<div class="home-news">
+  <div class="home-news-container">
+    <h2>最新消息</h2>
+    <div class="news-card-list">
+
+    <div class="news-card">
+      <div class="news-pic">
+        <img src="index/main-news/Sanxiantai.jpg" alt="Sanxiantai">
+      </div>
+      <div class="news-txt">
+        <p>夜探三仙台 -三仙台5月至10月開放預約報名</p>
+        <div class="news-bottom">
+          <p>2023-04-27</p>
+          <img src="index/main-news/eye.svg" alt="viewer">
+          <span>1458</span>
+        </div>
+      
+      </div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-pic">
+        <img src="index/main-news/flower.jpg" alt="flower">
+      </div>
+      <div class="news-txt">
+        <p>台東鹿野地區油桐花季</p>
+        <div class="news-bottom">
+          <p>2023-04-21</p>
+          <img src="index/main-news/eye.svg" alt="viewer">
+          <span>23213</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-pic">
+        <img src="index/main-news/museum.jpg" alt="
+        museum">
+      </div>
+      <div class="news-txt">
+        <p>國立台灣史前文化博物館將於5/19(五)重新開幕</p>
+        <div class="news-bottom">
+          <p>2023-04-20</p>
+          <img src="index/main-news/eye.svg" alt="viewer">
+          <span>11458</span>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <button><a href="#">了解更多</a></button>
+</div>
+</div>
+
+
+<div class="home-spot">
+  <div class="container">
+
+  
+  <h2>鄰近景點</h2>
+  <div class="spot-area-list">
+ 
+  <div class="home-spot-area">
+    <div class="spot-area-pic">
+      <a href="tour.html"><img src="index/main-tour/BrownAvenue.jpg" alt="
+    Brown Avenue"></a>
+    </div>
+        
+    <p>伯朗大道</p>
+  </div>
+
+  <div class="home-spot-area">
+    <div class="spot-area-pic">
+      <a href="tour.html"><img src="index/main-tour/ChuluRanch.jpg" alt="Chulu Ranch"></a>
+    </div>
+    
+    <p>初鹿牧場</p>
+  </div>
+
+  <div class="home-spot-area">
+    <div class="spot-area-pic">
+      <a href="tour.html"><img src="index/main-tour/ZhibenHotSpring.jpg" alt="Zhiben Hot Spring"></a> 
+    </div>
+      <p>知本溫泉</p>
+  </div>
+
+  <div class="home-spot-area">
+    <div class="spot-area-pic">
+      <a href="tour.html"><img src="index/main-tour/star.jpg" alt="star"></a>
+    </div>
+         <p>星星部落</p>
+  </div>
+
+  <div class="home-spot-area">
+    <div class="spot-area-pic">
+      <a href="tour.html"><img src="index/main-tour/Sanxiantai.jpg" alt="Sanxiantai">
+    </div>
+        <p>三仙台</p></a>
+  </div>
+
+  <div class="home-spot-area">
+    <div class="spot-area-pic">
+       <a href="tour.html"><img src="index/main-tour/Tomioka Geopark.jpg" alt="Tomioka Geopark"></a>
+      </div>
+      <p>富岡地質公園</p>
+   
+  </div>
+</div>
+<div class="home-spot-youtube">
+<iframe width="600" height="400" src="https://www.youtube.com/embed/WA7GEXVGAP0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="600" height="400" src="https://www.youtube.com/embed/uRJqpcGOuJs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="600" height="400" src="https://www.youtube.com/embed/UCG1aXVO8H8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="600" height="400" src="https://www.youtube.com/embed/TY4qQElcUrA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</div>
+
+</div>
+
+<div class="home-food">
+  <div class="container">
+    <h2>美味佳餚</h2>
+  <div class="home-food-area">
+
+    <div class="home-food-pic">
+      <img src="index/main-food/anna-pelzer-IGfIGP5ONV0-unsplash 1.jpg" alt="food">
+      <img src="index/main-food/alex-munsell-Yr4n8O_3UPc-unsplash 1.jpg" alt="food">
+      <img src="index/main-food/do-mee-SH8_JmrsQcw-unsplash 1.jpg" alt="food">
+    </div>
+    <div class="home-food-txt">
+      <p>採用當日新鮮食材製作，
+        讓您品嚐台東道地的美味</p>
+      </div>
+    </div>
+</div>
+</div>
+
+<div class="home-room">
+  <div class="container">
+    <h2>房型介紹</h2>
+    <div class="room-card-list">
+      <div class="room-card">
+        <div class="room-card-pic">
+         <a href="room.html"> <img src="index/main-room/1.jpg" alt="seesea-room-number1"></a>
+        </div>
+      <div class="room-card-txt">
+        <h4>海洋雙人房</h4>
+        <span>人數:2-4人</span>
+        <span>30平方公尺</span>
+        <button><a href="room.html">查看更多</a></button>
+      </div>
+      </div>
+
+      <div class="room-card">
+        <div class="room-card-pic">
+          <a href="room.html"> <img src="index/main-room/2.jpg" alt="seesea-room-number1"></a>
+        </div>
+      <div class="room-card-txt">
+        <h4>簡約雙人房</h4>
+        <span>人數:2-4人</span>
+        <span>30平方公尺</span>
+        <button><a href="room.html">查看更多</a></button>
+      </div>
+      </div>
+      <div class="room-card">
+        <div class="room-card-pic">
+          <a href="room.html"> <img src="index/main-room/3.jpg" alt="seesea-room-number1"></a>
+        </div>
+      <div class="room-card-txt">
+        <h4>溫馨四人房</h4>
+        <span>人數:4-6人</span>
+        <span>40平方公尺</span>
+        <button><a href="room.html">查看更多</a></button>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      </div>
+          </section>
+
+    <section class="map">
+      <h2>位置</h2>
+      <div class="container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.235355691627!2d121.12052367442446!3d22.793741424830618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fba2d125d3459%3A0x6ae15f1fb75cb961!2z5Y-w5p2x6LuK56uZ!5e0!3m2!1szh-TW!2stw!4v1684118062897!5m2!1szh-TW!2stw"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <div class="map-txt">
+          <h3>交通指南</h3>
+
+          <ul>
+            <li>搭到台東車站，步行三分鐘，約200公尺，即可抵達。</li>
+
+            <li>自行開車<br />北部:國三、國五接台九線，即可抵達。</li>
+            <li>南部:國三接台九線，即可抵達。</li>
+
+            <li>搭火車<br />位於台東車站附近，搭車、自行開車可抵達。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="container">
+        <form>
+                    <h3>聯絡我們</h3>
+                    <div class="about-group">
+                      <label>姓名
+          </label>
+              <input type="text" required />
+                    </div>
+          <div class="about-group">
+             <label>電話
+            </label>
+              <input type="tel" required/>
+          </div>
+          <div class="about-group">
+          <label>信箱 </label>
+            <input type="email" class="ooxx" required/> 
+          </div>
+          <div class="about-group">
+            <label>地址 </label>
+            <input type="text" required/>
+          </div>
+          
+          <div class="about-type">
+
+          
+          <label >種類 </label>
+            <label for=""> <input type="radio" name="type" />設施
+           
+                      <label for=""> <input type="radio" name="type" />服務 </label>
+            <label for=""> <input type="radio" name="type" />其他 </label>
+         </div>
+          <div class="illustrate">
+            <label for="">說明</label>
+            <textarea required></textarea>
+          </div>
+          <button><a href="#">送出</a></button>
+        </form>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="container">
+        <div class="footer-logo">
+          <a href="index.html"><img src="logo.png" alt="seesea-logo" />
+          </a>
+        </div>
+        <div class="footer-txt">
+          <h4><a href="news.html">最新消息</a></h4>
+         <h4><a href="q&a.html">常見問題</a></h4>
+          <h4><a href="aboutus.html">關於我們</a></h4>
+          <h4><a href="tour.html">周邊景點</a></h4>
+          <h4><a href="room.html">房型介紹</a></h4>
+          <h4><a href="online.html">線上訂房</a></h4>
+        </div>
+        <div class="footer-address">
+          <h4>電話:03-1234567</h4>
+          <h4>地址:台東縣台東市岩灣路101巷999號</h4>
+        </div>
+        <div class="footer-social">
+          <a href="#"><img src="index/footer/tweet.svg" /></a>
+          <a href="#"><img src="index/footer/ins.svg" /></a>
+          <a href="#"><img src="index/footer/fb.svg" /></a>
+          <a href="#"><img src="index/footer/line white.svg" /></a>
+        </div>
+      </div>
+      <div class="copyright">本網站為緯育TibaMe前端設計工程師班第85期學員專題作品，本平台僅供學習、展示之用。</div>
+    </section>
+
+    <div class="add-friend">
+      <a href="#"><p>
+        歡迎加入官方LINE群組<br />
+        掌握第一手的消息
+      </p></a>
+      <a href="#"><img src="index/footer/line 1 (2).svg" /></a>
+    </div>
+   
+  </body>
+  
+</html>

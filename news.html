@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeeSea-B&B</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&family=Noto+Serif+TC:wght@200;400;700&display=swap"
+      rel="stylesheet">
+    <style>
+       * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        font-family: 'Noto Serif TC', serif;
+        }
+
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+
+      body {
+               position: relative;
+        background-image: url("background.jpg");
+        background-size:cover
+            }
+
+h2{
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+      /*導覽列*/
+
+      .main-header {
+        width: 100%;
+        position: fixed;
+        z-index: 999;
+        box-shadow: 2px 2px 5px #c5c4c4;
+        background-color: rgba(255, 255, 255);
+      }
+
+      .main-header .container {
+        width: 100%;
+        display: flex;
+        margin: auto;
+        justify-content: space-between;
+        
+      }
+
+      .main-header .container .main-logo{
+        width: 91px;
+             }
+      
+
+      .main-header .container img {
+        width: 100%;
+      vertical-align: middle;
+        margin: 0.5em 0 0.5em 2em;
+            }
+
+      .main-header .main-header-nav {
+        margin: auto 5em ;
+      }
+
+      .main-header .main-header-nav a {
+        font-size: 18px;
+        text-decoration: none;
+        padding: 1em;
+        color: black;
+        margin-right: 3em;
+        transition: .5s;
+      }
+
+      .main-header .main-header-nav a:hover {
+       color:#7097a8;
+      }
+
+
+      /*麵包屑*/
+
+      .breadcrumb {
+        width: 100%;
+        padding: 6em 0 1em 0;
+        margin-bottom: 3em;
+      }
+
+      .breadcrumb-list {
+        width: 90%;
+        margin-left: 2em;
+        display: flex;
+        font-size: 14px;
+      }
+
+      .breadcrumb-list li + li:before {
+        content: ">";
+        color: #000;
+        margin-right: 20px;
+      }
+
+      .breadcrumb-list li {
+        font-size: 16px;
+        padding: 0 20px;
+      }
+
+
+        /*新聞區*/
+        .news {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .news .news-btns {
+            text-align: center;
+            margin-bottom: 5em;
+        }
+
+        .news .news-btns button {
+            padding: 1.5em 5em;
+            margin:1em 5em;
+            background-color: #7097A8;
+            border: 1px solid transparent;
+           
+        }
+
+        .news .news-btns button:hover{
+            background-color: rgba(112, 151, 168,.5);
+        }
+
+        .news .news-btns a{
+            color: #fff;
+            font-size: 20px;
+        }
+
+    
+
+        .news-btns .btn-hidden {
+            display: none;
+        }
+
+
+        .news .news-card-list .news-card {
+            width: 1200px;
+            display: flex;
+            gap: 4em;
+            justify-content: center;
+            padding-bottom: 3em;
+            margin-bottom: 3em;
+            border-bottom: 5px solid #7097A8;
+        }
+
+        .news .news-card-list .news-card .news-card-date{
+          font-size: 18px;
+        }
+
+        .news .news-card-list .news-card .news-card-pic img{
+          width: 100%;
+          vertical-align: top;
+        }
+
+        .news .news-card-list .news-card:nth-child(3) {
+            border-bottom: none;
+        }
+
+        .news-card .news-card-txt {
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5em;
+            line-height: 1.5;
+            font-size: 18px;
+        }
+
+
+        /*google 地圖*/
+
+        .map {
+            margin-bottom: 3em;
+        }
+
+       
+        
+        .map .container {
+            width: 1280px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            gap: 5em;
+            border-top: 5px solid #7097a8;
+            padding-top: 2em;
+        }
+
+        .map .map-txt {
+            background-color: #7097a8;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            line-height: 1.5;
+            font-size: 20px;
+            width: 30%;
+            padding: 1em;
+
+            box-sizing: border-box;
+        }
+
+        .map .container iframe{
+            margin-top: 2em;
+        }
+
+        .map .map-txt h3 {
+            margin-bottom: 2em;
+            text-align: center;
+        }
+
+        .map .map-txt ul li {
+            margin-bottom: 2em;
+
+        }
+
+        /*頁尾*/
+      
+      .footer {
+        width: 100%;
+      }
+
+      .footer .container {
+        width: 100%;
+        background-color: #2a5cb4;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+
+      .footer h4{
+                font-weight: 400;
+                font-size: 18px;
+      }
+      .footer .container .footer-logo img {
+        width: 100%;
+        margin: 1em 0 1em 0;
+      }
+
+      .footer .container .footer-txt {
+        display: flex;
+        gap: 3em;
+      }
+
+      .footer .container .footer-address {
+        text-align: center;
+      }
+
+      .footer .container .footer-address h4 {
+        margin-bottom: 0.5em;
+        color: #fff;
+      }
+
+      .footer .container .footer-social img {
+        width: 40px;
+        margin: 0.5em;
+      }
+
+      .footer .container .footer-txt a{
+        color: #fff;
+      }
+
+      .footer .copyright {
+        background-color: #2a5cb4;
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+       padding-bottom: 1em;
+      }
+
+      /*加入line好友*/
+
+      .add-friend {
+        width: 150px;
+        height: 200px;
+        border: 1px solid #666;
+        text-align: center;
+        position: fixed;
+        bottom: 10em;
+        right: 2em;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        font-size: 16px;
+        padding: 0 1em;
+        box-sizing: border-box;
+      }
+
+      .add-friend img {
+        width: 50px;
+        margin-top: 1em;
+      }
+    </style>
+</head>
+
+<body>
+     <header class="main-header">
+      <div class="container">
+
+        <a href="index.html">
+          <div class="main-logo">
+            <img src="logo.png" alt="seesea-logo"/>
+          </div>
+          
+        </a>
+        <nav class="main-header-nav">
+          <a href="news.html">最新消息</a>
+          <a href="q&a.html">常見問題</a>
+          <a href="aboutus.html">關於我們</a>
+          <a href="tour.html">周邊景點</a>
+          <a href="room.html">房型介紹</a>
+          <a href="online.html">線上訂房</a>
+        </nav>
+      </div>
+    </header>
+  
+      <div class="breadcrumb">
+        <ol class="breadcrumb-list">
+          <li><a href="index.html">首頁</a></li>
+          <li><a href="aboutus.html">最新消息</a></li>
+        </ol>
+      </div>
+
+    <section class="news">
+        <div class="news-btns">
+            <button class="btn-active"><a href="#">旅遊</a></button>
+            <button class="btn-active"><a href="#">住宿</a></button>
+            <button class="btn-active"><a href="#">其他</a></button>
+        </div>
+        <div class="news-card-list">
+            <div class="news-card">
+                <div class="news-card-date">2023.04.27</div>
+                <div class="new-card-pic">
+                    <img src="news/1.jpg" alt="Sanxiantai">
+                </div>
+                <div class="news-card-txt">
+                    <h4>夜探三仙台 -三仙台5月至10月開放預約報名</h4>
+                    <p>活動期間自 5 月 1 日至10 月 31 日止，每晚6時30分集合，
+                        遊程約 1 至 2 小時，即日起受理報名。
+                        三仙台由三座石灰岩峰狀的岩石組成，分別為松山、竹山和梅山。
+                        <br>
+                    <p>
+                        這些岩石形狀獨特，被認為是由地殼運動和風化作用形成的。從
+                        三仙台山頂可欣賞到台東市區和太平洋美麗的海岸線，是拍攝日
+                        出和日落的絕佳地點。
+                    </p>
+
+                    </p>
+                </div>
+            </div>
+            <div class="news-card">
+                <div class="news-card-date">2023.04.21</div>
+                <div class="new-card-pic">
+                    <img src="news/2.jpg" alt="flower">
+                </div>
+                <div class="news-card-txt">
+                    <h4>台東鹿野地區油桐花季</h4>
+                    <p>台東鹿野地區是臺灣著名的油桐花盛產區之一，每年3
+                        月至4月是油桐花盛開的季節，吸引了許多遊客前來觀
+                        賞和拍照。
+                        <br>
+                        鹿野地區位於台東縣南部，距離台東市約50公里。可
+                        乘坐台東客運或自行開車前往，也有一些旅遊巴士提
+                        供前往油桐花區的服務。
+                    </p>
+                </div>
+            </div>
+            <div class="news-card">
+                <div class="news-card-date">2023.04.20</div>
+                <div class="new-card-pic">
+                    <img src="news/3.jpg" alt="
+                    museum">
+                </div>
+                <div class="news-card-txt">
+                    <h4>國立台灣史前文化博物館將於5/19(五)重新開幕</h4>
+                    <p>位於台東市中正路112號。該博物館收藏、展示台東地區
+                        原住民族群的文物、器物、織品、雕刻等，介紹台東地區
+                        的原住民族文化及其演變歷程。
+                        <br>
+                    <p>
+                        博物館內的展品包括排灣族、阿美族、布農族、魯凱族等族群的文物，還有一些展示台東地區特有的生物和自然景觀的展品。
+
+                        除了展示展品外，台東縣原住民文物館還提供一些有趣的活動，如原住民族文化工作坊、傳統織品體驗等，讓遊客可以更深入地了解台東的原住民族文化。
+                    </p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map">
+        
+        <div class="container">
+            <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.235355691627!2d121.12052367442446!3d22.793741424830618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fba2d125d3459%3A0x6ae15f1fb75cb961!2z5Y-w5p2x6LuK56uZ!5e0!3m2!1szh-TW!2stw!4v1684118062897!5m2!1szh-TW!2stw"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+            <div class="map-txt">
+                <h3>交通指南</h3>
+
+                <ul>
+                    <li>
+                        搭到台東車站，步行三分鐘，約200公尺，即可抵達。
+                    </li>
+
+                    <li>自行開車<br>北部:國三、國五接台九線，即可抵達。</li>
+                    <li>南部:國三接台九線，即可抵達。</li>
+
+                    <li>搭火車<br>位於台東車站附近，搭車、自行開車可抵達。
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="container">
+          <div class="footer-logo">
+            <a href="index.html"><img src="logo.png" alt="seesea-logo" />
+            </a>
+          </div>
+          <div class="footer-txt">
+            <h4><a href="news.html">最新消息</a></h4>
+           <h4><a href="q&a.html">常見問題</a></h4>
+            <h4><a href="aboutus.html">關於我們</a></h4>
+            <h4><a href="tour.html">周邊景點</a></h4>
+            <h4><a href="room.html">房型介紹</a></h4>
+            <h4><a href="online.html">線上訂房</a></h4>
+          </div>
+          <div class="footer-address">
+            <h4>電話:03-1234567</h4>
+            <h4>地址:台東縣台東市岩灣路101巷999號</h4>
+          </div>
+          <div class="footer-social">
+            <a href="#"><img src="index/footer/tweet.svg" /></a>
+            <a href="#"><img src="index/footer/ins.svg" /></a>
+            <a href="#"><img src="index/footer/fb.svg" /></a>
+            <a href="#"><img src="index/footer/line white.svg" /></a>
+          </div>
+        </div>
+        <div class="copyright">本網站為緯育TibaMe前端設計工程師班第85期學員專題作品，本平台僅供學習、展示之用。</div>
+      </section>
+  
+      <div class="add-friend">
+        <a href="#"><p>
+          歡迎加入官方LINE群組<br />
+          掌握第一手的消息
+        </p></a>
+        <a href="#"><img src="index/footer/line 1 (2).svg" /></a>
+      </div>
+    <script defer src="script.js"></script>
+    
+</body>
+
+</html>

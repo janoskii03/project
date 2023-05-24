@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SeeSea-B&B</title>
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&family=Noto+Serif+TC:wght@200;400;700&display=swap"
+      rel="stylesheet">
+    
+
+    
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        font-family: 'Noto Serif TC', serif;
+        }
+
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+
+      body {
+               position: relative;
+        background-image: url("background.jpg");
+        background-size:cover
+            }
+
+h2{
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+      /*導覽列*/
+      .main-header {
+        width: 100%;
+        position: fixed;
+        z-index: 999;
+        box-shadow: 2px 2px 5px #c5c4c4;
+        background-color: rgba(255, 255, 255);
+      }
+
+      .main-header .container {
+        width: 100%;
+        display: flex;
+        margin: auto;
+        justify-content: space-between;
+        
+      }
+
+      .main-header .container .main-logo{
+        width: 91px;
+             }
+      
+
+      .main-header .container img {
+        width: 100%;
+      vertical-align: middle;
+        margin: 0.5em 0 0.5em 2em;
+            }
+
+      .main-header .main-header-nav {
+        margin: auto 5em ;
+      }
+
+      .main-header .main-header-nav a {
+        font-size: 18px;
+        text-decoration: none;
+        padding: 1em;
+        color: black;
+        margin-right: 3em;
+        transition: .5s;
+      }
+
+      .main-header .main-header-nav a:hover {
+       color:#7097a8;
+      }
+
+
+      /*麵包屑*/
+
+      .breadcrumb {
+        width: 100%;
+        padding: 6em 0 1em 0;
+        margin-bottom: 8em;
+      }
+
+      .breadcrumb-list {
+        width: 90%;
+        margin-left: 2em;
+        display: flex;
+        font-size: 14px;
+      }
+
+      .breadcrumb-list li + li:before {
+        content: ">";
+        color: #000;
+        margin-right: 20px;
+      }
+
+      .breadcrumb-list li {
+        font-size: 16px;
+        padding: 0 20px;
+      }
+
+      /*關於我們*/
+
+      .about .container {
+        width: 1280px;
+        margin: auto;
+      }
+
+      .about img{
+        border-radius: 20px;
+      }
+
+      .about .about-home {
+        display: grid;
+        grid-template-areas:
+          "a a b b "
+          "a a b b "
+          "c d b b "
+          "e f g g "
+          ". . g g ";
+        gap: 2em;
+        margin-bottom: 4em;
+      }
+
+      .about .about-home img {
+        width: 100%;
+      }
+
+      .about-home .home-txt {
+        grid-area: a;
+        text-align: center;
+        align-self: center;
+        justify-self: center;
+        width: 400px;
+        line-height: 1.5;
+        letter-spacing: 0.5px;
+      }
+
+      .about-home .home-txt p {
+        font-size: 20px;
+        margin-bottom: 1em;
+      }
+
+      .about-home .down-right {
+        grid-area: g;
+        text-align: center;
+        width: 400px;
+        letter-spacing: 0.5px;
+        align-self: center;
+        justify-self: center;
+      }
+
+      .about-home .down-right p {
+        font-size: 20px;
+        margin-bottom: 1em;
+      }
+
+      .about-home .up-right {
+        grid-area: b;
+        margin-left: 2em;
+      }
+
+      .about-home .down-left {
+        grid-area: c;
+        align-self: flex-end;
+
+      }
+
+      .about-home .down-left-next {
+        grid-area: d;
+        align-self: flex-end;
+      }
+
+      .about-home .left-after {
+        grid-area: e;
+      }
+
+      .about-home .left-after-next {
+        grid-area: f;
+      }
+
+      .about .container .about-room-inside {
+        display: grid;
+        grid-template-areas:
+          "a a b b b b b c c"
+          "a a b b b b b c c"
+          "a a d d e e e c c"
+          "a a d d e e e c c";
+        margin-bottom: 3em;
+        gap: 2em;
+      }
+
+      .about .container .about-room-inside img {
+        width: 100%;
+      }
+
+      .about-room-inside .inside1 {
+        grid-area: a;
+      }
+
+      .about-room-inside .inside2 {
+        grid-area: b;
+      }
+
+      .about-room-inside .inside3 {
+        grid-area: c;
+      }
+
+      .about-room-inside .inside4 {
+        grid-area: d;
+      }
+
+      .about-room-inside .inside5 {
+        grid-area: e;
+      }
+
+      .about .background-pic {
+
+        margin-bottom: 2em;
+      }
+
+      about .background-pic img{
+        width: 100%;
+        vertical-align: top;
+      }
+
+      .about .about-card {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3em;
+      }
+
+      .about .about-card .about-card-txt {
+        width: 400px;
+        align-self: center;
+        text-align: center;
+        position: relative;
+        left: 10%;
+        padding: 3em;
+        background-color: #b7e3ec;
+        font-size: 20px;
+      }
+
+      .about .about-card .about-card-txt p + p {
+        margin-top: 1em;
+      }
+
+      /*google 地圖*/
+
+      .map {
+        margin-bottom: 3em;
+      }
+
+      .map .container {
+        width: 1280px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        gap: 5em;
+        border-top: 5px solid #7097a8;
+        padding-top: 2em;
+      }
+
+      .map .map-txt {
+        background-color: #7097a8;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        line-height: 1.5;
+        font-size: 20px;
+        width: 30%;
+        padding: 1em;
+
+        box-sizing: border-box;
+      }
+
+      .map .container iframe{
+            margin-top: 2em;
+        }
+
+      .map .map-txt h3 {
+        margin-bottom: 2em;
+        text-align: center;
+      }
+
+      .map .map-txt ul li {
+        margin-bottom: 2em;
+      }
+
+      /*頁尾*/
+      
+      .footer {
+        width: 100%;
+      }
+
+      .footer .container {
+        width: 100%;
+        background-color: #2a5cb4;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+
+      .footer h4{
+        font-size: 18px;
+                font-weight: 400;
+      }
+      .footer .container .footer-logo img {
+        width: 100%;
+        margin: 1em 0 1em 0;
+      }
+
+      .footer .container .footer-txt {
+        display: flex;
+        gap: 3em;
+      }
+
+      .footer .container .footer-address {
+        text-align: center;
+      }
+
+      .footer .container .footer-address h4 {
+        margin-bottom: 0.5em;
+        color: #fff;
+      }
+
+      .footer .container .footer-social img {
+        width: 40px;
+        margin: 0.5em;
+      }
+
+      .footer .container .footer-txt a{
+        color: #fff;
+      }
+
+      .footer .copyright {
+        background-color: #2a5cb4;
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+       padding-bottom: 1em;
+      }
+
+      /*加入line好友*/
+
+      .add-friend {
+        width: 150px;
+        height: 200px;
+        border: 1px solid #666;
+        text-align: center;
+        position: fixed;
+        bottom: 10em;
+        right: 2em;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        font-size: 16px;
+        padding: 0 1em;
+        box-sizing: border-box;
+      }
+
+      .add-friend img {
+        width: 50px;
+        margin-top: 1em;
+      }
+
+
+    </style>
+  </head>
+
+  <body>
+    <header class="main-header">
+      <div class="container">
+
+        <a href="index.html">
+          <div class="main-logo" >
+            <img src="logo.png" alt="seesea-logo" />
+          </div>
+          
+        </a>
+        <nav class="main-header-nav">
+          <a href="news.html">最新消息</a>
+          <a href="q&a.html">常見問題</a>
+          <a href="aboutus.html">關於我們</a>
+          <a href="tour.html">周邊景點</a>
+          <a href="room.html">房型介紹</a>
+          <a href="online.html">線上訂房</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="breadcrumb">
+      <ol class="breadcrumb-list">
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="aboutus.html">關於我們</a></li>
+      </ol>
+    </div>
+
+    <section class="about">
+      <div class="container">
+        <div class="about-home">
+          <div class="home-txt">
+            <p>
+              於2023年設立，理念是宣傳台東的美好，
+              讓旅人們感受如同身處在家的溫暖和舒適，
+              並能從旅程中得到片刻的放鬆。
+            </p>
+            <p>
+              本民宿採預約制， 如果您需要更多關於民宿的資訊， 請隨時聯繫我們，
+              我們非常樂意為您提供協助。
+            </p>
+          </div>
+
+          <div class="down-right">
+            <p>安全舒適的環境</p>
+            <p>
+              客房除每日清潔外，因應疫情，除消毒外，
+              房內提供酒精使用，服務人員每日篩檢， 給您一個安全且舒適的環境。
+            </p>
+          </div>
+
+          <img
+            class="up-right"
+            src="about/1.jpg"
+            alt="seesea-home"
+          />
+
+          <img
+            class="down-left"
+            src="about/2.jpg"
+            alt="seesea-beach"
+          />
+          <img
+            class="down-left-next"
+            src="about/3.jpg"
+            alt="seesea-beach"
+          />
+          <img
+            class="left-after"
+            src="about/4.jpg"
+            alt="seesea-beach"
+          />
+          <img
+            class="left-after-next"
+            src="about/5.jpg"
+            alt="seesea-beach"
+          />
+        </div>
+
+        <div class="about-card">
+          <div class="about-card-txt">
+            <p>致力於提供友善的環境</p>
+            <p>
+              本民宿部分用品僅提供一次性使用，為提供一個友善的環境，保護和促進人與自然環境的和諧共存
+            </p>
+          </div>
+          <div class="about-card-pic">
+            <img src="about/6.jpg" />
+          </div>
+        </div>
+        <div class="about-room-inside">
+          <img class="inside1" src="about/7.jpg" />
+          <img class="inside2" src="about/8.jpg" />
+          <img class="inside3" src="about/9.jpg" />
+          <img class="inside4" src="about/10.jpg" />
+          <img class="inside5" src="about/11.jpg" />
+        </div>
+        <div class="background-pic">
+          <img src="about/Mask group-5.jpg" alt="seesea-view" />
+        </div>
+      </div>
+    </section>
+
+    <section class="map">
+      <div class="container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.235355691627!2d121.12052367442446!3d22.793741424830618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fba2d125d3459%3A0x6ae15f1fb75cb961!2z5Y-w5p2x6LuK56uZ!5e0!3m2!1szh-TW!2stw!4v1684118062897!5m2!1szh-TW!2stw"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <div class="map-txt">
+          <h3>交通指南</h3>
+
+          <ul>
+            <li>搭到台東車站，步行三分鐘，約200公尺，即可抵達。</li>
+
+            <li>自行開車<br />北部:國三、國五接台九線，即可抵達。</li>
+            <li>南部:國三接台九線，即可抵達。</li>
+
+            <li>搭火車<br />位於台東車站附近，搭車、自行開車可抵達。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="container">
+        <div class="footer-logo">
+          <a href="index.html"><img src="logo.png" alt="seesea-logo" />
+          </a>
+        </div>
+        <div class="footer-txt">
+          <h4><a href="news.html">最新消息</a></h4>
+         <h4><a href="q&a.html">常見問題</a></h4>
+          <h4><a href="aboutus.html">關於我們</a></h4>
+          <h4><a href="tour.html">周邊景點</a></h4>
+          <h4><a href="room.html">房型介紹</a></h4>
+          <h4><a href="online.html">線上訂房</a></h4>
+        </div>
+        <div class="footer-address">
+          <h4>電話:03-1234567</h4>
+          <h4>地址:台東縣台東市岩灣路101巷999號</h4>
+        </div>
+        <div class="footer-social">
+          <a href="#"><img src="index/footer/tweet.svg" /></a>
+          <a href="#"><img src="index/footer/ins.svg" /></a>
+          <a href="#"><img src="index/footer/fb.svg" /></a>
+          <a href="#"><img src="index/footer/line white.svg" /></a>
+        </div>
+      </div>
+      <div class="copyright">本網站為緯育TibaMe前端設計工程師班第85期學員專題作品，本平台僅供學習、展示之用。</div>
+    </section>
+
+    <div class="add-friend">
+      <a href="#"><p>
+        歡迎加入官方LINE群組<br />
+        掌握第一手的消息
+      </p></a>
+      <a href="#"><img src="index/footer/line 1 (2).svg" /></a>
+    </div>
+   
+    <script defer src="script.js"></script>
+   
+  </body>
+</html>

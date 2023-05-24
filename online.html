@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SeeSea-B&B</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&family=Noto+Serif+TC:wght@200;400;700&display=swap"
+    rel="stylesheet">
+    <style>
+  * {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-family: 'Noto Serif TC', serif;
+  }
+
+  a {
+  text-decoration: none;
+  color: #000;
+  }
+
+  body {
+  position: relative;
+  background-image: url("background.jpg");
+  background-size: cover
+  }
+
+  h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 2em;
+  }
+
+  /*導覽列*/
+
+  .main-header {
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  box-shadow: 2px 2px 5px #c5c4c4;
+  background-color: rgba(255, 255, 255);
+  }
+
+  .main-header .container {
+  width: 100%;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+
+  }
+
+  .main-header .container .main-logo {
+  width: 91px;
+  }
+
+
+  .main-header .container img {
+  width: 100%;
+  vertical-align: middle;
+  margin: 0.5em 0 0.5em 2em;
+  }
+
+  .main-header .main-header-nav {
+  margin: auto 5em;
+  }
+
+  .main-header .main-header-nav a {
+  font-size: 18px;
+  text-decoration: none;
+  padding: 1em;
+  color: black;
+  margin-right: 3em;
+  transition: .5s;
+  }
+
+  .main-header .main-header-nav a:hover {
+  color: #7097a8;
+  }
+
+
+  /*麵包屑*/
+
+  .breadcrumb {
+  width: 100%;
+  padding: 6em 0 1em 0;
+  margin-bottom: 3em;
+  }
+
+  .breadcrumb-list {
+  width: 90%;
+  margin-left: 2em;
+  display: flex;
+  font-size: 14px;
+  }
+
+  .breadcrumb-list li+li:before {
+  content: ">";
+  color: #000;
+  margin-right: 20px;
+  }
+
+  .breadcrumb-list li {
+  font-size: 16px;
+  padding: 0 20px;
+  }
+
+
+
+  /*線上訂房*/
+
+  .online .container {
+  width: 1280px;
+  margin: auto;
+  }
+
+  .online .container .online-info {
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  margin-bottom: 2em;
+  background-color: #D3EFF8;
+  padding: 2em;
+  font-size: 20px;
+  }
+
+  .online .online-info .online-info-in input,
+  .online .online-info .online-info-quit input {
+  text-align: center;
+  margin-left: 1em;
+
+  }
+
+  .online .online-info .online-info-man,
+  .online .online-info .online-info-child {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0.5em;
+  }
+
+  .online .online-info .online-info-man img {
+  width: 15px;
+  height: 15px;
+
+
+  }
+
+  .online .online-info .online-info-child img {
+  width: 15px;
+  height: 15px;
+
+
+  }
+
+
+  .online .container .online-info input {
+  width: 100px;
+  padding: .3em 0;
+  }
+
+  .online .online-info .online-info-man input {
+  width: 30px
+  }
+
+  .online .online-info .online-info-child input {
+  width: 30px
+  }
+
+  .online .online-card-list {
+  display: flex;
+  gap: 3em;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .online .online-card-list .online-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2em;
+  gap: 1em;
+  position: relative;
+  transform: translateY(0px);
+  }
+
+  .online .online-card-list .online-card img {
+  width: 100%;
+
+  }
+
+
+  .online-card-list .online-card h4 {
+  font-size: 20px;
+  margin-bottom: 1em;
+  }
+
+  .online-card-list .online-card span {
+  font-size: 20px;
+  }
+
+  .online-card-list .online-card button {
+  padding: 1em 2em;
+  background-color: #7097A8;
+  border: 1px solid transparent;
+  }
+
+  .online-card-list .online-card button a {
+  font-size: 20px;
+  color: #fff;
+  }
+
+  .online-card-list .online-card button:hover {
+  background-color: rgba(112, 151, 168, 0.5);
+  }
+
+  .online-card-list .online-card:hover img {
+  transform: translateY(-20px);
+  }
+
+  .online .online-know {
+  width: 960px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  margin: 2em auto 2em;
+  padding: 2em 0 3em 0;
+  background-color: #D3EFF8;
+  }
+
+  .online .online-know h3 {
+  font-size: 24px;
+  text-align: center;
+  }
+
+  .online .online-know li {
+  width: 600px;
+  font-size: 18px;
+  line-height: 1.5;
+  list-style: decimal;
+  margin-bottom: 1em;
+  }
+
+
+
+  /*加購行程*/
+
+  .online-add-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4em auto;
+  }
+
+  .online-add-list .add-card-list {
+  display: flex;
+  gap: 2em;
+  margin-bottom: 2em;
+  }
+
+  .online-add-list h3 {
+  font-size: 24px;
+  margin-bottom: 3em;
+  }
+
+  .online-add-list .add-more {
+  font-size: 18px;
+  align-self: flex-end;
+  }
+
+  .online-add-list .add-more:hover a {
+  color: #7097a8;
+  }
+
+  .online-add-list .add-card-list .add-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #7097A8;
+  transform: translateY(0px);
+
+  }
+
+  .add-card .add-card-title h4 {
+  font-size: 18px;
+  }
+
+  .add-card .add-card-txt {
+  flex-grow: 1;
+  padding: 0.5em 2em 1em 2em;
+  display: flex;
+  flex-direction: column;
+  }
+
+  .add-card .add-card-txt .add-card-title h4+h4 {
+  color: rgba(255, 0, 0, 0.658);
+  }
+
+  .add-card .add-card-pic {
+  width: 100%;
+  vertical-align: middle;
+  }
+
+  .add-card .add-card-txt .add-card-bottom {
+  margin-top: auto;
+  }
+
+  .add-card .add-card-txt span {
+  color: #555454;
+  font-weight: 200;
+  font-size: 14px;
+  margin-bottom: 0.5em;
+  }
+
+  .add-card .add-card-txt .card-txt-small span:nth-child(1) {
+  margin-right: 1em;
+  }
+
+  .add-card .add-card-txt .card-txt-small {
+  margin-bottom: 0.5em;
+  }
+
+  .add-card .add-card-txt .add-card-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5em;
+  }
+
+  .add-card .add-card-txt .card-txt-hour {
+  font-size: 16px;
+  }
+
+  .add-card .add-card-txt .add-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  }
+
+  .add-card .add-card-txt p {
+  margin-bottom: 0.5em;
+  }
+
+  .online-add-list .add-card-list .add-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 5px #7097A8;
+  }
+
+
+
+
+  /*google 地圖*/
+
+  .map {
+  margin-bottom: 3em;
+  }
+
+
+
+  .map .container {
+  width: 1280px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 5em;
+  border-top: 5px solid #7097a8;
+  padding-top: 2em;
+  }
+
+  .map .map-txt {
+  background-color: #7097a8;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.5;
+  font-size: 20px;
+  width: 30%;
+  padding: 1em;
+
+  box-sizing: border-box;
+  }
+
+  .map .container iframe {
+  margin-top: 2em;
+  }
+
+  .map .map-txt h3 {
+  margin-bottom: 2em;
+  text-align: center;
+  }
+
+  .map .map-txt ul li {
+  margin-bottom: 2em;
+
+  }
+
+  /*頁尾*/
+
+  .footer {
+  width: 100%;
+  }
+
+  .footer .container {
+  width: 100%;
+  background-color: #2a5cb4;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  }
+
+
+  .footer h4 {
+  font-size: 18px;
+  font-weight: 400;
+  }
+
+  .footer .container .footer-logo img {
+  margin: 1em 0 1em 0;
+  }
+
+  .footer .container .footer-txt {
+  display: flex;
+  gap: 3em;
+  }
+
+  .footer .container .footer-address {
+  text-align: center;
+  }
+
+  .footer .container .footer-address h4 {
+  margin-bottom: 0.5em;
+  color: #fff;
+  }
+
+  .footer .container .footer-social img {
+  width: 40px;
+  margin: 0.5em;
+  }
+
+  .footer .container .footer-txt a {
+  color: #fff;
+  }
+
+  .footer .copyright {
+  background-color: #2a5cb4;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  padding-bottom: 1em;
+  }
+
+  /*加入line好友*/
+
+  .add-friend {
+  width: 150px;
+  height: 200px;
+  border: 1px solid #666;
+  text-align: center;
+  position: fixed;
+  bottom: 10em;
+  right: 2em;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  font-size: 16px;
+  padding: 0 1em;
+  box-sizing: border-box;
+  }
+
+  .add-friend img {
+  width: 50px;
+  margin-top: 1em;
+  }
+  </style>
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="container">
+
+      <a href="index.html">
+        <div class="main-logo">
+          <img src="logo.png" alt="seesea-logo" />
+        </div>
+
+      </a>
+      <nav class="main-header-nav">
+        <a href="news.html">最新消息</a>
+        <a href="q&a.html">常見問題</a>
+        <a href="aboutus.html">關於我們</a>
+        <a href="tour.html">周邊景點</a>
+        <a href="room.html">房型介紹</a>
+        <a href="online.html">線上訂房</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="breadcrumb">
+    <ol class="breadcrumb-list">
+      <li><a href="index.html">首頁</a></li>
+      <li><a href="online.html">線上訂房</a></li>
+    </ol>
+  </div>
+
+  <section class="online">
+    <div class="container">
+
+      <div class="online-info">
+        <div class="online-info-in">
+          <label for="">入住日期
+            <input type="date">
+          </label>
+        </div>
+        <div class="online-info-quit">
+          <label for="">離開日期
+            <input type="date"></label>
+        </div>
+
+        <div class="online-info-man">
+          <label for="">大人</label><img src="online/Vector.svg" alt="plus">
+          <input type="text" value="0" style="text-align: center;">
+          <img src="online/minus-solid 1.svg" alt="minus">
+        </div>
+
+        <div class="online-info-child">
+          <label for="">小孩</label><img src="online/Vector.svg" alt="plus">
+          <input type="text" value="0" style="text-align: center;">
+          <img src="online/minus-solid 1.svg" alt="minus">
+        </div>
+      </div>
+      <div class="online-card-list">
+        <div class="online-card">
+          <h4><a href="#">海洋雙人房</a>
+          </h4>
+          <div class="online-card-pic"><a href="#"><img src="online/1.jpg"></a>
+          </div>
+          <span><a href="#">NT 2,000</a> </span>
+          <button><a href="#">預約</a></button>
+        </div>
+        <div class="online-card">
+          <h4><a href="#">簡約雙人房</a></h4>
+          <div class="online-card-pic"><a href="#"><img src="online/2.jpg"></a>
+          </div>
+          <span><a href="#">NT 2,000</a></span>
+          <button><a href="#">預約</a></button>
+        </div>
+        <div class="online-card">
+          <h4><a href="#">溫馨四人房</a></h4>
+          <div class="online-card-pic"><a href="#"><img src="online/3.jpg"></a>
+          </div>
+          <span><a href="#">NT 3,000</a></span>
+          <button><a href="#">預約</a></button>
+        </div>
+      </div>
+      <div class="online-know">
+        <h3>訂房須知</h3>
+        <ul>
+          <li>我們辦理入住時間從15:00開始， 退房時間至11:00止。視客房供應狀況，您可以在訂
+            房時提出「提前入住」或「延後退房」的需求 ; 若住客在非指定時間辦理入住或退房，
+            可能需支付額外費用 ; 也提供入住前及退房後的行李寄放服務。</li>
+          <li>我們有10個機車停車格和4個汽車停車格，汽車停車格採預約停放。</li>
+          <li>洗衣機和烘衣機放在一樓，曬衣場也是。</li>
+          <li>六歲以下孩童免費，六歲以上孩童一名加收600元。</li>
+          <li>晚餐採用當日購買的新鮮食材，菜色不固定，如有吃素者，請提前告知</li>
+          <li>恕不提供一次性拋棄式盥洗用品 （註：牙刷組、梳子、浴帽、刮鬍刀、棉花棒、毛巾）。續住的貴賓，我們也不主動更換床單，若是忘了攜帶個人盥洗用品，請您告知櫃台人員。
+          </li>
+        </ul>
+      </div>
+
+
+      <div class="online-add-list">
+        <h3>加購行程</h3>
+        <div class="add-card-list">
+          <div class="add-card">
+            <div class="add-card-pic">
+              <a href="#"><img src="room/Mask group.jpg" alt="seesea-activity" /></a>
+            </div>
+            <div class="add-card-txt">
+              <span>#潛水浮潛</span>
+              <div class="add-card-title">
+                <h4><a href="#">台東潛水體驗</a></h4>
+                <h4>7日內免費取消</h4>
+              </div>
+              <span class="card-txt-hour"><a href="#">2-4小時</a></span>
+              <p><a href="#">體驗一下台東海洋之美，並享受豐富的生態</a></p>
+              <div class="add-card-bottom">
+                <h4><a href="#">NT$2000</a></h4>
+                <h4>150人已購買</h4>
+              </div>
+            </div>
+          </div>
+          <div class="add-card">
+            <div class="add-card-pic">
+              <a href="#"><img src="room/Mask group (1).jpg" alt="seesea-activity" /></a>
+            </div>
+            <div class="add-card-txt">
+              <span>#離島旅遊</span>
+              <div class="add-card-title">
+                <h4><a href="#">綠島一日遊</a></h4>
+                <h4>7日內免費取消</h4>
+              </div>
+              <span class="card-txt-hour"><a href="#">4-6小時</a></span>
+              <p>
+                <a href="#">探索隱藏於熱帶天堂的自然島嶼，享受湛藍的大海美景</a>
+              </p>
+              <div class="add-card-bottom">
+                <h4><a href="#">NT$3000</a></h4>
+                <h4>250人已購買</h4>
+              </div>
+            </div>
+          </div>
+          <div class="add-card">
+            <div class="add-card-pic">
+              <a href="#"><img src="room/Mask group (2).jpg" alt="seesea-activity" /></a>
+            </div>
+            <div class="add-card-txt">
+              <div class="card-txt-small">
+                <span>#空中觀光 </span>
+                <span> #季節限定</span>
+              </div>
+              <div class="add-card-title">
+                <h4><a href="#">熱氣球之旅</a></h4>
+              </div>
+              <span class="card-txt-hour"><a href="#">1小時</a></span>
+              <p>
+                <a href="#">在高空中觀賞東台灣的美景，一生值得去一次的旅程</a>
+              </p>
+              <div class="add-card-bottom">
+                <h4><a href="#">NT$10000</a></h4>
+                <h4>15人已購買</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="add-more"><a href="#">更多行程></a></span>
+      </div>
+
+
+    </div>
+  </section>
+
+  <section class="map">
+
+    <div class="container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.235355691627!2d121.12052367442446!3d22.793741424830618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fba2d125d3459%3A0x6ae15f1fb75cb961!2z5Y-w5p2x6LuK56uZ!5e0!3m2!1szh-TW!2stw!4v1684118062897!5m2!1szh-TW!2stw"
+        width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="map-txt">
+        <h3>交通指南</h3>
+
+        <ul>
+          <li>
+            搭到台東車站，步行三分鐘，約200公尺，即可抵達。
+          </li>
+
+          <li>自行開車<br>北部:國三、國五接台九線，即可抵達。</li>
+          <li>南部:國三接台九線，即可抵達。</li>
+
+          <li>搭火車<br>位於台東車站附近，搭車、自行開車可抵達。
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <a href="index.html"><img src="logo.png" alt="seesea-logo" />
+        </a>
+      </div>
+      <div class="footer-txt">
+        <h4><a href="news.html">最新消息</a></h4>
+        <h4><a href="q&a.html">常見問題</a></h4>
+        <h4><a href="aboutus.html">關於我們</a></h4>
+        <h4><a href="tour.html">周邊景點</a></h4>
+        <h4><a href="room.html">房型介紹</a></h4>
+        <h4><a href="online.html">線上訂房</a></h4>
+      </div>
+      <div class="footer-address">
+        <h4>電話:03-1234567</h4>
+        <h4>地址:台東縣台東市岩灣路101巷999號</h4>
+      </div>
+      <div class="footer-social">
+        <a href="#"><img src="index/footer/tweet.svg" /></a>
+        <a href="#"><img src="index/footer/ins.svg" /></a>
+        <a href="#"><img src="index/footer/fb.svg" /></a>
+        <a href="#"><img src="index/footer/line white.svg" /></a>
+      </div>
+    </div>
+    <div class="copyright">本網站為緯育TibaMe前端設計工程師班第85期學員專題作品，本平台僅供學習、展示之用。</div>
+  </section>
+
+  <div class="add-friend">
+    <a href="#">
+      <p>
+        歡迎加入官方LINE群組<br />
+        掌握第一手的消息
+      </p>
+    </a>
+    <a href="#"><img src="index/footer/line 1 (2).svg" /></a>
+  </div>
+
+  <script defer src="script.js"></script>
+</body>
+
+</html>

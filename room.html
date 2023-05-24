@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SeeSea-B&B</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&family=Noto+Serif+TC:wght@200;400;700&display=swap"
+    rel="stylesheet">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <style>
+     * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        font-family: 'Noto Serif TC', serif;
+        }
+
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+
+      body {
+               position: relative;
+        background-image: url("background.jpg");
+        background-size:cover
+            }
+
+h2{
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+      /*導覽列*/
+      .main-header {
+        width: 100%;
+        position: fixed;
+        z-index: 999;
+        box-shadow: 2px 2px 5px #c5c4c4;
+        background-color: rgba(255, 255, 255);
+      }
+
+      .main-header .container {
+        width: 100%;
+        display: flex;
+        margin: auto;
+        justify-content: space-between;
+        
+      }
+
+      .main-header .container .main-logo{
+        width: 91px;
+             }
+      
+
+      .main-header .container img {
+        width: 100%;
+      vertical-align: middle;
+        margin: 0.5em 0 0.5em 2em;
+            }
+
+      .main-header .main-header-nav {
+        margin: auto 5em ;
+      }
+
+      .main-header .main-header-nav a {
+        font-size: 18px;
+        text-decoration: none;
+        padding: 1em;
+        color: black;
+        margin-right: 3em;
+        transition: .5s;
+      }
+
+      .main-header .main-header-nav a:hover {
+       color:#7097a8;
+      }
+
+    /*麵包屑*/
+
+    .breadcrumb {
+      width: 100%;
+      padding: 6em 0 1em 0;
+      margin-bottom: 3em;
+    }
+
+    .breadcrumb-list {
+      width: 90%;
+      margin-left: 2em;
+      display: flex;
+      font-size: 14px;
+    }
+
+    .breadcrumb-list li+li:before {
+      content: ">";
+      color: #000;
+      margin-right: 20px;
+    }
+
+    .breadcrumb-list li {
+      font-size: 16px;
+      padding: 0 20px;
+    }
+
+
+    /*房型介紹*/
+
+    .room .container {
+      width: 1280px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .room .room-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 3em;
+    }
+
+    .room .room-card .card-pic-other{
+      display: flex;
+      gap: 1em;
+      justify-content: center;
+    }
+
+    .room .room-card .card-pic-other  .card-other-pic img {
+      width: 100%;
+      padding: 1em 0;
+      margin-right: 1em;
+    }
+
+    .room .room-card .card-pic-other .card-other-pic{
+      width: 216px;
+      height: 148px;
+    }
+
+    .room .room-card h4 {
+      font-size: 24px;
+      margin-bottom: 2em;
+    }
+
+    .room .room-card-info {
+      display: flex;
+      margin-bottom: 3em;
+      gap: 5em;
+      background-color: #fff;
+
+      justify-content: center;
+      padding: 2em 6em;
+    }
+
+
+    .room .room-card-info li{
+      font-size: 18px;
+    }
+
+  
+    .room .room-card-info .card-info li {
+      margin-bottom: 2em;
+    }
+
+    .room .room-card-info .card-other li {
+
+      margin-bottom: 1em;
+    }
+
+    .room .room-card-info .card-care li {
+      margin-bottom: 2em;
+    }
+
+    .room-card-last div {
+      font-weight: 700;
+    }
+
+    .room .room-card-last li {
+      font-size: 18px;
+      margin-bottom: 2em;
+      list-style: decimal;
+    }
+
+
+
+    .room-card-info ol:not(:first-child) li+li {
+      list-style: circle;
+    }
+
+    .room-card-last {
+      display: flex;
+    }
+
+    .room-card-last .card-last-title {
+      font-size: 20px;
+      margin-bottom: 2em;
+      text-align: center;
+    }
+
+    .room-card-last .card-last-price {
+      align-self: center;
+      background-color: #b7e3ec;
+      margin-left: 5em;
+      padding: 5em 10em;
+    }
+
+    .room-card-last .card-last-price h4 {
+      font-size: 20px;
+      margin-bottom: 2em;
+      text-align: center;
+    }
+
+    .room-card-last .card-last-price button {
+      padding: 1em 2em;
+      border: 1px solid transparent;
+      background-color: #7097a8;
+    }
+
+    .room-card-last .card-last-price a {
+      font-size: 18px;
+      color: #fff;
+    }
+
+    .room-card-last .card-last-price .last-price-btn:hover {
+      background-color: rgba(112, 151, 168, 0.6);
+    }
+
+    /*加購行程*/
+
+    .room-add-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 4em auto;
+    }
+
+    .room-add-list .add-card-list {
+      display: flex;
+      gap: 2em;
+      margin-bottom: 2em;
+    }
+
+    .room-add-list h3 {
+      font-size: 24px;
+      margin-bottom: 3em;
+    }
+
+    .room-add-list .add-more {
+      font-size: 18px;
+      align-self: flex-end;
+
+    }
+
+    .room-add-list .add-more:hover a {
+      color: #7097a8;
+    }
+
+    .room-add-list .add-card-list .add-card {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #7097A8;
+      transform: translateY(0px);
+
+    }
+
+    .add-card .add-card-txt {
+      flex-grow: 1;
+      padding: 0.5em 2em 1em 2em;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .add-card .add-card-title h4 {
+      font-size: 18px;
+    }
+
+    .add-card .add-card-txt .add-card-title h4+h4 {
+      color: rgba(255, 0, 0, 0.658);
+    }
+
+    .add-card .add-card-pic {
+      width: 100%;
+      vertical-align: middle;
+    }
+
+    .add-card .add-card-txt .add-card-bottom {
+      margin-top: auto;
+    }
+
+    .add-card .add-card-txt span {
+      color: #555454;
+      font-weight: 200;
+      font-size: 14px;
+      margin-bottom: 0.5em;
+    }
+
+    .add-card .add-card-txt .card-txt-small span:nth-child(1) {
+      margin-right: 1em;
+    }
+
+    .add-card .add-card-txt .card-txt-small {
+      margin-bottom: 0.5em;
+    }
+
+    .add-card .add-card-txt .add-card-title {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5em;
+    }
+
+    .add-card .add-card-txt .card-txt-hour {
+      font-size: 16px;
+    }
+
+    .add-card .add-card-txt .add-card-bottom {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .add-card .add-card-txt p {
+      margin-bottom: 0.5em;
+    }
+
+    .room-add-list .add-card-list .add-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0px 8px 5px #7097A8;
+    }
+
+    /*客戶評價*/
+
+    .room-evaluate {
+      width: 1280px;
+      margin: 0 auto 3em;
+    }
+
+    .room-evaluate .item {
+      width: 380px;
+      display: flex;
+      flex-direction: column;
+      background-color: #b7e3ec;
+    }
+
+    .room-evaluate .item .room-evaluate-description {
+      margin-top: auto;
+      padding: 0.5em 1em 1em 2em;
+    }
+
+    .item .room-evaluate-user {
+      display: flex;
+      gap: 1em;
+      padding: 1em 2em;
+    }
+
+    .item .room-evaluate-user img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .room-evaluate-user .room-evaluate-txt {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+    }
+
+    .room-evaluate h3 {
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 1em;
+    }
+
+    /*其它房型*/
+    .room-others {
+      margin-bottom: 3em;
+
+    }
+
+    .room-others h3 {
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 2em;
+      padding-bottom: 1em;
+      border-bottom: 5px solid #7097a8;
+    }
+
+    .room-others .room-others-room {
+      display: flex;
+      gap: 4em;
+      margin-bottom: 3em;
+    }
+
+    .room-others .room-others-room h4 {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 2em;
+    }
+
+    /*google 地圖*/
+
+    .map {
+      margin-bottom: 3em;
+    }
+
+
+
+    .map .container {
+      width: 1280px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      gap: 5em;
+      border-top: 5px solid #7097a8;
+      padding-top: 2em;
+    }
+
+    .map .map-txt {
+      background-color: #7097a8;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      line-height: 1.5;
+      font-size: 20px;
+      width: 30%;
+      padding: 1em;
+
+      box-sizing: border-box;
+    }
+
+    .map .container iframe {
+      margin-top: 2em;
+    }
+
+    .map .map-txt h3 {
+      margin-bottom: 2em;
+      text-align: center;
+    }
+
+    .map .map-txt ul li {
+      margin-bottom: 2em;
+
+    }
+
+    /*頁尾*/
+
+    .footer {
+      width: 100%;
+    }
+
+    .footer .container {
+      width: 100%;
+      background-color: #2a5cb4;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+
+    .footer h4 {
+      font-weight: 400;
+    }
+
+    .footer .container .footer-logo img {
+      margin: 1em 0 1em 0;
+    }
+
+    .footer .container .footer-txt {
+      display: flex;
+      gap: 3em;
+    }
+
+    .footer .container .footer-address {
+      text-align: center;
+    }
+
+    .footer .container .footer-address h4 {
+      margin-bottom: 0.5em;
+      color: #fff;
+    }
+
+    .footer .container .footer-social img {
+      width: 40px;
+      margin: 0.5em;
+    }
+
+    .footer .container .footer-txt a {
+      color: #fff;
+    }
+
+    .footer .copyright {
+      background-color: #2a5cb4;
+      text-align: center;
+      color: #fff;
+      font-size: 14px;
+      padding-bottom: 1em;
+    }
+
+    /*加入line好友*/
+
+    .add-friend {
+      width: 150px;
+      height: 200px;
+      border: 1px solid #666;
+      text-align: center;
+      position: fixed;
+      bottom: 10em;
+      right: 2em;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      font-size: 16px;
+      padding: 0 1em;
+      box-sizing: border-box;
+    }
+
+    .add-friend img {
+      width: 50px;
+      margin-top: 1em;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="container">
+
+      <a href="index.html">
+        <div class="main-logo">
+          <img src="logo.png" alt="seesea-logo"/>
+        </div>
+        
+      </a>
+      <nav class="main-header-nav">
+        <a href="news.html">最新消息</a>
+        <a href="q&a.html">常見問題</a>
+        <a href="aboutus.html">關於我們</a>
+        <a href="tour.html">周邊景點</a>
+        <a href="room.html">房型介紹</a>
+        <a href="online.html">線上訂房</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="breadcrumb">
+    <ol class="breadcrumb-list">
+      <li><a href="index.html">首頁</a></li>
+      <li><a href="room.html">房型介紹</a></li>
+    </ol>
+  </div>
+
+  <section class="room">
+    <div class="container">
+      <div class="room-card">
+        <h4>海洋雙人房</h4>
+        <div class="room-card-pic">
+          <img class="card-pic-main" src="room/room/one/Mask group.png" alt="seesea-room1" />
+          <div class="card-pic-other">
+            <div class="card-other-pic"><img src="room/room/one/Mask group-1.png" alt="seesea-room1" /></div>
+            <div class="card-other-pic"><img src="room/room/one/Mask group-2.png" alt="seesea-room1" /></div>
+            <div class="card-other-pic"> <img src="room/room/one/Mask group-3.png" alt="seesea-room1" /></div>
+           
+          </div>
+        </div>
+      </div>
+      <div class="room-card-info">
+        <ol class="card-info">
+          <li>客房資訊</li>
+          <li>面積:20平方公尺</li>
+          <li>人數:2-4 人</li>
+          <li>床型:雙人床</li>
+          <li>景觀:面海</li>
+        </ol>
+        <ol class="card-other">
+          <li>客房設備</li>
+          <li>羽絨枕、羽絨被</li>
+          <li>席夢思床墊</li>
+          <li>沐浴用品</li>
+          <li>吹風機、毛巾、拖鞋</li>
+          <li>免治馬桶、衛浴間乾濕分離</li>
+          <li>無線免費上網</li>
+          <li>可調式空調</li>
+          <li>液晶電視、MOD</li>
+          <li>熱水壺、免費飲用水、咖啡</li>
+          <li>冰箱</li>
+        </ol>
+        <ol class="card-care">
+          <li>其他服務</li>
+          <li>免費停車場</li>
+          <li>洗衣及烘衣服務</li>
+          <li>免費寄托行李</li>
+          <li>酒吧</li>
+        </ol>
+      </div>
+      <div class="room-card-last">
+        <ol>
+          <div class="card-last-title">注意事項</div>
+          <li>每房附贈晚餐一客</li>
+          <li>入住時間為15:00-20:00</li>
+          <li>六歲以下孩童免費，六歲以上孩童一名加收600元</li>
+          <li>為保護環境，有些盥洗用品為一次性用品</li>
+        </ol>
+
+        <div class="card-last-price">
+          <h4>NT 2,000</h4>
+          <button class="last-price-btn"><a href="#">馬上預約</a></button>
+        </div>
+      </div>
+
+      <div class="room-add-list">
+        <h3>加購行程</h3>
+        <div class="add-card-list">
+          <div class="add-card">
+            <div class="add-card-pic">
+              <a href="#"><img src="room/Mask group.jpg" alt="seesea-activity" /></a>
+            </div>
+            <div class="add-card-txt">
+              <span>#潛水浮潛</span>
+              <div class="add-card-title">
+                <h4><a href="#">台東潛水體驗</a></h4>
+                <h4>7日內免費取消</h4>
+              </div>
+              <span class="card-txt-hour"><a href="#">2-4小時</a></span>
+              <p><a href="#">體驗一下台東海洋之美，並享受豐富的生態</a></p>
+              <div class="add-card-bottom">
+                <h4><a href="#">NT$2000</a></h4>
+                <h4>150人已購買</h4>
+              </div>
+            </div>
+          </div>
+          <div class="add-card">
+            <div class="add-card-pic">
+              <a href="#"><img src="room/Mask group (1).jpg" alt="seesea-activity" /></a>
+            </div>
+            <div class="add-card-txt">
+              <span>#離島旅遊</span>
+              <div class="add-card-title">
+                <h4><a href="#">綠島一日遊</a></h4>
+                <h4>7日內免費取消</h4>
+              </div>
+              <span class="card-txt-hour"><a href="#">4-6小時</a></span>
+              <p>
+                <a href="#">探索隱藏於熱帶天堂的自然島嶼，享受湛藍的大海美景</a>
+              </p>
+              <div class="add-card-bottom">
+                <h4><a href="#">NT$3000</a></h4>
+                <h4>250人已購買</h4>
+              </div>
+            </div>
+          </div>
+          <div class="add-card">
+            <div class="add-card-pic">
+              <a href="#"><img src="room/Mask group (2).jpg" alt="seesea-activity" /></a>
+            </div>
+            <div class="add-card-txt">
+              <div class="card-txt-small">
+                <span>#空中觀光 </span>
+                <span> #季節限定</span>
+              </div>
+              <div class="add-card-title">
+                <h4><a href="#">熱氣球之旅</a></h4>
+              </div>
+              <span class="card-txt-hour"><a href="#">1小時</a></span>
+              <p>
+                <a href="#">在高空中觀賞東台灣的美景，一生值得去一次的旅程</a>
+              </p>
+              <div class="add-card-bottom">
+                <h4><a href="#">NT$10000</a></h4>
+                <h4>15人已購買</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="add-more"><a href="#">更多行程></a></span>
+      </div>
+
+      <div class="room-others">
+        <h3>其它房型</h3>
+        <div class="room-others-room">
+          <div class="others-room">
+            <h4>簡約雙人房</h4>
+            <div class="others-room-pic">
+              <a href="#"><img src="room/room/two/2.jpg" alt="seesea-rooms" /></a>
+            </div>
+          </div>
+          <div class="others-room">
+            <h4>溫馨四人房</h4>
+            <div class="others-room-pic">
+              <a href="#"><img src="room/room/three/3.jpg" alt="seesea-rooms" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="room-evaluate">
+        <h3>客戶評價</h3>
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <div class="room-evaluate-user">
+              <img src="room/user-regular 3.svg" alt="guest" />
+              <div class="room-evaluate-txt">
+                <h4>Amy</h4>
+                <p>2023/05/09</p>
+              </div>
+            </div>
+            <p class="room-evaluate-description">
+              很適合全家旅遊放鬆，下次還會再來!!
+            </p>
+          </div>
+          <div class="item">
+            <div class="room-evaluate-user">
+              <img src="room/user-regular 3.svg" alt="guest" />
+              <div class="room-evaluate-txt">
+                <h4>Ted</h4>
+                <p>2023/05/15</p>
+              </div>
+            </div>
+            <p class="room-evaluate-description">
+              老闆很熱情地介紹附近景點，此次旅行超值
+            </p>
+          </div>
+          <div class="item">
+            <div class="room-evaluate-user">
+              <img src="room/user-regular 3.svg" alt="guest" />
+              <div class="room-evaluate-txt">
+                <h4>Peter</h4>
+                <p>2023/05/16</p>
+              </div>
+            </div>
+            <p class="room-evaluate-description">
+              房間舒適、老闆熱情，推薦景點很棒
+            </p>
+          </div>
+          <div class="item">
+            <div class="room-evaluate-user">
+              <img src="room/user-regular 3.svg" alt="guest" />
+              <div class="room-evaluate-txt">
+                <h4>Amy</h4>
+                <p>2023/05/09</p>
+              </div>
+            </div>
+            <p class="room-evaluate-description">
+              很適合全家旅遊放鬆，下次還會再來!!
+            </p>
+          </div>
+          <div class="item">
+            <div class="room-evaluate-user">
+              <img src="room/user-regular 3.svg" alt="guest" />
+              <div class="room-evaluate-txt">
+                <h4>Ted</h4>
+                <p>2023/05/15</p>
+              </div>
+            </div>
+            <p class="room-evaluate-description">
+              老闆很熱情地介紹附近景點，此次旅行超值
+            </p>
+          </div>
+          <div class="item">
+            <div class="room-evaluate-user">
+              <img src="room/user-regular 3.svg" alt="guest" />
+              <div class="room-evaluate-txt">
+                <h4>Peter</h4>
+                <p>2023/05/16</p>
+              </div>
+            </div>
+            <p class="room-evaluate-description">
+              房間舒適、老闆熱情，推薦景點很棒
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="map">
+
+    <div class="container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.235355691627!2d121.12052367442446!3d22.793741424830618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fba2d125d3459%3A0x6ae15f1fb75cb961!2z5Y-w5p2x6LuK56uZ!5e0!3m2!1szh-TW!2stw!4v1684118062897!5m2!1szh-TW!2stw"
+        width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="map-txt">
+        <h3>交通指南</h3>
+
+        <ul>
+          <li>
+            搭到台東車站，步行三分鐘，約200公尺，即可抵達。
+          </li>
+
+          <li>自行開車<br>北部:國三、國五接台九線，即可抵達。</li>
+          <li>南部:國三接台九線，即可抵達。</li>
+
+          <li>搭火車<br>位於台東車站附近，搭車、自行開車可抵達。
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <a href="index.html"><img src="logo.png" alt="seesea-logo" />
+        </a>
+      </div>
+      <div class="footer-txt">
+        <h4><a href="news.html">最新消息</a></h4>
+        <h4><a href="q&a.html">常見問題</a></h4>
+        <h4><a href="aboutus.html">關於我們</a></h4>
+        <h4><a href="tour.html">周邊景點</a></h4>
+        <h4><a href="room.html">房型介紹</a></h4>
+        <h4><a href="online.html">線上訂房</a></h4>
+      </div>
+      <div class="footer-address">
+        <h4>電話:03-1234567</h4>
+        <h4>地址:台東縣台東市岩灣路101巷999號</h4>
+      </div>
+      <div class="footer-social">
+        <a href="#"><img src="index/footer/tweet.svg" /></a>
+        <a href="#"><img src="index/footer/ins.svg" /></a>
+        <a href="#"><img src="index/footer/fb.svg" /></a>
+        <a href="#"><img src="index/footer/line white.svg" /></a>
+      </div>
+    </div>
+    <div class="copyright">本網站為緯育TibaMe前端設計工程師班第85期學員專題作品，本平台僅供學習、展示之用。</div>
+  </section>
+
+  <div class="add-friend">
+    <a href="#">
+      <p>
+        歡迎加入官方LINE群組<br />
+        掌握第一手的消息
+      </p>
+    </a>
+    <a href="#"><img src="index/footer/line 1 (2).svg" /></a>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+    integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script defer src="script.js"></script>
+  
+  <script>
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      margin: 10,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 1,
+          nav: true,
+        },
+        600: {
+          items: 2,
+          nav: false,
+        },
+        1000: {
+          items: 3,
+          nav: true,
+          loop: false,
+        },
+      },
+    });
+  </script>
+</body>
+
+</html>
