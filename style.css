@@ -11,6 +11,7 @@ a {
 }
 
 body {
+
   position: relative;
   background-image: url("background.jpg");
   background-size: cover;
@@ -75,17 +76,21 @@ h2 {
 
 /*首頁天氣*/
 
+
+
 .home .home-weather {
   display: flex;
   justify-content: space-around;
   align-items: center;
   gap: 3em;
   margin-bottom: 5em;
+ 
 }
 
 .home .container {
   width: 1280px;
   margin: auto;
+  
 }
 
 .home .container > h3 {
@@ -178,6 +183,8 @@ h2 {
   gap: 2em;
   justify-content: center;
   margin-bottom: 3em;
+  position: relative;
+ 
 }
 
 .home-news .news-card-list .news-card {
@@ -237,6 +244,8 @@ h2 {
 
 .home-spot {
   margin-bottom: 3em;
+  
+  
 }
 
 .home-spot .spot-area-list {
@@ -246,6 +255,8 @@ h2 {
   justify-content: center;
   align-items: center;
   margin-bottom: 8em;
+  position: relative;
+  
 }
 
 .home-spot .spot-area-list .home-spot-area {
@@ -279,9 +290,16 @@ h2 {
   transform: scale(1.1);
 }
 
+.home-spot .home-spot-youtube{
+  position: relative;
+  
+}
+
 .home-spot .home-spot-youtube iframe {
   margin: 0 1em 4em 1em;
 }
+
+
 
 /*美食佳餚*/
 
@@ -300,6 +318,8 @@ h2 {
 
 .home-food .home-food-area {
   display: flex;
+  position: relative;
+  animation: slow-left 15s linear;
 }
 .home-food .home-food-pic {
   width: 70%;
@@ -345,6 +365,8 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+ 
 }
 
 .home-room .room-card-list h3 {
@@ -1569,6 +1591,8 @@ vertical-align: top;
     top: -400px;
     left: 0px;
 }
+
+
 
 
 
