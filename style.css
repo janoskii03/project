@@ -230,6 +230,7 @@ h2 {
 
 .home-news .home-news-container button:hover {
   background-color: rgba(112, 151, 168, 0.5);
+  cursor: pointer;
 }
 
 /*鄰近景點*/
@@ -398,6 +399,7 @@ h2 {
 
 .room-card .room-card-txt button:hover {
   background-color: rgba(112, 151, 168, 0.5);
+  cursor: pointer;
 }
 
 /*google 地圖*/
@@ -520,6 +522,7 @@ h2 {
 
 .main-about .container button:hover {
   background-color: rgba(112, 151, 168, 0.5);
+  cursor: pointer;
 }
 
 .main-about .container .illustrate {
@@ -813,6 +816,7 @@ h2 {
 
 .news .news-btns button:hover{
   background-color: rgba(112, 151, 168,.5);
+  cursor: pointer;
 }
 
 .news .news-btns a{
@@ -970,6 +974,7 @@ vertical-align: top;
 
   .online-card-list .online-card button:hover {
   background-color: rgba(112, 151, 168, 0.5);
+  cursor: pointer;
   }
 
   .online-card-list .online-card:hover img {
@@ -1296,6 +1301,7 @@ vertical-align: top;
 
   .room-card-last .card-last-price .last-price-btn:hover {
     background-color: rgba(112, 151, 168, 0.6);
+    cursor: pointer;
   }
 
   /*加購行程*/
