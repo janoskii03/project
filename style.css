@@ -690,7 +690,7 @@ h2 {
 
 .about-home .home-txt {
   grid-area: a;
-  text-align: center;
+ 
   align-self: center;
   justify-self: center;
   width: 400px;
@@ -705,7 +705,7 @@ h2 {
 
 .about-home .down-right {
   grid-area: g;
-  text-align: center;
+  
   width: 400px;
   letter-spacing: 0.5px;
   align-self: center;
@@ -795,7 +795,7 @@ h2 {
 .about .about-card .about-card-txt {
   width: 400px;
   align-self: center;
-  text-align: center;
+  
   position: relative;
   left: 10%;
   padding: 3em;
@@ -1173,12 +1173,15 @@ transition: .5s;
 
   .question-list .question-list-faq .list-faq-question h4{
         font-weight: 400;
+        border-bottom: 3px solid #7097A8;
+        padding-bottom: 0.5em;
   }
 
   .question-list-faq .list-faq-question {
     display: flex;
-    justify-content: space-between;
+    gap: 2em;
     margin-bottom: 0.5em;
+    
   }
 
   .question-list-faq .list-faq-answer {
