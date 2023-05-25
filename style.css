@@ -966,11 +966,12 @@ vertical-align: top;
   gap: 1em;
   position: relative;
   transform: translateY(0px);
+  
   }
 
   .online .online-card-list .online-card img {
   width: 100%;
-
+  transition: 1s;
   }
 
 
@@ -1064,7 +1065,7 @@ vertical-align: top;
   flex-direction: column;
   border: 1px solid #7097A8;
   transform: translateY(0px);
-
+transition: .5s;
   }
 
   .add-card .add-card-title h4 {
@@ -1188,7 +1189,7 @@ vertical-align: top;
     max-height: 0;
     max-width: 768px;
     overflow: hidden;
-    transition: max-height 1s;
+    transition: max-height .8s linear;
   }
   .active .list-faq-answer {
     max-width: 768px;
@@ -1361,6 +1362,7 @@ vertical-align: top;
     flex-direction: column;
     border: 1px solid #7097A8;
     transform: translateY(0px);
+    transition: .5s;
 
   }
 
