@@ -11,9 +11,8 @@ a {
 }
 
 body {
-
   position: relative;
-  background-image: url("background.jpg");
+  
   background-size: cover;
 }
 
@@ -68,13 +67,81 @@ h2 {
   color: #7097a8;
 }
 
+
 /*banner*/
 
 .banner {
   margin-bottom: 3em;
+  position: relative;
+  
 }
 
+.banner h4{
+  color: rgb(255, 255, 255);
+  font-size: 60px;
+  font-weight: 700;
+  position: absolute;
+  z-index: 2;
+  top: 4em;
+  left: 10em;
+}
+
+
+
+
+
+/*首頁訂房*/
+
+
+
+.home-booking .container{
+  width: 100%;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 3em;
+}
+
+.home-booking .home-booking-info{
+   display: flex;
+  align-items: center;
+  font-size: 20px;
+  padding: 2em;
+  gap: 3em;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+ top: -6em;
+ box-shadow: 1px 1px 1px #cecdcd;
+}
+
+.home-booking .home-booking-info .booking-info-in input,.home-booking .home-booking-info .booking-info-quit input{
+ margin-left: 1em;
+}
+
+.home-booking .home-booking-info .booking-info-man input,.home-booking .home-booking-info .booking-info-child input{
+ width: 3em;
+ 
+}
+
+.home-booking .home-booking-info .booking-btn{
+  padding: 0.5em 2em 0.7em 2em;
+  background-color: #7097a8;
+  border: 1px solid transparent;
+}
+
+.home-booking .home-booking-info .booking-btn a{
+  color: #fff;
+  font-size: 18px;
+}
+
+.home-booking .home-booking-info .booking-btn:hover{
+  
+  background-color: rgba(112, 151, 168, 0.5);
+  cursor: pointer;
+}
 /*首頁天氣*/
+
 
 
 
@@ -101,8 +168,7 @@ h2 {
 }
 
 .home-weather .home-weather-current {
-  width: 40%;
-  height: 300px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -128,7 +194,7 @@ h2 {
   margin-bottom: 0.5em;
 }
 .home-weather .home-weather-others {
-  width: 60%;
+  
   display: flex;
   gap: 3em;
   flex-wrap: wrap;
@@ -160,10 +226,10 @@ h2 {
 
 .weather-others-card .others-card-pic .card-txt-pic {
   display: flex;
-  gap: 0.5em;
+  
 }
 
-/*最新消息*/
+/*首頁最新消息*/
 
 .home-news .home-news-container {
   width: 1280px;
@@ -261,22 +327,41 @@ h2 {
 
 .home-spot .spot-area-list .home-spot-area {
   width: 400px;
-  text-align: center;
+  box-sizing: border-box;
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+  flex-grow: 1;
+}
+
+.home-spot .spot-area-list .home-spot-area .spot-area-text {
+  flex-grow: 1;
+display: flex;
+flex-direction: column;
+background-color: rgba(112, 151, 168,.8);
+padding: 1em;
+gap: .5em;
+position: relative;
+top: -3em;
+z-index: 2;
+
+}
+
+.home-spot .spot-area-list .home-spot-area .spot-area-text h4{
+  font-size: 20px;
 }
 
 .home-spot .spot-area-list .home-spot-area p {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .spot-area-list .home-spot-area .spot-area-pic img {
   width: 100%;
   margin-bottom: 1em;
   transition: .5s;
+  vertical-align: top;
 }
 
 .spot-area-pic {
@@ -353,6 +438,66 @@ h2 {
   text-align: center;
   margin-left: 5em;
 }
+
+
+/*設施介紹*/
+
+.home-facility{
+ 
+  background-image: url("index/Group\ 177.jpg");
+  background-size: cover;
+  margin-bottom: 3em;
+}
+
+.home-facility .home-facility-container{
+  max-width: 1280px;
+  margin: auto;
+}
+
+
+.home-facility .home-facility-container .home-facility-list{
+ 
+  display: flex;
+  padding: 3em;
+  
+  gap: 3em;
+}
+
+.home-facility .home-facility-list .facility-card {
+  width: 300px;
+display: flex;
+flex-direction: column;
+gap: 1em;
+align-items: center;
+text-align: center;
+}
+
+.home-facility .container .home-facility-list .facility-card .facility-card-pic{
+
+  width: 100%;
+  vertical-align: top;
+}
+
+.home-facility .container .home-facility-list .facility-card .facility-card-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ 
+}
+
+.facility-card .facility-card-text h4{
+  
+  font-size: 18px;
+  margin-bottom: 1em;
+}
+
+
+.facility-card .facility-card-text p{
+  letter-spacing: 5px;
+  line-height: 1.5;
+}
+
+
 /*房型介紹*/
 
 .home-room .container {
@@ -395,21 +540,22 @@ h2 {
 }
 
 .room-card .room-card-txt {
+  width: 40%;
   display: flex;
   flex-direction: column;
   margin-left: 2em;
-  gap: 3em;
-  text-align: center;
-}
-
-.room-card .room-card-txt {
+  gap: 2em;
   font-size: 18px;
 }
 
+
+
 .room-card .room-card-txt button {
+  width: 150px;
   font-size: 18px;
   padding: 1em 2em;
   background-color: #7097a8;
+  align-self: center;
   border: 1px solid transparent;
 }
 .room-card .room-card-txt h4 {
