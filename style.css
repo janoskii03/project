@@ -11,8 +11,9 @@ a {
 }
 
 body {
-  position: relative;
   
+  position: relative;
+
   background-size: cover;
 }
 
@@ -25,12 +26,19 @@ h2 {
 /*首頁*/
 
 /*導覽列*/
+
+
+#menu_control{
+  position: absolute;
+}
+
 .main-header {
   width: 100%;
   position: fixed;
   z-index: 999;
   box-shadow: 2px 2px 5px #c5c4c4;
   background-color: rgba(255, 255, 255);
+ 
 }
 
 .main-header .container {
@@ -38,10 +46,43 @@ h2 {
   display: flex;
   margin: auto;
   justify-content: space-between;
+  position: relative;
+}
+
+.main-header .menu-btn{
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  display: block;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
+.main-header .menu-btn span{
+opacity: 0;
+width: 1px;
+height: 1px;
+display: block;
+overflow: hidden;
+}
+
+.menu-btn::before{
+  content: '';
+  position: absolute;
+  height: 2px;
+  left: 2px;
+  width: 36px;
+  background-color: #aaa;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  box-shadow: 0px 8px 0px #aaa,
+  0px -8px 0px #aaa;
 }
 
 .main-header .container .main-logo {
-  width: 91px;
+  width: 5em;
 }
 
 .main-header .container img {
@@ -51,20 +92,32 @@ h2 {
 }
 
 .main-header .main-header-nav {
-  margin: auto 5em;
+  opacity: 0;
+  min-width: 90%;
+  height: 100vh;
+     background-color: #000;
+    position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: 888;
+  transition: 1s;
 }
 
 .main-header .main-header-nav a {
+  display: block;
   font-size: 18px;
   text-decoration: none;
   padding: 1em;
-  color: black;
-  margin-right: 3em;
-  transition: 0.5s;
+  margin: auto;
+  color: rgb(255, 255, 255);
+  text-align:center;
+  border-bottom: 1px solid #555454;
+  
 }
 
-.main-header .main-header-nav a:hover {
-  color: #7097a8;
+#menu_control:checked ~ header nav{
+  opacity: 1;
+left: 10%;
 }
 
 
@@ -73,10 +126,9 @@ h2 {
 .banner {
   margin-bottom: 3em;
   position: relative;
-  
 }
 
-.banner h4{
+.banner h4 {
   color: rgb(255, 255, 255);
   font-size: 60px;
   font-weight: 700;
@@ -86,15 +138,9 @@ h2 {
   left: 10em;
 }
 
-
-
-
-
 /*首頁訂房*/
 
-
-
-.home-booking .container{
+.home-booking .container {
   width: 100%;
   display: flex;
   margin: auto;
@@ -103,47 +149,44 @@ h2 {
   margin-bottom: 3em;
 }
 
-.home-booking .home-booking-info{
-   display: flex;
+.home-booking .home-booking-info {
+  display: flex;
   align-items: center;
   font-size: 20px;
   padding: 2em;
   gap: 3em;
   background-color: rgb(255, 255, 255);
   position: absolute;
- top: -6em;
- box-shadow: 1px 1px 1px #cecdcd;
+  top: -6em;
+  box-shadow: 1px 1px 1px #cecdcd;
 }
 
-.home-booking .home-booking-info .booking-info-in input,.home-booking .home-booking-info .booking-info-quit input{
- margin-left: 1em;
+.home-booking .home-booking-info .booking-info-in input,
+.home-booking .home-booking-info .booking-info-quit input {
+  margin-left: 1em;
 }
 
-.home-booking .home-booking-info .booking-info-man input,.home-booking .home-booking-info .booking-info-child input{
- width: 3em;
- 
+.home-booking .home-booking-info .booking-info-man input,
+.home-booking .home-booking-info .booking-info-child input {
+  width: 3em;
 }
 
-.home-booking .home-booking-info .booking-btn{
+.home-booking .home-booking-info .booking-btn {
   padding: 0.5em 2em 0.7em 2em;
   background-color: #7097a8;
   border: 1px solid transparent;
 }
 
-.home-booking .home-booking-info .booking-btn a{
+.home-booking .home-booking-info .booking-btn a {
   color: #fff;
   font-size: 18px;
 }
 
-.home-booking .home-booking-info .booking-btn:hover{
-  
+.home-booking .home-booking-info .booking-btn:hover {
   background-color: rgba(112, 151, 168, 0.5);
   cursor: pointer;
 }
 /*首頁天氣*/
-
-
-
 
 .home .home-weather {
   display: flex;
@@ -151,13 +194,11 @@ h2 {
   align-items: center;
   gap: 3em;
   margin-bottom: 5em;
- 
 }
 
 .home .container {
   width: 1280px;
   margin: auto;
-  
 }
 
 .home .container > h3 {
@@ -168,7 +209,6 @@ h2 {
 }
 
 .home-weather .home-weather-current {
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -194,7 +234,6 @@ h2 {
   margin-bottom: 0.5em;
 }
 .home-weather .home-weather-others {
-  
   display: flex;
   gap: 3em;
   flex-wrap: wrap;
@@ -226,7 +265,6 @@ h2 {
 
 .weather-others-card .others-card-pic .card-txt-pic {
   display: flex;
-  
 }
 
 /*首頁最新消息*/
@@ -250,7 +288,6 @@ h2 {
   justify-content: center;
   margin-bottom: 3em;
   position: relative;
- 
 }
 
 .home-news .news-card-list .news-card {
@@ -310,8 +347,6 @@ h2 {
 
 .home-spot {
   margin-bottom: 3em;
-  
-  
 }
 
 .home-spot .spot-area-list {
@@ -322,13 +357,12 @@ h2 {
   align-items: center;
   margin-bottom: 8em;
   position: relative;
-  
 }
 
 .home-spot .spot-area-list .home-spot-area {
   width: 400px;
   box-sizing: border-box;
-  
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -338,18 +372,17 @@ h2 {
 
 .home-spot .spot-area-list .home-spot-area .spot-area-text {
   flex-grow: 1;
-display: flex;
-flex-direction: column;
-background-color: rgba(112, 151, 168,.8);
-padding: 1em;
-gap: .5em;
-position: relative;
-top: -3em;
-z-index: 2;
-
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(112, 151, 168, 0.8);
+  padding: 1em;
+  gap: 0.5em;
+  position: relative;
+  top: -3em;
+  z-index: 2;
 }
 
-.home-spot .spot-area-list .home-spot-area .spot-area-text h4{
+.home-spot .spot-area-list .home-spot-area .spot-area-text h4 {
   font-size: 20px;
 }
 
@@ -360,7 +393,7 @@ z-index: 2;
 .spot-area-list .home-spot-area .spot-area-pic img {
   width: 100%;
   margin-bottom: 1em;
-  transition: .5s;
+  transition: 0.5s;
   vertical-align: top;
 }
 
@@ -375,16 +408,13 @@ z-index: 2;
   transform: scale(1.1);
 }
 
-.home-spot .home-spot-youtube{
+.home-spot .home-spot-youtube {
   position: relative;
-  
 }
 
 .home-spot .home-spot-youtube iframe {
   margin: 0 1em 4em 1em;
 }
-
-
 
 /*美食佳餚*/
 
@@ -404,7 +434,6 @@ z-index: 2;
 .home-food .home-food-area {
   display: flex;
   position: relative;
-  animation: slow-left 15s linear;
 }
 .home-food .home-food-pic {
   width: 70%;
@@ -439,64 +468,63 @@ z-index: 2;
   margin-left: 5em;
 }
 
-
 /*設施介紹*/
 
-.home-facility{
- 
+.home-facility {
   background-image: url("index/Group\ 177.jpg");
   background-size: cover;
   margin-bottom: 3em;
 }
 
-.home-facility .home-facility-container{
+.home-facility .home-facility-container {
   max-width: 1280px;
   margin: auto;
 }
 
-
-.home-facility .home-facility-container .home-facility-list{
- 
+.home-facility .home-facility-container .home-facility-list {
   display: flex;
   padding: 3em;
-  
+
   gap: 3em;
 }
 
 .home-facility .home-facility-list .facility-card {
   width: 300px;
-display: flex;
-flex-direction: column;
-gap: 1em;
-align-items: center;
-text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  text-align: center;
 }
 
-.home-facility .container .home-facility-list .facility-card .facility-card-pic{
-
+.home-facility
+  .container
+  .home-facility-list
+  .facility-card
+  .facility-card-pic {
   width: 100%;
   vertical-align: top;
 }
 
-.home-facility .container .home-facility-list .facility-card .facility-card-text{
+.home-facility
+  .container
+  .home-facility-list
+  .facility-card
+  .facility-card-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
- 
 }
 
-.facility-card .facility-card-text h4{
-  
+.facility-card .facility-card-text h4 {
   font-size: 18px;
   margin-bottom: 1em;
 }
 
-
-.facility-card .facility-card-text p{
+.facility-card .facility-card-text p {
   letter-spacing: 5px;
   line-height: 1.5;
 }
-
 
 /*房型介紹*/
 
@@ -511,7 +539,6 @@ text-align: center;
   justify-content: center;
   align-items: center;
   position: relative;
- 
 }
 
 .home-room .room-card-list h3 {
@@ -548,8 +575,6 @@ text-align: center;
   font-size: 18px;
 }
 
-
-
 .room-card .room-card-txt button {
   width: 150px;
   font-size: 18px;
@@ -574,6 +599,7 @@ text-align: center;
 
 .map {
   margin-bottom: 3em;
+margin: 0 auto;
 }
 
 .map h2 {
@@ -583,31 +609,41 @@ text-align: center;
 }
 
 .map .container {
-  width: 1280px;
-  margin: auto;
+  width: 100%;
+  margin: 1em auto;
   display: flex;
-  justify-content: center;
-  gap: 5em;
+  flex-direction: column;
+  align-items: center;
   border-top: 5px solid #7097a8;
   padding-top: 2em;
+  gap: 2em;
+  
 }
 
 .map .map-txt {
+ min-width: 50%;
   background-color: #7097a8;
   color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  line-height: 1.5;
-  font-size: 20px;
-  width: 30%;
-  padding: 1em;
-
+   font-size: 16px;
+   padding: 1em;
   box-sizing: border-box;
+  margin-bottom: 3em;
+}
+
+.map .google-map{
+  min-width: 50%;
+  aspect-ratio: 600/450;
+  position: relative;
+  margin-bottom: 3em;
 }
 
 .map .container iframe {
-  margin-top: 2em;
+  width: 100%;
+  height: 100%;
+    margin-top: 2em;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .map .map-txt h3 {
@@ -701,14 +737,17 @@ text-align: center;
 
 /*頁尾*/
 
+
+
 .footer {
-  width: 100%;
+ width: 100%;
+ background-color: #2a5cb4;
 }
 
 .footer .container {
   width: 100%;
-  background-color: #2a5cb4;
   display: flex;
+ flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
@@ -723,8 +762,10 @@ text-align: center;
 }
 
 .footer .container .footer-txt {
-  display: flex;
-  gap: 3em;
+  
+
+
+  margin-bottom: .5em;
 }
 
 .footer .container .footer-address {
@@ -746,6 +787,7 @@ text-align: center;
 }
 
 .footer .copyright {
+  max-width: 100%;
   background-color: #2a5cb4;
   text-align: center;
   color: #fff;
@@ -760,18 +802,12 @@ text-align: center;
   height: 200px;
   border: 1px solid #666;
   text-align: center;
-  position: fixed;
-  bottom: 10em;
-  right: 2em;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
+    bottom: 10em;
+      background-color: #fff;
   font-size: 16px;
   padding: 0 1em;
   box-sizing: border-box;
+  margin:0 auto 3em;
 }
 
 .add-friend img {
@@ -781,9 +817,9 @@ text-align: center;
 
 /*關於我們*/
 
- /*麵包屑*/
+/*麵包屑*/
 
- .breadcrumb {
+.breadcrumb {
   width: 100%;
   padding: 6em 0 1em 0;
   margin-bottom: 8em;
@@ -814,7 +850,7 @@ text-align: center;
   margin: auto;
 }
 
-.about img{
+.about img {
   border-radius: 20px;
 }
 
@@ -836,7 +872,7 @@ text-align: center;
 
 .about-home .home-txt {
   grid-area: a;
- 
+
   align-self: center;
   justify-self: center;
   width: 400px;
@@ -851,7 +887,7 @@ text-align: center;
 
 .about-home .down-right {
   grid-area: g;
-  
+
   width: 400px;
   letter-spacing: 0.5px;
   align-self: center;
@@ -871,7 +907,6 @@ text-align: center;
 .about-home .down-left {
   grid-area: c;
   align-self: flex-end;
-
 }
 
 .about-home .down-left-next {
@@ -923,11 +958,10 @@ text-align: center;
 }
 
 .about .background-pic {
-
   margin-bottom: 2em;
 }
 
-.about .background-pic img{
+.about .background-pic img {
   width: 100%;
   vertical-align: top;
 }
@@ -941,7 +975,7 @@ text-align: center;
 .about .about-card .about-card-txt {
   width: 400px;
   align-self: center;
-  
+
   position: relative;
   left: 10%;
   padding: 3em;
@@ -952,7 +986,6 @@ text-align: center;
 .about .about-card .about-card-txt p + p {
   margin-top: 1em;
 }
-
 
 /*最新消息*/
 
@@ -976,28 +1009,24 @@ text-align: center;
 
 .news .news-btns button {
   padding: 1.5em 5em;
-  margin:1em 5em;
-  background-color: #7097A8;
+  margin: 1em 5em;
+  background-color: #7097a8;
   border: 1px solid transparent;
- 
 }
 
-.news .news-btns button:hover{
-  background-color: rgba(112, 151, 168,.5);
+.news .news-btns button:hover {
+  background-color: rgba(112, 151, 168, 0.5);
   cursor: pointer;
 }
 
-.news .news-btns a{
+.news .news-btns a {
   color: #fff;
   font-size: 20px;
 }
 
-
-
 .news-btns .btn-hidden {
   display: none;
 }
-
 
 .news .news-card-list .news-card {
   width: 1200px;
@@ -1006,16 +1035,16 @@ text-align: center;
   justify-content: center;
   padding-bottom: 3em;
   margin-bottom: 3em;
-  border-bottom: 5px solid #7097A8;
+  border-bottom: 5px solid #7097a8;
 }
 
-.news .news-card-list .news-card .news-card-date{
-font-size: 18px;
+.news .news-card-list .news-card .news-card-date {
+  font-size: 18px;
 }
 
-.news .news-card-list .news-card .news-card-pic img{
-width: 100%;
-vertical-align: top;
+.news .news-card-list .news-card .news-card-pic img {
+  width: 100%;
+  vertical-align: top;
 }
 
 .news .news-card-list .news-card:nth-child(3) {
@@ -1042,69 +1071,63 @@ vertical-align: top;
 .online .container {
   width: 1280px;
   margin: auto;
-  }
+}
 
-  .online .container .online-info {
+.online .container .online-info {
   display: flex;
   text-align: center;
   justify-content: space-evenly;
   margin-bottom: 2em;
-  background-color: #D3EFF8;
+  background-color: #d3eff8;
   padding: 2em;
   font-size: 20px;
-  }
+}
 
-  .online .online-info .online-info-in input,
-  .online .online-info .online-info-quit input {
+.online .online-info .online-info-in input,
+.online .online-info .online-info-quit input {
   text-align: center;
   margin-left: 1em;
+}
 
-  }
-
-  .online .online-info .online-info-man,
-  .online .online-info .online-info-child {
+.online .online-info .online-info-man,
+.online .online-info .online-info-child {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   gap: 0.5em;
-  }
+}
 
-  .online .online-info .online-info-man img {
+.online .online-info .online-info-man img {
   width: 15px;
   height: 15px;
+}
 
-
-  }
-
-  .online .online-info .online-info-child img {
+.online .online-info .online-info-child img {
   width: 15px;
   height: 15px;
+}
 
-
-  }
-
-
-  .online .container .online-info input {
+.online .container .online-info input {
   width: 100px;
-  padding: .3em 0;
-  }
+  padding: 0.3em 0;
+}
 
-  .online .online-info .online-info-man input {
-  width: 30px
-  }
+.online .online-info .online-info-man input {
+  width: 30px;
+}
 
-  .online .online-info .online-info-child input {
-  width: 30px
-  }
+.online .online-info .online-info-child input {
+  width: 30px;
+}
 
-  .online .online-card-list {
+.online .online-card-list {
   display: flex;
   gap: 3em;
   justify-content: center;
   align-items: center;
-  }
+}
 
-  .online .online-card-list .online-card {
+.online .online-card-list .online-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1112,45 +1135,43 @@ vertical-align: top;
   gap: 1em;
   position: relative;
   transform: translateY(0px);
-  
-  }
+}
 
-  .online .online-card-list .online-card img {
+.online .online-card-list .online-card img {
   width: 100%;
   transition: 1s;
-  }
+}
 
-
-  .online-card-list .online-card h4 {
+.online-card-list .online-card h4 {
   font-size: 20px;
   margin-bottom: 1em;
-  }
+}
 
-  .online-card-list .online-card span {
+.online-card-list .online-card span {
   font-size: 20px;
-  }
+}
 
-  .online-card-list .online-card button {
+.online-card-list .online-card button {
   padding: 1em 2em;
-  background-color: #7097A8;
+  background-color: #7097a8;
   border: 1px solid transparent;
-  }
+}
 
-  .online-card-list .online-card button a {
+.online-card-list .online-card button a {
   font-size: 20px;
   color: #fff;
-  }
+}
 
-  .online-card-list .online-card button:hover {
+.online-card-list .online-card button:hover {
   background-color: rgba(112, 151, 168, 0.5);
   cursor: pointer;
-  }
+}
 
-  .online-card-list .online-card:hover img {
+.online-card-list .online-card:hover img {
   transform: translateY(-20px);
-  }
+}
 
-  .online .online-know {
+.online .online-know {
   width: 960px;
   display: flex;
   flex-direction: column;
@@ -1159,592 +1180,815 @@ vertical-align: top;
   gap: 2em;
   margin: 2em auto 2em;
   padding: 2em 0 3em 0;
-  background-color: #D3EFF8;
-  }
+  background-color: #d3eff8;
+}
 
-  .online .online-know h3 {
+.online .online-know h3 {
   font-size: 24px;
   text-align: center;
-  }
+}
 
-  .online .online-know li {
+.online .online-know li {
   width: 600px;
   font-size: 18px;
   line-height: 1.5;
   list-style: decimal;
   margin-bottom: 1em;
-  }
+}
 
+/*加購行程*/
 
-
-  /*加購行程*/
-
-  .online-add-list {
+.online-add-list {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 4em auto;
-  }
+}
 
-  .online-add-list .add-card-list {
+.online-add-list .add-card-list {
   display: flex;
   gap: 2em;
   margin-bottom: 2em;
-  }
+}
 
-  .online-add-list h3 {
+.online-add-list h3 {
   font-size: 24px;
   margin-bottom: 3em;
-  }
+}
 
-  .online-add-list .add-more {
+.online-add-list .add-more {
   font-size: 18px;
   align-self: flex-end;
-  }
+}
 
-  .online-add-list .add-more:hover a {
+.online-add-list .add-more:hover a {
   color: #7097a8;
-  }
+}
 
-  .online-add-list .add-card-list .add-card {
+.online-add-list .add-card-list .add-card {
   display: flex;
   flex-direction: column;
-  border: 1px solid #7097A8;
+  border: 1px solid #7097a8;
   transform: translateY(0px);
-transition: .5s;
-  }
+  transition: 0.5s;
+}
 
-  .add-card .add-card-title h4 {
+.add-card .add-card-title h4 {
   font-size: 18px;
-  }
+}
 
-  .add-card .add-card-txt {
+.add-card .add-card-txt {
   flex-grow: 1;
   padding: 0.5em 2em 1em 2em;
   display: flex;
   flex-direction: column;
-  }
+}
 
-  .add-card .add-card-txt .add-card-title h4+h4 {
+.add-card .add-card-txt .add-card-title h4 + h4 {
   color: rgba(255, 0, 0, 0.658);
-  }
+}
 
-  .add-card .add-card-pic {
+.add-card .add-card-pic {
   width: 100%;
   vertical-align: middle;
-  }
+}
 
-  .add-card .add-card-txt .add-card-bottom {
+.add-card .add-card-txt .add-card-bottom {
   margin-top: auto;
-  }
+}
 
-  .add-card .add-card-txt span {
+.add-card .add-card-txt span {
   color: #555454;
   font-weight: 200;
   font-size: 14px;
   margin-bottom: 0.5em;
-  }
+}
 
-  .add-card .add-card-txt .card-txt-small span:nth-child(1) {
+.add-card .add-card-txt .card-txt-small span:nth-child(1) {
   margin-right: 1em;
-  }
+}
 
-  .add-card .add-card-txt .card-txt-small {
+.add-card .add-card-txt .card-txt-small {
   margin-bottom: 0.5em;
-  }
+}
 
-  .add-card .add-card-txt .add-card-title {
+.add-card .add-card-txt .add-card-title {
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.5em;
-  }
+}
 
-  .add-card .add-card-txt .card-txt-hour {
+.add-card .add-card-txt .card-txt-hour {
   font-size: 16px;
-  }
+}
 
-  .add-card .add-card-txt .add-card-bottom {
+.add-card .add-card-txt .add-card-bottom {
   display: flex;
   justify-content: space-between;
-  }
+}
 
-  .add-card .add-card-txt p {
+.add-card .add-card-txt p {
   margin-bottom: 0.5em;
-  }
+}
 
-  .online-add-list .add-card-list .add-card:hover {
+.online-add-list .add-card-list .add-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0px 8px 5px #7097A8;
-  }
-
-  /*Q&A*/
-
-  .question-breadcrumb {
-    width: 100%;
-    padding: 6em 0 1em 0;
-    margin-bottom: 3em;
-  }
-
-  .question .container {
-    width: 1280px;
-    margin: 0 auto 5em;
-
-  }
-
-  .question .question-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 20px;
-  }
-
-  .question .question-list h3 {
-    font-weight: 400;
-    color: #fff;
-    font-size: 24px;
-    margin-bottom: 1em;
-    align-self: flex-start;
-    padding: 0.5em 1.5em;
-    background-color: #7097a8;
-  }
-
-  .question-list-faq .list-faq-answer p {
-    line-height: 1.5;
-  }
-
-  .question-list .question-list-faq {
-    width: 960px;
-    align-items: center;
-  }
-
-  .question-list .question-list-faq .list-faq-question h4{
-        font-weight: 400;
-        border-bottom: 3px solid #7097A8;
-        padding-bottom: 0.5em;
-  }
-
-  .question-list-faq .list-faq-question {
-    display: flex;
-    gap: 2em;
-    margin-bottom: 0.5em;
-    
-  }
-
-  .question-list-faq .list-faq-answer {
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 3px;
-    margin-bottom: 1em;
-    max-height: 0;
-    max-width: 768px;
-    overflow: hidden;
-    transition: max-height .8s linear;
-  }
-  .active .list-faq-answer {
-    max-width: 768px;
-    max-height: 300px;
-  }
-
-   /*房型介紹*/
-
-   .room-breadcrumb {
-    width: 100%;
-    padding: 6em 0 1em 0;
-    margin-bottom: 3em;
-  }
-
-   .room .container {
-    width: 1280px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .room .room-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 3em;
-  }
-
-  .room .room-card .card-pic-other{
-    display: flex;
-    gap: 1em;
-    justify-content: center;
-  }
-
-  .room .room-card .card-pic-other  .card-other-pic img {
-    width: 100%;
-    padding: 1em 0;
-    margin-right: 1em;
-  }
-
-  .room .room-card .card-pic-other .card-other-pic{
-    width: 216px;
-    height: 148px;
-  }
-
-  .room .room-card h4 {
-    font-size: 24px;
-    margin-bottom: 2em;
-  }
-
-  .room .room-card-info {
-    display: flex;
-    margin-bottom: 3em;
-    gap: 5em;
-    background-color: #fff;
-
-    justify-content: center;
-    padding: 2em 6em;
-  }
-
-
-  .room .room-card-info li{
-    font-size: 18px;
-  }
-
-
-  .room .room-card-info .card-info li {
-    margin-bottom: 2em;
-  }
-
-  .room .room-card-info .card-other li {
-
-    margin-bottom: 1em;
-  }
-
-  .room .room-card-info .card-care li {
-    margin-bottom: 2em;
-  }
-
-  .room-card-last div {
-    font-weight: 700;
-  }
-
-  .room .room-card-last li {
-    font-size: 18px;
-    margin-bottom: 2em;
-    list-style: decimal;
-  }
-
-
-
-  .room-card-info ol:not(:first-child) li+li {
-    list-style: circle;
-  }
-
-  .room-card-last {
-    display: flex;
-  }
-
-  .room-card-last .card-last-title {
-    font-size: 20px;
-    margin-bottom: 2em;
-    text-align: center;
-  }
-
-  .room-card-last .card-last-price {
-    align-self: center;
-    background-color: #b7e3ec;
-    margin-left: 5em;
-    padding: 5em 10em;
-  }
-
-  .room-card-last .card-last-price h4 {
-    font-size: 20px;
-    margin-bottom: 2em;
-    text-align: center;
-  }
-
-  .room-card-last .card-last-price button {
-    padding: 1em 2em;
-    border: 1px solid transparent;
-    background-color: #7097a8;
-  }
-
-  .room-card-last .card-last-price a {
-    font-size: 18px;
-    color: #fff;
-  }
-
-  .room-card-last .card-last-price .last-price-btn:hover {
-    background-color: rgba(112, 151, 168, 0.6);
-    cursor: pointer;
-  }
-
-  /*加購行程*/
-
-  .room-add-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 4em auto;
-  }
-
-  .room-add-list .add-card-list {
-    display: flex;
-    gap: 2em;
-    margin-bottom: 2em;
-  }
-
-  .room-add-list h3 {
-    font-size: 24px;
-    margin-bottom: 3em;
-  }
-
-  .room-add-list .add-more {
-    font-size: 18px;
-    align-self: flex-end;
-
-  }
-
-  .room-add-list .add-more:hover a {
-    color: #7097a8;
-  }
-
-  .room-add-list .add-card-list .add-card {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #7097A8;
-    transform: translateY(0px);
-    transition: .5s;
-
-  }
-
-  .add-card .add-card-txt {
-    flex-grow: 1;
-    padding: 0.5em 2em 1em 2em;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .add-card .add-card-title h4 {
-    font-size: 18px;
-  }
-
-  .add-card .add-card-txt .add-card-title h4+h4 {
-    color: rgba(255, 0, 0, 0.658);
-  }
-
-  .add-card .add-card-pic {
-    width: 100%;
-    vertical-align: middle;
-  }
-
-  .add-card .add-card-txt .add-card-bottom {
-    margin-top: auto;
-  }
-
-  .add-card .add-card-txt span {
-    color: #555454;
-    font-weight: 200;
-    font-size: 14px;
-    margin-bottom: 0.5em;
-  }
-
-  .add-card .add-card-txt .card-txt-small span:nth-child(1) {
-    margin-right: 1em;
-  }
-
-  .add-card .add-card-txt .card-txt-small {
-    margin-bottom: 0.5em;
-  }
-
-  .add-card .add-card-txt .add-card-title {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.5em;
-  }
-
-  .add-card .add-card-txt .card-txt-hour {
-    font-size: 16px;
-  }
-
-  .add-card .add-card-txt .add-card-bottom {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .add-card .add-card-txt p {
-    margin-bottom: 0.5em;
-  }
-
-  .room-add-list .add-card-list .add-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 8px 5px #7097A8;
-  }
-
-  /*客戶評價*/
-
-  .room-evaluate {
-    width: 1280px;
-    margin: 0 auto 3em;
-  }
-
-  .room-evaluate .item {
-    width: 380px;
-    display: flex;
-    flex-direction: column;
-    background-color: #b7e3ec;
-  }
-
-  .room-evaluate .item .room-evaluate-description {
-    margin-top: auto;
-    padding: 0.5em 1em 1em 2em;
-  }
-
-  .item .room-evaluate-user {
-    display: flex;
-    gap: 1em;
-    padding: 1em 2em;
-  }
-
-  .item .room-evaluate-user img {
-    width: 50px;
-    height: 50px;
-  }
-
-  .room-evaluate-user .room-evaluate-txt {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-  }
-
-  .room-evaluate h3 {
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 1em;
-  }
-
-  /*其它房型*/
-  .room-others {
-    margin-bottom: 3em;
-
-  }
-
-  .room-others h3 {
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 2em;
-    padding-bottom: 1em;
-    border-bottom: 5px solid #7097a8;
-  }
-
-  .room-others .room-others-room {
-    display: flex;
-    gap: 4em;
-    margin-bottom: 3em;
-  }
-
-  .room-others .room-others-room h4 {
-    font-size: 20px;
-    text-align: center;
-    margin-bottom: 2em;
-  }
-
-  /*周邊景點*/
-  
-  .tour-breadcrumb {
-    width: 100%;
-    padding: 6em 0 1em 0;
-    margin-bottom: 3em;
-  }
-
-
-  .tour .container {
-    width: 1280px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  box-shadow: 0px 8px 5px #7097a8;
 }
 
-.tour .container .tour-pic {
-    margin: 22em 0;
-  
+/*Q&A*/
 
+.question-breadcrumb {
+  width: 100%;
+  padding: 6em 0 1em 0;
+  margin-bottom: 3em;
 }
 
+.question .container {
+  width: 1280px;
+  margin: 0 auto 5em;
+}
 
+.question .question-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+}
+
+.question .question-list h3 {
+  font-weight: 400;
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 1em;
+  align-self: flex-start;
+  padding: 0.5em 1.5em;
+  background-color: #7097a8;
+}
+
+.question-list-faq .list-faq-answer p {
+  line-height: 1.5;
+}
+
+.question-list .question-list-faq {
+  width: 960px;
+  align-items: center;
+}
+
+.question-list .question-list-faq .list-faq-question h4 {
+  font-weight: 400;
+  border-bottom: 3px solid #7097a8;
+  padding-bottom: 0.5em;
+}
+
+.question-list-faq .list-faq-question {
+  display: flex;
+  gap: 2em;
+  margin-bottom: 0.5em;
+}
+
+.question-list-faq .list-faq-answer {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 3px;
+  margin-bottom: 1em;
+  max-height: 0;
+  max-width: 768px;
+  overflow: hidden;
+  transition: max-height 0.8s linear;
+}
+.active .list-faq-answer {
+  max-width: 768px;
+  max-height: 300px;
+}
+
+/*房型介紹*/
+
+.room-breadcrumb {
+  width: 100%;
+  padding: 6em 0 1em 0;
+  margin-bottom: 3em;
+}
+
+.room .container {
+  width: 1280px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.room .room-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3em;
+}
+
+.room .room-card .card-pic-other {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
+
+.room .room-card .card-pic-other .card-other-pic img {
+  width: 100%;
+  padding: 1em 0;
+  margin-right: 1em;
+}
+
+.room .room-card .card-pic-other .card-other-pic {
+  width: 216px;
+  height: 148px;
+}
+
+.room .room-card h4 {
+  font-size: 24px;
+  margin-bottom: 2em;
+}
+
+.room .room-card-info {
+  display: flex;
+  margin-bottom: 3em;
+  gap: 5em;
+  background-color: #fff;
+
+  justify-content: center;
+  padding: 2em 6em;
+}
+
+.room .room-card-info li {
+  font-size: 18px;
+}
+
+.room .room-card-info .card-info li {
+  margin-bottom: 2em;
+}
+
+.room .room-card-info .card-other li {
+  margin-bottom: 1em;
+}
+
+.room .room-card-info .card-care li {
+  margin-bottom: 2em;
+}
+
+.room-card-last div {
+  font-weight: 700;
+}
+
+.room .room-card-last li {
+  font-size: 18px;
+  margin-bottom: 2em;
+  list-style: decimal;
+}
+
+.room-card-info ol:not(:first-child) li + li {
+  list-style: circle;
+}
+
+.room-card-last {
+  display: flex;
+}
+
+.room-card-last .card-last-title {
+  font-size: 20px;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+.room-card-last .card-last-price {
+  align-self: center;
+  background-color: #b7e3ec;
+  margin-left: 5em;
+  padding: 5em 10em;
+}
+
+.room-card-last .card-last-price h4 {
+  font-size: 20px;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+.room-card-last .card-last-price button {
+  padding: 1em 2em;
+  border: 1px solid transparent;
+  background-color: #7097a8;
+}
+
+.room-card-last .card-last-price a {
+  font-size: 18px;
+  color: #fff;
+}
+
+.room-card-last .card-last-price .last-price-btn:hover {
+  background-color: rgba(112, 151, 168, 0.6);
+  cursor: pointer;
+}
+
+/*加購行程*/
+
+.room-add-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4em auto;
+}
+
+.room-add-list .add-card-list {
+  display: flex;
+  gap: 2em;
+  margin-bottom: 2em;
+}
+
+.room-add-list h3 {
+  font-size: 24px;
+  margin-bottom: 3em;
+}
+
+.room-add-list .add-more {
+  font-size: 18px;
+  align-self: flex-end;
+}
+
+.room-add-list .add-more:hover a {
+  color: #7097a8;
+}
+
+.room-add-list .add-card-list .add-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #7097a8;
+  transform: translateY(0px);
+  transition: 0.5s;
+}
+
+.add-card .add-card-txt {
+  flex-grow: 1;
+  padding: 0.5em 2em 1em 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-card .add-card-title h4 {
+  font-size: 18px;
+}
+
+.add-card .add-card-txt .add-card-title h4 + h4 {
+  color: rgba(255, 0, 0, 0.658);
+}
+
+.add-card .add-card-pic {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.add-card .add-card-txt .add-card-bottom {
+  margin-top: auto;
+}
+
+.add-card .add-card-txt span {
+  color: #555454;
+  font-weight: 200;
+  font-size: 14px;
+  margin-bottom: 0.5em;
+}
+
+.add-card .add-card-txt .card-txt-small span:nth-child(1) {
+  margin-right: 1em;
+}
+
+.add-card .add-card-txt .card-txt-small {
+  margin-bottom: 0.5em;
+}
+
+.add-card .add-card-txt .add-card-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5em;
+}
+
+.add-card .add-card-txt .card-txt-hour {
+  font-size: 16px;
+}
+
+.add-card .add-card-txt .add-card-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-card .add-card-txt p {
+  margin-bottom: 0.5em;
+}
+
+.room-add-list .add-card-list .add-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 5px #7097a8;
+}
+
+/*客戶評價*/
+
+.room-evaluate {
+  width: 1280px;
+  margin: 0 auto 3em;
+}
+
+.room-evaluate .item {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  background-color: #b7e3ec;
+}
+
+.room-evaluate .item .room-evaluate-description {
+  margin-top: auto;
+  padding: 0.5em 1em 1em 2em;
+}
+
+.item .room-evaluate-user {
+  display: flex;
+  gap: 1em;
+  padding: 1em 2em;
+}
+
+.item .room-evaluate-user img {
+  width: 50px;
+  height: 50px;
+}
+
+.room-evaluate-user .room-evaluate-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.room-evaluate h3 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+/*其它房型*/
+.room-others {
+  margin-bottom: 3em;
+}
+
+.room-others h3 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 2em;
+  padding-bottom: 1em;
+  border-bottom: 5px solid #7097a8;
+}
+
+.room-others .room-others-room {
+  display: flex;
+  gap: 4em;
+  margin-bottom: 3em;
+}
+
+.room-others .room-others-room h4 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+/*周邊景點*/
+
+.tour-breadcrumb {
+  width: 100%;
+  padding: 6em 0 1em 0;
+  margin-bottom: 3em;
+  display: none;
+}
+
+.tour .container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tour .container .tour-pic img {
+  margin: 5em 1em 2em 1em;
+  max-width: 100%;
+  vertical-align: top;
+  text-align: center;
+}
 
 .tour .tour-card-list {
-    display: flex;
-    gap: 2em;
-    margin-bottom: 3em;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-bottom: 3em;
+  align-items: center;
 }
 
 .tour .tour-card-list .tour-card {
-    width: 304px;
-    background-color: #B7E3EC;
-    flex-grow: 1;
-    border-radius: 10px;
-    position: absolute;
-    transform: translateY(0px);
-    transition: .5s;
+  max-width: 304px;
+  background-color: #b7e3ec;
+  flex-grow: 1;
+  border-radius: 10px;
+
+  transition: 0.5s;
 }
 
 .tour .tour-card-list .tour-card img {
-    border-radius: 10px 10px 0 0;
-  
+  border-radius: 10px 10px 0 0;
 }
 
 .tour-card-list .tour-card .tour-card-txt {
-    flex-grow: 1;
-    padding: 1em 2em 1em 2em;
+  flex-grow: 1;
+  padding: 1em 2em 1em 2em;
 }
 
 .tour-card-list .tour-card .tour-card-txt h4 {
   font-size: 20px;
-    margin-bottom: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 .tour-card-list .tour-card .tour-card-txt p {
   font-size: 18px;
+  line-height: 1.5;
+}
+
+
+
+
+
+/* 媒體查詢 */
+
+@media screen and (min-width: 768px) {
+
+
+/*導覽列*/
+.main-header {
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  box-shadow: 2px 2px 5px #c5c4c4;
+  background-color: rgba(255, 255, 255);
+}
+
+.main-header .container {
+  width: 100%;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.main-header .container .main-logo {
+  width: 91px;
+}
+
+.main-header .container img {
+  width: 100%;
+  vertical-align: middle;
+  margin: 0.5em 0 0.5em 2em;
+}
+
+.main-header .main-header-nav {
+  display: block;
+  margin: auto 5em;
+}
+
+.main-header .main-header-nav a {
+  font-size: 18px;
+  text-decoration: none;
+  padding: 1em;
+  color: black;
+  margin-right: 3em;
+  transition: 0.5s;
+}
+
+.main-header .main-header-nav a:hover {
+  color: #7097a8;
+}
+
+
+  /*google 地圖*/
+
+  .map {
+    margin-bottom: 3em;
+  }
+
+  .map h2 {
+    font-size: 32px;
+    text-align: center;
+    padding-bottom: 1em;
+  }
+
+  .map .container {
+    max-width: 1280px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5em;
+    border-top: 5px solid #7097a8;
+    padding-top: 2em;
+  }
+
+  .map .map-txt {
+    background-color: #7097a8;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     line-height: 1.5;
+    font-size: 20px;
+    width: 30%;
+    padding: 1em;
+
+    box-sizing: border-box;
+  }
+
+  .map .container iframe {
+    margin-top: 2em;
+  }
+
+  .map .map-txt h3 {
+    margin-bottom: 2em;
+    text-align: center;
+  }
+
+  .map .map-txt ul li {
+    margin-bottom: 2em;
+  }
+
+  /*頁尾*/
+
+.footer {
+  max-width: 100%;
 }
 
-.tour-card-list .tour-card:hover {
+.footer .container {
+  width: 100%;
+  background-color: #2a5cb4;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer h4 {
+  font-size: 16px;
+  font-weight: 400;
+}
+.footer .container .footer-logo img {
+  width: 100%;
+  margin: 1em 0 1em 0;
+}
+
+.footer .container .footer-txt {
+  display: flex;
+  gap: 3em;
+}
+
+.footer .container .footer-address {
+  text-align: center;
+}
+
+.footer .container .footer-address h4 {
+  margin-bottom: 0.5em;
+  color: #fff;
+}
+
+.footer .container .footer-social img {
+  width: 40px;
+  margin: 0.5em;
+}
+
+.footer .container .footer-txt a {
+  color: #fff;
+}
+
+.footer .copyright {
+  background-color: #2a5cb4;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  padding-bottom: 1em;
+}
+
+
+/*加入line好友*/
+
+.add-friend {
+  width: 150px;
+  height: 200px;
+  border: 1px solid #666;
+  text-align: center;
+  position: fixed;
+  bottom: 10em;
+  right: 2em;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  font-size: 16px;
+  padding: 0 1em;
+  box-sizing: border-box;
+}
+
+.add-friend img {
+  width: 50px;
+  margin-top: 1em;
+}
+
+  /*周邊景點*/
+
+  .tour-breadcrumb {
+    display: block;
+    width: 100%;
+    padding: 6em 0 1em 0;
+    margin-bottom: 3em;
+  }
+
+  .tour .container {
+    max-width: 1280px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tour .container .tour-pic {
+    margin: 22em 0;
+  }
+
+  .tour .tour-card-list {
+    display: flex;
+    gap: 2em;
+    margin-bottom: 3em;
+    position: relative;
+  }
+
+  .tour .tour-card-list .tour-card {
+    width: 304px;
+    background-color: #b7e3ec;
+    flex-grow: 1;
+    border-radius: 10px;
+    position: absolute;
+    transform: translateY(0px);
+    transition: 0.5s;
+  }
+
+  .tour .tour-card-list .tour-card img {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .tour-card-list .tour-card .tour-card-txt {
+    flex-grow: 1;
+    padding: 1em 2em 1em 2em;
+  }
+
+  .tour-card-list .tour-card .tour-card-txt h4 {
+    font-size: 20px;
+    margin-bottom: 0.5em;
+  }
+
+  .tour-card-list .tour-card .tour-card-txt p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .tour-card-list .tour-card:hover {
     transform: translateY(-30px);
-}
+  }
 
-.tour-card-list .tour-card-three {
+  .tour-card-list .tour-card-three {
     top: -1300px;
     left: -200px;
-}
+  }
 
-.tour .tour-card-list .tour-card-deer {
+  .tour .tour-card-list .tour-card-deer {
     top: -1100px;
     left: -600px;
-}
+  }
 
-.tour-card-list .tour-card-gold {
+  .tour-card-list .tour-card-gold {
     top: -500px;
     left: -600px;
-}
+  }
 
-.tour-card-list .tour-card-star {
+  .tour-card-list .tour-card-star {
     top: -1300px;
-    left: 250px;
-}
+    left: 180px;
+  }
 
-.tour-card-list .tour-card-park {
+  .tour-card-list .tour-card-park {
     top: -850px;
-    left: 300px;
-}
+    left: 200px;
+  }
 
-.tour-card-list .tour-card-hotspring {
+  .tour-card-list .tour-card-hotspring {
     top: -400px;
     left: 0px;
+  }
 }
-
-
-
-
-
-
