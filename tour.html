@@ -12,11 +12,11 @@
     href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&family=Noto+Serif+TC:wght@200;400;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="grid.css">
 </head>
 
 <body>
-
-  <input type="checkbox" name="menu" id="menu_control">
+  <input type="checkbox" name="menu" id="menu-switch">
   <header class="main-header">
     <div class="container">
 
@@ -26,9 +26,11 @@
         </div>
       </a>
 
-      <label for="menu_control" class="menu-btn">
-        <span>選單</span>
-      </label>
+      <label class="hb" for="menu-switch">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
 
       <nav class="main-header-nav">
         <a href="news.html">最新消息</a>
@@ -51,59 +53,77 @@
 
   <section class="tour">
     <div class="container">
+      <h3>周邊景點</h3>
       <div class="tour-pic">
         <img src="tour/taitung.png" alt="beautiful-country-Taitung">
       </div>
-      <div class="tour-card-list">
-        <div class="tour-card tour-card-gold">
-          <div class="tour-card-pic"><img src="tour/BrownAvenue.jpg" alt="Brown Avenue"></div>
-          <div class="tour-card-txt">
-            <h4>伯朗大道</h4>
-            <p>位於台灣台東縣太麻里鄉，是一條全長約4公里的美麗林蔭大道，因其景色迷人、綠樹成蔭、景色如畫，成為台東縣的著名景點之一。</p>
+      <div class="row  row-cols-md-2  row-cols-lg-3  ">
+        <div class="col">
+          <div class="tour-card tour-card-gold">
+            <div class="tour-card-pic"><img src="tour/BrownAvenue.jpg" alt="Brown Avenue"></div>
+            <div class="tour-card-txt">
+              <h4>伯朗大道</h4>
+              <p>位於台灣台東縣太麻里鄉，是一條全長約4公里的美麗林蔭大道，因其景色迷人、綠樹成蔭、景色如畫，成為台東縣的著名景點之一。</p>
+            </div>
           </div>
+          
         </div>
+     
+<div class="col">
         <div class="tour-card tour-card-hotspring">
           <div class="tour-card-pic"><img src="tour/ZhibenHotSpring.jpg" alt="
-                        Zhiben Hot Spring"></div>
-          <div class="tour-card-txt">
-            <h4>知本溫泉</h4>
-            <p>以泡湯聞名全臺的知本溫泉，知本溫泉屬於弱鹼性碳酸氫鈉泉，清澈無色，富含礦物質。</p>
+            Zhiben Hot Spring"></div>
+            <div class="tour-card-txt">
+              <h4>知本溫泉</h4>
+              <p>以泡湯聞名全臺的知本溫泉，知本溫泉屬於弱鹼性碳酸氫鈉泉，清澈無色，富含礦物質。</p>
+            </div>
           </div>
         </div>
-        <div class="tour-card tour-card-park">
-          <div class="tour-card-pic"><img src="tour/TomiokaGeopark.jpg" alt="
-                        Tomioka Geopark"></div>
-          <div class="tour-card-txt">
-            <h4>富岡地質公園</h4>
-            <p>位於台灣台東縣成功鎮和長濱鄉交界處，是一個集地質、生態、人文等多元元素的自然公園。</p>
+       <div class="col">     
+          <div class="tour-card tour-card-park">
+            
+            <div class="tour-card-pic"><img src="tour/TomiokaGeopark.jpg" alt="
+              Tomioka Geopark"></div>
+              <div class="tour-card-txt">
+                <h4>富岡地質公園</h4>
+                <p>位於台灣台東縣成功鎮和長濱鄉交界處，是一個集地質、生態、人文等多元元素的自然公園。</p>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="tour-card tour-card-star">
-          <div class="tour-card-pic"><img src="tour/startribe.jpg" alt="star tribe"></div>
-          <div class="tour-card-txt">
-            <h4>星星部落</h4>
-            <p>位於台東富源村，是一個人氣景點
-              ，可將整個台東市的夜色一覽無遺。</p>
-          </div>
-        </div>
-        <div class="tour-card tour-card-three">
-          <div class="tour-card-pic"><img src="tour/Sanxiantai.jpg" alt="Sanxiantai"></div>
-          <div class="tour-card-txt">
-            <h4>三仙台</h4>
-            <p>三仙台由三座石灰岩峰狀的岩石組成，分別為松山、竹山和梅山。
-            </p>
-          </div>
-        </div>
-        <div class="tour-card tour-card-deer">
-          <div class="tour-card-pic"><img src="tour/Chulu-Ranch.jpg" alt="
-                        Chulu-Ranch"></div>
-          <div class="tour-card-txt">
-            <h4>初鹿牧場</h4>
-            <p>位於台灣台東縣鹿野鄉，是一個以草原生態和牧羊養殖為主題的休閒農場。</p>
-          </div>
-        </div>
+<div class="col">
+            <div class="tour-card tour-card-star">
+              <div class="tour-card-pic"><img src="tour/startribe.jpg" alt="star tribe"></div>
+              <div class="tour-card-txt">
+                <h4>星星部落</h4>
+                <p>位於台東富源村，是一個人氣景點
+                  ，可將整個台東市的夜色一覽無遺。</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="tour-card tour-card-three">
+                <div class="tour-card-pic"><img src="tour/Sanxiantai.jpg" alt="Sanxiantai"></div>
+                <div class="tour-card-txt">
+                  <h4>三仙台</h4>
+                  <p>三仙台由三座石灰岩峰狀的岩石組成，分別為松山、竹山和梅山。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">  
+              <div class="tour-card tour-card-deer">
+                <div class="tour-card-pic"><img src="tour/Chulu-Ranch.jpg" alt="
+                  Chulu-Ranch"></div>
+                  <div class="tour-card-txt">
+                    <h4>初鹿牧場</h4>
+                    <p>位於台灣台東縣鹿野鄉，是一個以草原生態和牧羊養殖為主題的休閒農場。</p>
+                  </div>
+                </div>        
+        
+                </div>
       </div>
-    </div>
+    
+  </div>
   </section>
 
   <section class="map">
@@ -146,6 +166,11 @@
 
   <section class="footer">
     <div class="container">
+      <div class="row">
+
+        
+        
+        
       <div class="footer-logo">
         <a href="index.html"><img src="logo.png" alt="seesea-logo" />
         </a>
@@ -168,7 +193,10 @@
         <a href="#"><img src="index/footer/fb.svg" /></a>
         <a href="#"><img src="index/footer/line white.svg" /></a>
       </div>
+    
     </div>
+  
+  </div>
     <div class="copyright">本網站為緯育TibaMe前端設計工程師班第85期學員專題作品，本平台僅供學習、展示之用。</div>
   </section>
 
