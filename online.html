@@ -12,9 +12,11 @@
     href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&family=Noto+Serif+TC:wght@200;400;700&display=swap"
     rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="grid.css">
    </head>
 
 <body>
+  <input type="checkbox" name="menu" id="menu-switch">
   <header class="main-header">
     <div class="container">
 
@@ -22,8 +24,14 @@
         <div class="main-logo">
           <img src="logo.png" alt="seesea-logo" />
         </div>
-
       </a>
+
+      <label class="hb" for="menu-switch">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
       <nav class="main-header-nav">
         <a href="news.html">最新消息</a>
         <a href="q&a.html">常見問題</a>
@@ -44,7 +52,7 @@
 
   <section class="online">
     <div class="container">
-
+<div class="row  row-cols-1 row-cols-md-2  row-cols-lg-3 row-cols-xl-4">
       <div class="online-info">
         <div class="online-info-in">
           <label for="">入住日期
@@ -68,7 +76,7 @@
           <img src="online/minus-solid 1.svg" alt="minus">
         </div>
       </div>
-      <div class="online-card-list">
+      <div class="col">
         <div class="online-card">
           <h4><a href="#">海洋雙人房</a>
           </h4>
@@ -77,6 +85,8 @@
           <span><a href="#">NT 2,000</a> </span>
           <button><a href="#">預約</a></button>
         </div>
+      </div>
+      <div class="col">
         <div class="online-card">
           <h4><a href="#">簡約雙人房</a></h4>
           <div class="online-card-pic"><a href="#"><img src="online/2.jpg"></a>
@@ -84,6 +94,8 @@
           <span><a href="#">NT 2,000</a></span>
           <button><a href="#">預約</a></button>
         </div>
+      </div>
+      <div class="col">
         <div class="online-card">
           <h4><a href="#">溫馨四人房</a></h4>
           <div class="online-card-pic"><a href="#"><img src="online/3.jpg"></a>
@@ -110,7 +122,8 @@
 
       <div class="online-add-list">
         <h3>加購行程</h3>
-        <div class="add-card-list">
+        <div class="row row-cols-1 row-cols-md-2  row-cols-lg-3 ">
+        <div class="col ">
           <div class="add-card">
             <div class="add-card-pic">
               <a href="#"><img src="room/Mask group.jpg" alt="seesea-activity" /></a>
@@ -129,6 +142,8 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="col">
           <div class="add-card">
             <div class="add-card-pic">
               <a href="#"><img src="room/Mask group (1).jpg" alt="seesea-activity" /></a>
@@ -149,6 +164,9 @@
               </div>
             </div>
           </div>
+        </div>
+        
+        <div class="col">
           <div class="add-card">
             <div class="add-card-pic">
               <a href="#"><img src="room/Mask group (2).jpg" alt="seesea-activity" /></a>
@@ -172,20 +190,22 @@
             </div>
           </div>
         </div>
+        </div>
         <span class="add-more"><a href="#">更多行程></a></span>
       </div>
 
-
+    </div>
     </div>
   </section>
 
   <section class="map">
-
     <div class="container">
+      <div class="google-map">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.235355691627!2d121.12052367442446!3d22.793741424830618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fba2d125d3459%3A0x6ae15f1fb75cb961!2z5Y-w5p2x6LuK56uZ!5e0!3m2!1szh-TW!2stw!4v1684118062897!5m2!1szh-TW!2stw"
         width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
       <div class="map-txt">
         <h3>交通指南</h3>
 
@@ -204,8 +224,24 @@
     </div>
   </section>
 
+  <div class="add-friend">
+    <a href="#">
+      <p>
+        歡迎加入官方LINE群組<br />
+        掌握第一手的消息
+      </p>
+    </a>
+    <a href="#"><img src="index/footer/line 1 (2).svg" /></a>
+  </div>
+
+
   <section class="footer">
     <div class="container">
+      <div class="row">
+
+        
+        
+        
       <div class="footer-logo">
         <a href="index.html"><img src="logo.png" alt="seesea-logo" />
         </a>
@@ -228,20 +264,14 @@
         <a href="#"><img src="index/footer/fb.svg" /></a>
         <a href="#"><img src="index/footer/line white.svg" /></a>
       </div>
+    
     </div>
+  
+  </div>
     <div class="copyright">本網站為緯育TibaMe前端設計工程師班第85期學員專題作品，本平台僅供學習、展示之用。</div>
   </section>
 
-  <div class="add-friend">
-    <a href="#">
-      <p>
-        歡迎加入官方LINE群組<br />
-        掌握第一手的消息
-      </p>
-    </a>
-    <a href="#"><img src="index/footer/line 1 (2).svg" /></a>
-  </div>
-
+ 
   <script defer src="script.js"></script>
 </body>
 

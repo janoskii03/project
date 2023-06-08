@@ -11,9 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&family=Noto+Serif+TC:wght@200;400;700&display=swap"
       rel="stylesheet">
       <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="grid.css">
          </head>
 
   <body>
+    <input type="checkbox" name="menu" id="menu-switch">
     <header class="main-header">
       <div class="container">
   
@@ -21,8 +23,14 @@
           <div class="main-logo">
             <img src="logo.png" alt="seesea-logo" />
           </div>
-          
         </a>
+  
+        <label class="hb" for="menu-switch">
+          <span></span>
+          <span></span>
+          <span></span>
+      </label>
+  
         <nav class="main-header-nav">
           <a href="news.html">最新消息</a>
           <a href="q&a.html">常見問題</a>
@@ -43,8 +51,11 @@
 
     <section class="question">
       <div class="container">
+        <div class="row">
+<h3 class="question-title">常見問題</h3>
+        
         <div class="question-list">
-          <h3>住宿</h3>
+          <h3 >住宿</h3>
           <div class="question-list-faq">
             <div class="list-faq-question">
               <img src="Q&A/Vector.svg" alt="plus" />
@@ -140,73 +151,80 @@
           </div>
         </div>
       </div>
+    </div>
     </section>
 
     <section class="map">
-        
       <div class="container">
-          <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.235355691627!2d121.12052367442446!3d22.793741424830618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fba2d125d3459%3A0x6ae15f1fb75cb961!2z5Y-w5p2x6LuK56uZ!5e0!3m2!1szh-TW!2stw!4v1684118062897!5m2!1szh-TW!2stw"
-        width="600"
-        height="450"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
-          <div class="map-txt">
-              <h3>交通指南</h3>
-
-              <ul>
-                  <li>
-                      搭到台東車站，步行三分鐘，約200公尺，即可抵達。
-                  </li>
-
-                  <li>自行開車<br>北部:國三、國五接台九線，即可抵達。</li>
-                  <li>南部:國三接台九線，即可抵達。</li>
-
-                  <li>搭火車<br>位於台東車站附近，搭車、自行開車可抵達。
-                  </li>
-              </ul>
-          </div>
-      </div>
-  </section>
-
-  <section class="footer">
-      <div class="container">
-        <div class="footer-logo">
-          <a href="index.html"><img src="logo.png" alt="seesea-logo" />
-          </a>
+        <div class="google-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.235355691627!2d121.12052367442446!3d22.793741424830618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fba2d125d3459%3A0x6ae15f1fb75cb961!2z5Y-w5p2x6LuK56uZ!5e0!3m2!1szh-TW!2stw!4v1684118062897!5m2!1szh-TW!2stw"
+          width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <div class="footer-txt">
-          <h4><a href="news.html">最新消息</a></h4>
-         <h4><a href="q&a.html">常見問題</a></h4>
-          <h4><a href="aboutus.html">關於我們</a></h4>
-          <h4><a href="tour.html">周邊景點</a></h4>
-          <h4><a href="room.html">房型介紹</a></h4>
-          <h4><a href="online.html">線上訂房</a></h4>
-        </div>
-        <div class="footer-address">
-          <h4>電話:03-1234567</h4>
-          <h4>地址:台東縣台東市岩灣路101巷999號</h4>
-        </div>
-        <div class="footer-social">
-          <a href="#"><img src="index/footer/tweet.svg" /></a>
-          <a href="#"><img src="index/footer/ins.svg" /></a>
-          <a href="#"><img src="index/footer/fb.svg" /></a>
-          <a href="#"><img src="index/footer/line white.svg" /></a>
+        <div class="map-txt">
+          <h3>交通指南</h3>
+  
+          <ul>
+            <li>
+              搭到台東車站，步行三分鐘，約200公尺，即可抵達。
+            </li>
+  
+            <li>自行開車<br>北部:國三、國五接台九線，即可抵達。</li>
+            <li>南部:國三接台九線，即可抵達。</li>
+  
+            <li>搭火車<br>位於台東車站附近，搭車、自行開車可抵達。
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="copyright">本網站為緯育TibaMe前端設計工程師班第85期學員專題作品，本平台僅供學習、展示之用。</div>
     </section>
 
-    <div class="add-friend">
-      <a href="#"><p>
-        歡迎加入官方LINE群組<br />
-        掌握第一手的消息
-      </p></a>
-      <a href="#"><img src="index/footer/line 1 (2).svg" /></a>
+  <div class="add-friend">
+    <a href="#"><p>
+      歡迎加入官方LINE群組<br />
+      掌握第一手的消息
+    </p></a>
+    <a href="#"><img src="index/footer/line 1 (2).svg" /></a>
+  </div>
+
+  <section class="footer">
+    <div class="container">
+      <div class="row">
+
+        
+        
+        
+      <div class="footer-logo">
+        <a href="index.html"><img src="logo.png" alt="seesea-logo" />
+        </a>
+      </div>
+      <div class="footer-txt">
+        <h4><a href="news.html">最新消息</a></h4>
+        <h4><a href="q&a.html">常見問題</a></h4>
+        <h4><a href="aboutus.html">關於我們</a></h4>
+        <h4><a href="tour.html">周邊景點</a></h4>
+        <h4><a href="room.html">房型介紹</a></h4>
+        <h4><a href="online.html">線上訂房</a></h4>
+      </div>
+      <div class="footer-address">
+        <h4>電話:03-1234567</h4>
+        <h4>地址:台東縣台東市岩灣路101巷999號</h4>
+      </div>
+      <div class="footer-social">
+        <a href="#"><img src="index/footer/tweet.svg" /></a>
+        <a href="#"><img src="index/footer/ins.svg" /></a>
+        <a href="#"><img src="index/footer/fb.svg" /></a>
+        <a href="#"><img src="index/footer/line white.svg" /></a>
+      </div>
+    
     </div>
+  
+  </div>
+    <div class="copyright">本網站為緯育TibaMe前端設計工程師班第85期學員專題作品，本平台僅供學習、展示之用。</div>
+  </section>
+
+  
 
     
     <script defer src="script.js"></script>
