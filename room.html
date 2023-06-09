@@ -15,18 +15,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
  <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="grid.css">
    </head>
 
 <body>
+  <input type="checkbox" name="menu" id="menu-switch">
   <header class="main-header">
     <div class="container">
 
       <a href="index.html">
         <div class="main-logo">
-          <img src="logo.png" alt="seesea-logo"/>
+          <img src="logo.png" alt="seesea-logo" />
         </div>
-        
       </a>
+
+      <label class="hb" for="menu-switch">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
       <nav class="main-header-nav">
         <a href="news.html">最新消息</a>
         <a href="q&a.html">常見問題</a>
@@ -104,9 +112,11 @@
       </div>
 
       <div class="room-add-list">
-        <h3>加購行程</h3>
-        <div class="add-card-list">
-          <div class="add-card">
+               
+                <h3>加購行程</h3>
+          <div class="row row-cols-1 row-cols-md-2  row-cols-lg-3 " >
+         <div class="col">
+            <div class="add-card">
             <div class="add-card-pic">
               <a href="#"><img src="room/Mask group.jpg" alt="seesea-activity" /></a>
             </div>
@@ -124,6 +134,8 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="col">
           <div class="add-card">
             <div class="add-card-pic">
               <a href="#"><img src="room/Mask group (1).jpg" alt="seesea-activity" /></a>
@@ -144,7 +156,9 @@
               </div>
             </div>
           </div>
-          <div class="add-card">
+        </div>
+        <div class="col">
+                  <div class="add-card">
             <div class="add-card-pic">
               <a href="#"><img src="room/Mask group (2).jpg" alt="seesea-activity" /></a>
             </div>
@@ -166,6 +180,8 @@
               </div>
             </div>
           </div>
+        
+      </div>
         </div>
         <span class="add-more"><a href="#">更多行程></a></span>
       </div>
@@ -269,12 +285,13 @@
   </section>
 
   <section class="map">
-
     <div class="container">
+      <div class="google-map">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.235355691627!2d121.12052367442446!3d22.793741424830618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fba2d125d3459%3A0x6ae15f1fb75cb961!2z5Y-w5p2x6LuK56uZ!5e0!3m2!1szh-TW!2stw!4v1684118062897!5m2!1szh-TW!2stw"
         width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
       <div class="map-txt">
         <h3>交通指南</h3>
 
@@ -293,8 +310,20 @@
     </div>
   </section>
 
+
+  <div class="add-friend">
+    <a href="#">
+      <p>
+        歡迎加入官方LINE群組<br />
+        掌握第一手的消息
+      </p>
+    </a>
+    <a href="#"><img src="index/footer/line 1 (2).svg" /></a>
+  </div>
+
   <section class="footer">
     <div class="container">
+      <div class="row">    
       <div class="footer-logo">
         <a href="index.html"><img src="logo.png" alt="seesea-logo" />
         </a>
@@ -317,19 +346,13 @@
         <a href="#"><img src="index/footer/fb.svg" /></a>
         <a href="#"><img src="index/footer/line white.svg" /></a>
       </div>
+    
     </div>
+  
+  </div>
     <div class="copyright">本網站為緯育TibaMe前端設計工程師班第85期學員專題作品，本平台僅供學習、展示之用。</div>
   </section>
 
-  <div class="add-friend">
-    <a href="#">
-      <p>
-        歡迎加入官方LINE群組<br />
-        掌握第一手的消息
-      </p>
-    </a>
-    <a href="#"><img src="index/footer/line 1 (2).svg" /></a>
-  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
     integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
@@ -347,11 +370,11 @@
           items: 1,
           nav: true,
         },
-        600: {
+        768: {
           items: 2,
           nav: false,
         },
-        1000: {
+        1200: {
           items: 3,
           nav: true,
           loop: false,
