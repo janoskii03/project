@@ -51,11 +51,7 @@ z-index: 999;
 .hb {
   width: 40px;
   height: 40px;
-<<<<<<< HEAD
-  background-color: rgb(189, 189, 189);
-=======
   background-color: rgb(255, 255, 255);
->>>>>>> f18bfd6f577f10e4ad85a6aa0e262290d4072417
  position: relative;
  
 }
@@ -110,8 +106,6 @@ z-index: 999;
 .main-header .main-header-nav {
  display: none;
   width: 96%;
-<<<<<<< HEAD
-=======
  background-color: #b7e3ec;
     position: absolute;
   top: 115%;
@@ -132,6 +126,32 @@ z-index: 999;
   
 }
 
+/*首頁彈出*/
+
+#topMessage{
+  max-width: 100%;
+  background-color: rgba(42, 92, 180,.9);
+  color: #fff;
+  font: 1.3rem;
+  padding: 25px;
+  text-align: center;
+position: relative;
+top: 0;
+z-index: 9999;
+  display: none;
+}
+
+#topMessage a{
+  color: #fff;
+  text-decoration:underline;
+}
+
+#topMessage:hover a{
+ 
+  color: #b7e3ec;
+  cursor: pointer;
+}
+
 
 /*首頁*/
 
@@ -143,19 +163,14 @@ z-index: 999;
 }
 
 .banner h4 {
+  max-width: 960px;
+  width: 100%;
   color: rgb(255, 255, 255);
   font-size: 2.5rem;
   font-weight: 700;
-  position: absolute;
-  z-index: 2;
-  top: 50%;
-  
-  right: 0;
-  bottom: 0;
   margin: auto;
   display: none;
-  left: 50%;
-  transform: translate(-50%-50%);
+  
 }
 
 /*首頁訂房*/
@@ -170,8 +185,9 @@ z-index: 999;
   font-size: 1.3rem;
   gap: 1rem;
   background-color: rgb(255, 255, 255);
-  box-shadow: 1px 1px 1px #cecdcd;
+  box-shadow: 7px 14px 20px #cecdcd;
   margin-bottom: 3rem;
+  border-radius: 10px;
 }
 
 .home-booking .home-booking-info .booking-info-in input,
@@ -1720,7 +1736,6 @@ z-index: 999;
 .main-header .main-header-nav {
  display: none;
   width: 96%;
->>>>>>> f18bfd6f577f10e4ad85a6aa0e262290d4072417
  background-color: #cfcfcf;
     position: absolute;
   top: 100%;
@@ -1741,1611 +1756,6 @@ z-index: 999;
   
 }
 
-<<<<<<< HEAD
-
-/*首頁*/
-
-/*banner*/
-
-.banner {
-  margin-bottom: 3rem;
-  position: relative;
-}
-
-.banner h4 {
-  color: rgb(255, 255, 255);
-  font-size: 2.5rem;
-  font-weight: 700;
-  position: absolute;
-  z-index: 2;
-  top: 25%;
-  left: 27%;
-  letter-spacing: 1rem;
-  display: none;
-}
-
-/*首頁訂房*/
-
-.home-booking .home-booking-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 1.3rem;
-  gap: 1rem;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 1px 1px 1px #cecdcd;
-  margin-bottom: 3rem;
-}
-
-.home-booking .home-booking-info .booking-info-in input,
-.home-booking .home-booking-info .booking-info-quit input {
-  margin-left: 1rem;
-}
-
-.home-booking .home-booking-info .booking-info-man input,
-.home-booking .home-booking-info .booking-info-child input {
-  width: 3rem;
-}
-
-.home-booking .home-booking-info .booking-btn {
-  padding: 0.5em 2em 0.7em 2em;
-  background-color: #7097a8;
-  border: 1px solid transparent;
-  margin-bottom: 1.5rem;
-}
-
-.home-booking .home-booking-info .booking-btn a {
-  color: #fff;
-  font-size: 1.2rem;
-}
-
-
-/*首頁天氣*/
-
-.home .home-weather {
-  max-width: 60rem;
-  width: 100%;
-  
-  margin: 0 auto 2rem;
-  background-color: #b8e1f3;
-}
-
-.home .container .home-weather  .home-weather-title{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.home .container .home-weather  .home-weather-title span{
-  font-size: 1.1rem;
-  margin-left: 1rem;
-}
-
-
-.home .container .home-weather-list{
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-  
-}
-
-.home .container  .home-weather-rain,.home .container .home-weather-sunrise,.home .container .home-weather-air, .home .container .home-weather-sun{
-  display: flex;
-  flex-direction: column;
-  
-}
-
-.home .container  .home-weather-rain h4,.home .container .home-weather-sunrise h4,.home .container .home-weather-air h4,.home .container .home-weather-sun h4 {
-  margin-bottom: 1rem;
-}
-
-
-
-
-
-/*首頁最新消息*/
-
-.home-news .home-news-container {
-  max-width: 1280px;
-  width: 100%;
-  margin: auto;
-  margin-bottom: 5rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.home-news .home-news-container > h3 {
-  margin-bottom: 3rem;
-  text-align: center;
-}
-
-.home-news .news-card-list {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 3em;
-  position: relative;
-}
-
-.home-news .news-card-list .news-card {
-  max-width: 320px;
-  width: 100%;
-  
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #7097a8;
-  transform: translateY(0px);
-  transition: 0.5s;
-}
-
-.news-card-list .news-card .news-card-pic img {
-  width: 100%;
-  vertical-align: middle;
-}
-.news-card-list .news-card .news-txt {
-  box-sizing: border-box;
-  max-width: 19rem;
-  width: 100%;
-  padding: 0.5rem 1rem 1rem 1rem;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-.news-card-list .news-card .news-txt p {
-  font-size: 1.2rem;
-  flex-grow: 1;
-  
-}
-.news-card-list .news-card .news-txt .news-bottom {
-  display: flex;
-  align-items: center;
-  margin: 1.5rem 0;
-}
-
-.news-card-list .news-card .news-txt .news-bottom > span {
-  margin-left: 0.5rem;
-}
-
-.home-news .news-card-list .news-card:hover {
-  transform: translateY(-20px);
-}
-
-.home-news .home-news-container button {
-  align-self: center;
-  padding: 1rem 2rem;
-  background-color: #7097a8;
-  border: 1px solid transparent;
-}
-
-.home-news .home-news-container button a {
-  color: #fff;
-  font-size: 1.2rem;
-}
-
-.home-news .home-news-container button:hover {
-  background-color: rgba(112, 151, 168, 0.5);
-  cursor: pointer;
-}
-
-/*鄰近景點*/
-
-.home-spot {
-  margin-bottom: 3em;
-}
-
-.home-spot .spot-area-list {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 8rem;
-  position: relative;
-}
-
-.home-spot .spot-area-list .home-spot-area {
-  max-width: 25rem;
-  width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.home-spot .spot-area-list .home-spot-area .spot-area-text {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(112, 151, 168, 0.8);
-  padding: 1em;
-  gap: 0.5em;
-  position: relative;
-  top: -3em;
-  z-index: 2;
-}
-
-.home-spot .spot-area-list .home-spot-area .spot-area-text h4 {
-  font-size: 20px;
-}
-
-.home-spot .spot-area-list .home-spot-area p {
-  font-size: 18px;
-}
-
-.spot-area-list .home-spot-area .spot-area-pic img {
-  width: 100%;
-  margin-bottom: 1em;
-  transition: 0.5s;
-  vertical-align: top;
-}
-
-.spot-area-pic {
-  max-width: 355px;
-  /* width: 355px;
-  height: 255px; */
-  overflow: hidden;
-  margin-bottom: 1em;
-}
-
-.home-spot .spot-area-list .home-spot-area:hover img {
-  transform: scale(1.1);
-}
-
-.home-spot .home-spot-youtube {
-  position: relative;
-}
-
-.home-spot .home-spot-youtube iframe {
-  margin: 0 1em 4em 1em;
-}
-
-/*美食佳餚*/
-
-.home-food .container {
-  margin-bottom: 5rem;
-}
-
-.home-food h3 {
-  margin-bottom: 3rem;
-  border-bottom: 5px solid #7097a8;
-}
-
-.home-food .home-food-area {
-  display: flex;
-  flex-direction: column;
-  
-}
-
-
-.home-food .home-food-pic img {
-  width: 100%;
-  margin-bottom: 2rem;
-}
-
-.home-food .home-food-txt {
-  font-size:1.2rem;
-  width: 15rem;
-  font-weight: 400;
-  align-self: center;
-  text-align: center;
-  order: -1;
-  margin-bottom: 3rem;
-}
-
-/*設施介紹*/
-
-.home-facility {
-  background-image: url("index/Group\ 177.jpg");
-  background-size: cover;
-  margin-bottom: 3rem;
-  padding: 2rem 0;
-}
-
-.home-facility .home-facility-container {
-  max-width: 80rem;
-  width: 100%;
-  margin: auto;
-}
-
-.home-facility .home-facility-container .home-facility-list {
-  display: flex;
-  flex-direction: column;
-align-items: center;
-  gap: 3rem;
-}
-
-.home-facility .home-facility-list .facility-card {
-  max-width: 19rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  align-items: center;
-  text-align: center;
-}
-
-.home-facility
-  .container
-  .home-facility-list
-  .facility-card
-  .facility-card-pic {
-  width: 100%;
-  vertical-align: top;
-}
-
-.home-facility
-  .container
-  .home-facility-list
-  .facility-card
-  .facility-card-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.facility-card .facility-card-text h4 {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-.facility-card .facility-card-text p {
-  letter-spacing: 5px;
-  line-height: 1.5;
-}
-
-/*房型介紹*/
-
-
-
-.home-room .room-card-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.home-room .room-card-list h3 {
-  font-size: 18px;
-  text-align: center;
-  padding-bottom: 2em;
-  margin-bottom: 3em;
-  border-bottom: 5px solid #7097a8;
-}
-
-.home-room .room-card-list .room-card {
-  max-width: 60rem;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin: 0 0 6em 0;
-  align-items: center;
-  
-}
-
-.room-card .room-card-pic img {
-  width: 100%;
-  border-radius: 20px;
-margin-bottom: 1rem;
-}
-
-.room-card .room-card-txt {
-  
-  display: flex;
-  flex-direction: column;
-  margin-left: 2rm;
-  gap: 2rem;
-  font-size: 1.2rem;
-}
-
-.room-card .room-card-txt button {
-  width: 10rem;
-  font-size: 1.2rem;
-  padding: 1rem 2rem;
-  background-color: #7097a8;
-  align-self: center;
-  border: 1px solid transparent;
-}
-.room-card .room-card-txt h4 {
-  font-size: 1.3rem;
-}
-.room-card .room-card-txt a {
-  color: #fff;
-}
-
-
-/*google 地圖*/
-
-.map {
-  margin-bottom: 3rem;
-margin: 0 auto;
-}
-
-.map h2 {
-  font-size: 2rem;
-  text-align: center;
-  padding-bottom: 1rem;
-}
-
-.map .container {
-  
-  margin: 1rem auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-top: 5px solid #7097a8;
-  padding-top: 2rem;
-  gap: 2rem;
-  
-}
-
-.map .map-txt {
- 
-  background-color: #7097a8;
-  color: #fff;
-   font-size: 1rem;
-   padding: 1rem;
-  box-sizing: border-box;
-  margin-bottom: 3rem;
-}
-
-.map .google-map{
-  min-width: 50%;
-  aspect-ratio: 600/450;
-  position: relative;
-  margin-bottom: 3rem;
-}
-
-.map .container iframe {
-  width: 100%;
-  height: 100%;
-    margin-top: 2rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.map .map-txt h3 {
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.map .map-txt ul li {
-  margin-bottom: 2rem;
-}
-
-/*聯絡我們*/
-
-.main-about {
-  margin-bottom: 3rem;
-}
-
-.main-about .container {
-  max-width: 600px;
-  background-color: #b8e1f3;
-}
-
-.main-about .container h3 {
-  font-size: 1.3rem;
-  margin: 2rem 0;
-}
-
-.main-about label {
-  font-size: 1.2rem;
-}
-
-.main-about .container form {
-  max-width: 25rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: auto;
-}
-.main-about .container .about-group {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
-}
-
-.main-about .container .about-group label {
-  margin-right: 0.5rem;
-}
-
-.main-about .container .about-type {
-  display: flex;
-  margin-bottom: 2rem;
-}
-
-.main-about .container .about-type label {
-  margin-left: 0.5rem;
-}
-
-.main-about .container .about-type input {
-  margin-right: 1rem;
-}
-
-.main-about .container textarea {
-  max-width: 18rem;
-  height: 7rem;
-}
-
-.main-about .container button {
-  background-color: #7097a8;
-  border: 1px solid transparent;
-  padding: 0.5rem 1rem;
-  margin-bottom: 1rem;
-  align-self: center;
-}
-
-.main-about .container a {
-  font-size: 1rem;
-  color: #fff;
-}
-
-.main-about .container button:hover {
-  background-color: rgba(112, 151, 168, 0.5);
-  cursor: pointer;
-}
-
-.main-about .container .illustrate {
-  display: flex;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-/*頁尾*/
-
-
-.footer {
- width: 100%;
- background-color: #2a5cb4;
-}
-
-
-.footer .row{
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: center;
-}
-
-.footer h4 {
-  font-size: 1rem;
-  font-weight: 400;
-}
-.footer .container .footer-logo img {
-  margin: 1rem 0 1rem 0;
-}
-
-.footer .container .footer-txt {
-  padding-top: 1rem;
-  margin-bottom: .5rem;
-}
-
-.footer .container .footer-txt h4 {
-  
-  margin-bottom: .5rem;
-}
-
-.footer .container .footer-address {
-  text-align: center;
-}
-
-.footer .container .footer-address h4 {
-  margin-bottom: 0.5rem;
-  color: #fff;
-}
-
-.footer .container .footer-social img {
-  width: 40px;
-  margin: 0.5rem;
-}
-
-.footer .container .footer-txt a {
-  color: #fff;
-}
-
-.footer .copyright {
-  max-width: 100%;
-  background-color: #2a5cb4;
-  color: #fff;
-  font-size: 0.9rem;
-  padding-bottom: 1rem;
-}
-
-/*加入line好友*/
-
-.add-friend {
-  width: 150px;
-  height: 200px;
-  border: 1px solid #666;
-  text-align: center;
-    bottom: 10em;
-      background-color: #fff;
-  font-size: 16px;
-  padding: 0 1em;
-  box-sizing: border-box;
-  margin:2em auto 2em;
-}
-
-.add-friend img {
-  width: 50px;
-  margin-top: 1em;
-}
-
-/*關於我們*/
-
-/*麵包屑*/
-
-.breadcrumb {
-  width: 100%;
-  padding: 1.5rem 0 1rem 0;
- margin: 6rem 0 2rem 0;
-  display: none;
-}
-
-.breadcrumb-list {
-  width: 90%;
-  margin-left: 2rem;
-  display: flex;
-  font-size: 0.9rem;
-}
-
-.breadcrumb-list li + li:before {
-  content: ">";
-  color: #000;
-  margin-right: 1.3rem;
-}
-
-.breadcrumb-list li {
-  font-size: 1rem;
-  padding: 0 1.3rem;
-}
-
-/*關於我們*/
-
-.about img {
-  width: 100%;
-  border-radius: 20px;
-}
-
-.about .container .row{
-  margin: auto;
-justify-content: center;
-align-items: center;
-gap: 1rem;
-}
-
-.about .container .row h3{
-  font-size: 2rem;
-  margin: 7rem 0 2rem;
-}
-
-.about .about-home{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.about .about-home img {
-  width: 100%;
-}
-
-.about-home .home-txt {
-  width: 100%;
-  max-width: 25rem;
-    line-height: 1.5;
-  letter-spacing: 0.5px;
-  margin-bottom:2rem;
-}
-
-.about-home .home-txt p {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-.about-home .down-right {
-  width: 100%;
-  max-width: 25rem;
-  letter-spacing: 0.5px;
-  margin-bottom: 2rem;
-}
-
-.about-home .down-right p {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-.about-home .down-right p:nth-child(1) {
-  text-align: center;
-}
-
-
-.about-home .up-right,.about-home .down-left,.about-home .down-left-next,.about-home .left-after,.about-home .left-after-next{
-margin-bottom: 2rem;
-}
-
-.about .container .about-room-inside img {
-  width: 100%;
-  vertical-align: top;
-  
-}
-
-.about .about-card {
-  margin-bottom: 3rem;
-}
-
-.about .about-card .about-card-txt {
-  max-width: 25rem;
-  width: 100%;
-  box-sizing: border-box;
-  background-color: #b7e3ec;
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  padding: 1rem;
-}
-
-.about .about-card .about-card-pic img{
-  width: 100%;
-  vertical-align: top;
-}
-
-.about-room-inside .inside1,.about-room-inside .inside2,.about-room-inside .inside3,.about-room-inside .inside4,.about-room-inside .inside5{
-  margin-bottom: 2rem;
-}
-
-.about .background-pic img {
-  width: 100%;
-  vertical-align: top;
-}
-
-.about .background-pic{
-  margin-bottom: 2rem;
-}
-
-/*最新消息*/
-
-.news-breadcrumb {
-  width: 100%;
-  margin-top: 5rem;
-  padding: 2rem 0;
-  display: none;
-}
-
-.news {
-  margin: 1.5rem auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-}
-.news .container .row{
-  justify-content: center;
-}
-
-.news .container .row h3{
-  font-size: 2rem;
-  margin: 6rem auto 2rem;
-}
-
-.news .news-btns {
-  width: 100%;
-  text-align: center;
-}
-
-.news .news-btns button {
-  padding: .5rem 1rem ;
-  margin: .3rem;
-  background-color: #7097a8;
-  border: 1px solid transparent;
-}
-
-
-.news .news-btns a {
-  color: #fff;
-  font-size: 1.3rem;
-}
-
-.news-btns .btn-hidden {
-  display: none;
-}
-
-.news .news-card-list .news-card {
-  width: 100%;
-  max-width: 75rem;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
- gap: 1rem;
-  align-items: center;
-  padding: 2rem;
-  border-bottom: 5px solid #7097a8;
-}
-
-.news .news-card-list .news-card .news-card-date {
-  font-size: 1.2rem;
-}
-
-.news .news-card-list .news-card .news-card-pic img {
-  width: 100%;
-  vertical-align: top;
-}
-
-.news .news-card-list .news-card:nth-child(3) {
-  border-bottom: none;
-}
-
-.news-card .news-card-txt {
-  max-width: 31rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5em;
-  line-height: 1.5;
-  font-size: 18px;
-  padding: 1rem;
-}
-
-/*線上訂房*/
-.online{
-  margin-top: 4rem;
-}
-
-.online-breadcrumb {
-  width: 100%;
-  padding: 7rem 0 0 0;
-  display: none;
-}
-
-.online .container .col{
-  margin: auto;
-}
-
-.online .container .online-info {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 2rem;
-  background-color: #d3eff8;
-  padding: 2rem;
-  font-size: 1.3rem;
-}
-
-.online .online-info .online-info-in ,
-.online .online-info .online-info-quit  {
-
-  margin: 1rem;
-}
-
-.online .online-info .online-info-man,
-.online .online-info .online-info-child {
-  margin: 1rem;
-}
-
-.online .online-info .online-info-man img,.online .online-info .online-info-child img {
-  width: 0.9rem;
-  height: 0.9rem;
-}
-
-.online .container .online-info input {
-  width: 7rem;
-  padding: 0.3rem 0;
-}
-
-.online .online-info .online-info-man input,.online .online-info .online-info-child input {
-  width: 2.5rem;
-}
-
-
-.online .col .online-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 2rem;
-  gap: 1.5rem;
-  position: relative;
-  transform: translateY(0px);
-  
-}
-
-.online .col .online-card img {
-  width: 100%;
-  vertical-align: top;
-  transition: 1s;
-}
-
-.col .online-card h4 {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-}
-
-.col .online-card span {
-  font-size:1.3rem;
-}
-
-.col .online-card button {
-  padding: 1rem 2rem;
-  background-color: #7097a8;
-  border: 1px solid transparent;
-}
-
-.col .online-card button a {
-  font-size: 1.3rem;
-  color: #fff;
-}
-
-.online .online-know {
-        margin: 2rem auto 2rem;
-  padding: 2rem 0 3rem 0;
-  background-color: #d3eff8;
-}
-
-.online .online-know h3 {
-  font-size: 1.5rem;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.online .online-know li {
-  font-size: 1.2rem;
-  line-height: 1.5;
-  list-style: decimal;
-  margin-bottom: 1rem;
-  padding: 1rem;
-}
-
-
-
-/*加購行程*/
-
-.online-add-list  {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: auto;
-  gap: 0.5rem;
-  margin-bottom: 2rem;
-}
-
-.online-add-list h3 {
-  font-size: 1.5rem;
-  margin-bottom: 3rem;
-}
-
-.online-add-list .add-more {
-  font-size: 1.2rem;
-  
-}
-
-.online-add-list .add-more:hover a {
-  color: #7097a8;
-}
-
-.online-add-list .row{
-  margin:0 auto;
-}
-
-.online-add-list .row .col{
-  display: flex;
-  margin: 0 auto ;
-}
-
-.online-add-list .col .add-card {
-  max-width: 350px;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #7097a8;
-  transform: translateY(0px);
-  transition: 0.5s;
- margin: 1rem auto;
- box-sizing: border-box;
-
-}
-
-.online-add-list .add-card .add-card-title h4 {
-  font-size: 1.2rem;
-}
-
-.online-add-list .add-card .add-card-txt {
- 
-   padding: 0.5rem 2rem 1rem 2rem;
-  display: flex;
-  flex-direction: column;
-  
-}
-
-.online-add-list .add-card .add-card-txt .add-card-title h4 + h4 {
-  color: rgba(255, 0, 0, 0.658);
-}
-
-.online-add-list .add-card .add-card-pic img {
-  width: 100%;
-  vertical-align: middle;
-}
-
-.online-add-list .add-card .add-card-txt span {
-  color: #555454;
-  font-weight: 200;
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-}
-
-.online-add-list .add-card .add-card-txt .card-txt-small span:nth-child(1) {
-  margin-right: 1rem;
-}
-
-.online-add-list .add-card .add-card-txt .card-txt-small {
-  margin-bottom: 0.5rem;
-}
-
-.online-add-list .add-card .add-card-txt .add-card-title {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.5rem;
-}
-
-.online-add-list .add-card .add-card-txt .card-txt-hour {
-  font-size: 1rem;
-}
-
-.online-add-list .add-card .add-card-txt .add-card-bottom {
-  
-  display: flex;
-  justify-content: space-between;
- 
-}
-
-.online-add-list .add-card .add-card-txt p {
-  margin-bottom: 0.5rem;
-  
-}
-
-
-
-/*Q&A*/
-
-.question{
-  margin: 3rem;
-}
-
-.question .row{
-  justify-content: center;
-  align-items: center;
-}
-
-.question .container .row .question-title{
-  font-size: 2rem;
-  margin: 4rem auto 1rem;
-}
-
-.question-breadcrumb {
-  width: 100%;
-  padding: 2rem 0 1em 0;
-  margin:5rem 0 ;
-  display: none;
-}
-
-.question .question-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 1.3rem;
-}
-
-.question .question-list h3 {
-  font-weight: 400;
-  color: #fff;
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
-  align-self: flex-start;
-  padding: 0.5rem 1.5rem;
-  background-color: #7097a8;
-}
-
-.question-list-faq .list-faq-answer p {
-  line-height: 1.5;
-}
-
-.question-list .question-list-faq {
-  width: 100%;
-  align-items: center;
-  margin-left: 4rem;
-}
-
-.question-list .question-list-faq .list-faq-question h4 {
-  font-weight: 400;
-  border-bottom: 3px solid #7097a8;
-  padding-bottom: 0.5rem;
-}
-
-.question-list-faq .list-faq-question {
-  
-  display: flex;
-  gap: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.question-list-faq .list-faq-answer {
-  font-size: 1rem;
-  line-height: 1.5;
-  letter-spacing: 3px;
-  margin-bottom: 1rem;
-  max-height: 0;
-  max-width: 600px;
-  margin-left: 3.1rem;
-  overflow: hidden;
-  transition: max-height 0.8s linear;
-}
-.active .list-faq-answer {
-  margin-left: 3.1rem;
-  max-width: 600px;
-  max-height: 300px;
-}
-
-/*房型介紹*/
-
-.room-breadcrumb {
-  width: 100%;
-  padding: 7rem 0 1rem 0;
-
-  display: none;
-}
-
-
-
-.room .room-card {
-  
-  margin-bottom: 3rem;
-}
-
-.room .room-card .card-pic-other {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.room .room-card .card-pic-other .card-other-pic img {
-  width: 100%;
-}
-
-.room .room-card h4 {
-  font-size: 1.5rem;
-  margin: 6rem auto 2rem;
-  text-align: center;
-}
-
-.room .room-card-info {
-  display: flex;
-  margin-bottom: 3rem;
-  gap: 2rem;
-  background-color: #7097a8;
-padding: 1rem;
-  justify-content: center;
-  
-}
-
-.room .room-card-info li {
-  font-size: 1rem;
-}
-
-.room-card-last div {
-  font-weight: 700;
-}
-
-.room .room-card-last li {
-  font-size: 1.2rem;
-  margin-bottom: 2em;
-  list-style: decimal;
-}
-
-.room-card-info ol:not(:first-child) li + li {
-  list-style: circle;
-}
-
-.room-card-last {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  
-}
-
-.room-card-last  ol{
-  margin-left: 2rem;
-}
-
-.room-card-last .card-last-title {
-  font-size: 1.3rem;
-  margin-bottom: 2rem;
-  text-align: center;
-  
-}
-
-.room-card-last .card-last-price {
-  align-self: center;
-  background-color: #b7e3ec;
-  padding: 5rem;
-}
-
-.room-card-last .card-last-price h4 {
-  font-size: 1.3rem;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.room-card-last .card-last-price button {
-  padding: 1rem 2rem;
-  border: 1px solid transparent;
-  background-color: #7097a8;
-}
-
-.room-card-last .card-last-price a {
-  font-size: 1.2rem;
-  color: #fff;
-}
-
-
-
-/*加購行程*/
-
-.room .room-add-list {
-  
-  margin: 4rem auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-
-.room-add-list h3 {
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.room-add-list .add-more {
-  font-size: 1.2rem;
-  
-}
-
-
-
-.room-add-list .add-card {
-
-  box-sizing: border-box;
-  border: 1px solid #7097a8;
-  transform: translateY(0px);
-  transition: 0.5s;
-  margin: 1rem auto;
-}
-
-.room-add-list .add-card .add-card-txt {
-  flex-grow: 1;
-  padding: 0.5rem 2rem 1rem 2rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.room-add-list .add-card .add-card-title h4 {
-  font-size: 1.2rem;
-}
-
-.room-add-list .add-card .add-card-txt .add-card-title h4 + h4 {
-  color: rgba(255, 0, 0, 0.658);
-}
-
-.room-add-list .add-card .add-card-pic img {
-  width: 100%;
-  vertical-align: middle;
-}
-
-.room-add-list .add-card .add-card-txt .add-card-bottom {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0;
-}
-
-.room-add-list .add-card .add-card-txt span {
-  color: #555454;
-  font-weight: 200;
-  font-size: 0.9rem;
-  margin-bottom: 0.5em;
-}
-
-.room-add-list .add-card .add-card-txt .card-txt-small span:nth-child(1) {
-  margin-right: 1rem;
-}
-
-.room-add-list .add-card .add-card-txt .card-txt-small {
-  margin-bottom: 0.5rem;
-}
-
-.room-add-list .add-card .add-card-txt .add-card-title {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.5rem;
-}
-
-.room-add-list .add-card .add-card-txt .card-txt-hour {
-  font-size: 1rem;
-}
-
-.room-add-list .add-card .add-card-txt p {
-  margin-bottom: 0.5rem;
-}
-
-
-/*客戶評價*/
-
-.room-evaluate {
-  max-width: 100%;
-}
-
-.room-evaluate .item {
-  display: flex;
-  margin: auto;
-  flex-direction: column;
-  align-items: center;
-  background-color: #b7e3ec;
-}
-
-.room-evaluate .item .room-evaluate-description {
-  margin-top: auto;
-  padding: 0.5em 1em 1em 2em;
-}
-
-.item .room-evaluate-user {
-  display: flex;
-  gap: 1em;
-  padding: 1em 2em;
-}
-
-.item .room-evaluate-user img {
-  width: 50px;
-  height: 50px;
-}
-
-.room-evaluate-user .room-evaluate-txt {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-}
-
-.room-evaluate h3 {
-  font-size: 24px;
-  text-align: center;
-  margin-bottom: 1em;
-}
-
-/*其它房型*/
-.room-others {
-  width: 100%;
-  margin-bottom: 3em;
-}
-
-.room-others h3 {
-  font-size: 24px;
-  text-align: center;
-  margin-bottom: 2em;
-  padding-bottom: 1em;
-  border-bottom: 5px solid #7097a8;
-}
-
-.room-others .room-others-room {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4em;
-  margin-bottom: 3em;
-}
-
-.room-others .room-others-room h4 {
-  font-size: 20px;
-  text-align: center;
-  margin-bottom: 2em;
-}
-
-.room-others .room-others-room img{
-  width: 100%;
-}
-
-/*周邊景點*/
-
-.tour-breadcrumb {
-  width: 100%;
-  padding: 1rem 0;
-  margin-bottom: 3rem;
-  display: none;
-}
-
-
-.tour .container h3{
-  font-size: 2rem;
-  margin: 6rem;
-  text-align: center;
-}
-
-.tour .row{
-  justify-content: center;
-  margin: auto;
-}
-.tour .container .tour-pic{
-  text-align: center;
-  margin: 2rem;
-}
-
-
-.tour .container .tour-pic img {
- max-width: 50%;
-  vertical-align: top;
-  text-align: center;
-}
-
-.tour .col {
-  
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-bottom: 3rem;
-  align-items: center;
-}
-
-.tour .col .tour-card {
- width: 22rem;
-  display: flex;
-  flex-direction: column;
-  background-color: #b7e3ec;
-  flex-grow: 1;
-  border-radius: 10px;
-  transition: 0.5s;
-  box-sizing: border-box;
-}
-
-.tour .col .tour-card img {
-  width: 100%;
-  border-radius: 10px 10px 0 0;
-}
-
-.col .tour-card .tour-card-txt {
- display: flex;
- flex-direction: column;
-  padding: 1rem ;
-}
-
-.col .tour-card .tour-card-txt h4 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.col .tour-card .tour-card-txt p {
-  font-size: 1.2rem;
-  flex-grow: 1;
-  line-height: 1.5;
-  margin-top: 0;
-}
-
-
-
-
-
-/* 媒體查詢 */
-
-@media screen and (min-width: 768px) {
-
-/*首頁*/
-
-/*導覽列*/
-
-#menu-switch {
-  display: none;
-}
-
-.main-header {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 10px;
-  top: 0;
- position: fixed;
-  box-shadow: 2px 2px 5px #c5c4c4;
-  background-color: rgba(255, 255, 255);
-z-index: 999;
-
-}
-
-.main-header .container {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.hb {
-  width: 40px;
-  height: 40px;
-  background-color: rgb(189, 189, 189);
- position: relative;
- 
-}
-
-.hb span {
-  width: 84%;
-  height: 3px;
-  background-color: rgb(0, 0, 0);
-  position: absolute;
-  margin: auto;
-  left: 0;
-  right: 0;
-  rotate: 0deg;
-}
-
-.hb span:nth-child(1){
-  top: 8px;
-  transition: top .5s .5s , rotate .5s;
-}
-.hb span:nth-child(2){
-  top: 18px;
-}
-.hb span:nth-child(3){
-  top: 28px;
-  transition: top .5s .5s , rotate .5s;
-}
-
-#menu-switch:checked+.main-header .main-header-nav {
-  display: block;
-}
-
-#menu-switch:checked + .main-header .hb span:nth-child(1){
-  top: 18px;
-  rotate: 45deg;
-  transition: top .5s  , rotate .5s .5s;
-}
-#menu-switch:checked + .main-header .hb span:nth-child(2){
-  display: none;
-}
-#menu-switch:checked + .main-header .hb span:nth-child(3){
-  top: 18px;
-  rotate: -45deg;
-  transition: top .5s  , rotate .5s .5s;
-}
-
-
-.main-header .container img {
-  vertical-align: middle;
-  
-}
-
-.main-header .main-header-nav {
- display: none;
-  width: 96%;
- background-color: #cfcfcf;
-    position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 888;
-  transition: 1s;
-}
-
-.main-header .main-header-nav a {
-  display: block;
-  font-size: 18px;
-  text-decoration: none;
-  padding: 1em;
-  margin: auto;
-  color: rgb(255, 255, 255);
-  text-align:center;
-  border-bottom: 1px solid #555454;
-  
-}
-
-
-=======
-
->>>>>>> f18bfd6f577f10e4ad85a6aa0e262290d4072417
 /*首頁*/
 
 /*banner*/
@@ -3356,41 +1766,30 @@ z-index: 999;
 }
 
 .banner h4 {
-  color: rgb(255, 255, 255);
-  font-size: 60px;
-  font-weight: 700;
+  display: block;
   position: absolute;
   z-index: 2;
-  top: 25%;
-  left: 27%;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
   letter-spacing: 1rem;
+  text-align: center;
 }
 
 /*首頁訂房*/
 
-<<<<<<< HEAD
-.home-booking .container {
-  width: 100%;
-  margin-bottom: 3em;
-}
+
 
 .home-booking .home-booking-info {
+  max-width: 960px;
+ margin:2rem auto 3rem;
   display: flex;
-  align-items: center;
-  font-size: 20px;
-  padding: 2rem;
-  gap: 3rem;
+ padding: 1rem;
+ justify-content: space-between;
+  font-size: 1.3rem;
+gap: 1.5rem;
   background-color: rgb(255, 255, 255);
-  position: absolute;
-  top: 36rem;
-  left: 29rem;
-  box-shadow: 1px 1px 1px #cecdcd;
-=======
-
-
-.home-booking .home-booking-info {
-  display: none;
->>>>>>> f18bfd6f577f10e4ad85a6aa0e262290d4072417
+  box-shadow: 7px 14px 20px #cecdcd;
   
 }
 
@@ -3443,36 +1842,15 @@ z-index: 999;
 
 /*首頁最新消息*/
 
-<<<<<<< HEAD
-.home-news .home-news-container {
-  max-width: 1280px;
-  width: 100%;
-  margin: auto;
-  margin-bottom: 5rem;
-  display: flex;
-  flex-direction: column;
-}
-=======
-
->>>>>>> f18bfd6f577f10e4ad85a6aa0e262290d4072417
 
 .home-news .home-news-container > h3 {
   margin-bottom: 3rem;
   text-align: center;
 }
 
-<<<<<<< HEAD
-.home-news .news-card-list {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  margin-bottom: 3em;
-  position: relative;
-=======
 .home-news .news-card-list{
   flex-direction: row;
   margin: 2rem;
->>>>>>> f18bfd6f577f10e4ad85a6aa0e262290d4072417
 }
 
 
@@ -3601,23 +1979,6 @@ z-index: 999;
   transform: scale(1.1);
 }
 
-<<<<<<< HEAD
-
-.home-spot .home-spot-youtube {
-  max-width: 600px;
-  aspect-ratio: 1/1;
-}
-.home-spot .home-spot-youtube .youtube{
-  width: 100%;
-  height: 100%;
-    
-    
-}
-
-
-
-
-=======
 .home-spot .home-spot-youtube .row{
   flex-direction: row;
   justify-content: center;
@@ -3626,7 +1987,6 @@ z-index: 999;
   width: 45%;
 }
 
->>>>>>> f18bfd6f577f10e4ad85a6aa0e262290d4072417
 
 
 /*設施介紹*/
@@ -3689,12 +2049,7 @@ z-index: 999;
 
 /*美食佳餚*/
 
-<<<<<<< HEAD
-.home-room .container {
-  width: 100%;
-=======
 .home-food .container {
->>>>>>> f18bfd6f577f10e4ad85a6aa0e262290d4072417
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -3757,18 +2112,6 @@ align-items: center;
   justify-content: space-evenly;
 }
 
-<<<<<<< HEAD
-.home-room .room-card-list .room-card:nth-child(2) .room-card-pic {
-  order: 1;
-}
-
-.room-card .room-card-pic img {
-  width: 100%;
-  border-radius: 20px;
-
-}
-=======
->>>>>>> f18bfd6f577f10e4ad85a6aa0e262290d4072417
 
 .room-card .room-card-txt {
   width: 40%;
@@ -4079,9 +2422,6 @@ display: none;
 
 /*加購行程*/
 
-<<<<<<< HEAD
-
-
 .online-add-list .row{
   justify-content: center;
   }
@@ -4174,100 +2514,6 @@ display: none;
 
   /*Q&A*/
 
-=======
-.online-add-list .row{
-  justify-content: center;
-  }
-  
-  .online-add-list h3 {
-    font-size: 24px;
-    margin-bottom: 3em;
-  }
-  
-  .online-add-list .add-more {
-    font-size: 18px;
-    align-self: flex-end;
-  }
-  
-  .online-add-list .add-more:hover a {
-    color: #7097a8;
-  }
-  
-  .online-add-list .add-card-list .add-card {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #7097a8;
-    transform: translateY(0px);
-    transition: 0.5s;
-  }
-  
-  .online-add-list .add-card .add-card-txt {
-    flex-grow: 1;
-    padding: 0.5em 2em 1em 2em;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .online-add-list .add-card .add-card-title h4 {
-    font-size: 18px;
-  }
-  
-  .online-add-list .add-card-txt .add-card-title h4 + h4 {
-    color: rgba(255, 0, 0, 0.658);
-  }
-  
-  .online-add-list .add-card .add-card-pic img {
-    width: 100%;
-    vertical-align: middle;
-  }
-  
-  .online-add-list .add-card .add-card-txt .add-card-bottom {
-    margin-top: auto;
-  }
-  
-  .online-add-list .add-card .add-card-txt span {
-    color: #555454;
-    font-weight: 200;
-    font-size: 14px;
-    margin-bottom: 0.5em;
-  }
-  
-  .online-add-list .add-card .add-card-txt .card-txt-small span:nth-child(1) {
-    margin-right: 1em;
-  }
-  
-  .online-add-list .add-card .add-card-txt .card-txt-small {
-    margin-bottom: 0.5em;
-  }
-  
-  .online-add-list .add-card .add-card-txt .add-card-title {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.5em;
-  }
-  
-  .online-add-list .add-card .add-card-txt .card-txt-hour {
-    font-size: 16px;
-  }
-  
-  .online-add-list .add-card .add-card-txt .add-card-bottom {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .online-add-list .add-card .add-card-txt p {
-    margin-bottom: 0.5em;
-  }
-  
-  .online-add-list .row .add-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 8px 5px #7097a8;
-  }
-
-
-  /*Q&A*/
-
->>>>>>> f18bfd6f577f10e4ad85a6aa0e262290d4072417
   .question .container .row .question-title{
    display: none;
   }
@@ -4398,10 +2644,6 @@ display: none;
 }
 
 /*加購行程*/
-<<<<<<< HEAD
-=======
-
->>>>>>> f18bfd6f577f10e4ad85a6aa0e262290d4072417
 .room-add-list .col{
   display: flex;
   margin:0 auto;
@@ -4729,11 +2971,7 @@ padding: 0;
   position: fixed;
   bottom: 10rem;
   right: 2rem;
-<<<<<<< HEAD
-  z-index: 1;
-=======
   z-index: 999;
->>>>>>> f18bfd6f577f10e4ad85a6aa0e262290d4072417
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -4756,8 +2994,6 @@ padding: 0;
 
 @media screen and (min-width: 1200px){
 
-<<<<<<< HEAD
-=======
 .banner h4{
   display: block;
 }
@@ -4911,7 +3147,6 @@ gap: 2rem;
   margin-left: 5rem;
 }
 
->>>>>>> f18bfd6f577f10e4ad85a6aa0e262290d4072417
 .tour .container h3{
   display: none;
 }
@@ -4933,11 +3168,7 @@ gap: 2rem;
 
   
   .tour{
-<<<<<<< HEAD
-margin-bottom: 20rem;
-=======
 margin-bottom: 23rem;
->>>>>>> f18bfd6f577f10e4ad85a6aa0e262290d4072417
 
   }
   .tour .container .tour-pic {
