@@ -51,7 +51,7 @@ z-index: 999;
 .hb {
   width: 40px;
   height: 40px;
-  background-color: rgb(189, 189, 189);
+  background-color: rgb(255, 255, 255);
  position: relative;
  
 }
@@ -106,9 +106,9 @@ z-index: 999;
 .main-header .main-header-nav {
  display: none;
   width: 96%;
- background-color: #cfcfcf;
+ background-color: #b7e3ec;
     position: absolute;
-  top: 100%;
+  top: 115%;
   left: 0;
   z-index: 888;
   transition: 1s;
