@@ -129,13 +129,13 @@ z-index: 999;
 /*首頁彈出*/
 
 #topMessage{
-  max-width: 100%;
+  width: 100%;
   background-color: rgba(42, 92, 180,.9);
   color: #fff;
   font: 1.3rem;
   padding: 25px;
   text-align: center;
-position: relative;
+position: fixed;
 top: 0;
 z-index: 9999;
   display: none;
@@ -193,6 +193,7 @@ z-index: 9999;
 .home-booking .home-booking-info .booking-info-in input,
 .home-booking .home-booking-info .booking-info-quit input {
   margin-left: 1rem;
+  text-align: center;
 }
 
 .home-booking .home-booking-info .booking-info-man input,
@@ -292,11 +293,11 @@ z-index: 9999;
   transition: 0.5s;
 }
 
-.news-card-list .news-card .news-card-pic img {
+.home-news .news-card-list .news-card .news-card-pic img {
   width: 100%;
   vertical-align: middle;
 }
-.news-card-list .news-card .news-txt {
+.home-news .news-card-list .news-card .news-txt {
   box-sizing: border-box;
   max-width: 19rem;
   width: 100%;
@@ -305,21 +306,20 @@ z-index: 9999;
   flex-direction: column;
   flex-grow: 1;
 }
-.news-card-list .news-card .news-txt p {
+.home-news .news-card-list .news-card .news-txt p {
   font-size: 1.2rem;
   flex-grow: 1;
   
 }
-.news-card-list .news-card .news-txt .news-bottom {
+.home-news .news-card-list .news-card .news-txt .news-bottom {
   display: flex;
   align-items: center;
   margin: 1.5rem 0;
 }
 
-.news-card-list .news-card .news-txt .news-bottom > span {
+.home-news .news-card-list .news-card .news-txt .news-bottom > span {
   margin-left: 0.5rem;
 }
-
 
 
 .home-news .home-news-container button {
@@ -978,7 +978,7 @@ margin-bottom: 2rem;
  gap: 1rem;
   align-items: center;
   padding: 2rem;
-  border-bottom: 5px solid #7097a8;
+  
 }
 
 .news .news-card-list .news-card .news-card-date {
@@ -990,9 +990,6 @@ margin-bottom: 2rem;
   vertical-align: top;
 }
 
-.news .news-card-list .news-card:nth-child(3) {
-  border-bottom: none;
-}
 
 .news-card .news-card-txt {
   max-width: 31rem;
@@ -1303,7 +1300,6 @@ margin-bottom: 2rem;
 .room-breadcrumb {
   width: 100%;
   padding: 7rem 0 1rem 0;
-
   display: none;
 }
 
@@ -2177,10 +2173,8 @@ margin: 1rem;
 }
 
 .news .news-card-list .news-card .news-card-date {
-  font-size: 18px;
+  font-size: 1.2rem;
 }
-
-
 
 .news-card .news-card-txt {
  width: 31rem;

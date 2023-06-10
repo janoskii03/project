@@ -56,24 +56,24 @@
       <div class="online-info">
         <div class="online-info-in">
           <label for="">入住日期
-            <input type="date">
+            <input id="checkIn" type="date" value="2023-06-10">
           </label>
         </div>
         <div class="online-info-quit">
           <label for="">離開日期
-            <input type="date"></label>
+            <input id="checkOut" type="date" value="2023-06-11"></label>
         </div>
 
         <div class="online-info-man">
-          <label for="">大人</label><img src="online/Vector.svg" alt="plus">
-          <input type="text" value="0" style="text-align: center;">
-          <img src="online/minus-solid 1.svg" alt="minus">
+          <label for="">大人</label><img src="online/Vector.svg" alt="plus" id="plus">
+          <input id="adult" type="text" value="0" style="text-align: center;" min="0">
+          <img src="online/minus-solid 1.svg" alt="minus" id="minus">
         </div>
 
         <div class="online-info-child">
-          <label for="">小孩</label><img src="online/Vector.svg" alt="plus">
-          <input type="text" value="0" style="text-align: center;">
-          <img src="online/minus-solid 1.svg" alt="minus">
+          <label for="">小孩</label><img src="online/Vector.svg" alt="plus" id="childPlus">
+          <input id="children" type="text" value="0" style="text-align: center;" min="0">
+          <img src="online/minus-solid 1.svg" alt="minus" id="childMinus">
         </div>
       </div>
       <div class="col">
