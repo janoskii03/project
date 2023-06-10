@@ -126,6 +126,32 @@ z-index: 999;
   
 }
 
+/*首頁彈出*/
+
+#topMessage{
+  max-width: 100%;
+  background-color: rgba(42, 92, 180,.9);
+  color: #fff;
+  font: 1.3rem;
+  padding: 25px;
+  text-align: center;
+position: relative;
+top: 0;
+z-index: 9999;
+  display: none;
+}
+
+#topMessage a{
+  color: #fff;
+  text-decoration:underline;
+}
+
+#topMessage:hover a{
+ 
+  color: #b7e3ec;
+  cursor: pointer;
+}
+
 
 /*首頁*/
 
@@ -137,19 +163,14 @@ z-index: 999;
 }
 
 .banner h4 {
+  max-width: 960px;
+  width: 100%;
   color: rgb(255, 255, 255);
   font-size: 2.5rem;
   font-weight: 700;
-  position: absolute;
-  z-index: 2;
-  top: 50%;
-  
-  right: 0;
-  bottom: 0;
   margin: auto;
   display: none;
-  left: 50%;
-  transform: translate(-50%-50%);
+  
 }
 
 /*首頁訂房*/
@@ -164,8 +185,9 @@ z-index: 999;
   font-size: 1.3rem;
   gap: 1rem;
   background-color: rgb(255, 255, 255);
-  box-shadow: 1px 1px 1px #cecdcd;
+  box-shadow: 7px 14px 20px #cecdcd;
   margin-bottom: 3rem;
+  border-radius: 10px;
 }
 
 .home-booking .home-booking-info .booking-info-in input,
@@ -1734,7 +1756,6 @@ z-index: 999;
   
 }
 
-
 /*首頁*/
 
 /*banner*/
@@ -1745,14 +1766,14 @@ z-index: 999;
 }
 
 .banner h4 {
-  color: rgb(255, 255, 255);
-  font-size: 60px;
-  font-weight: 700;
+  display: block;
   position: absolute;
   z-index: 2;
-  top: 25%;
-  left: 27%;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
   letter-spacing: 1rem;
+  text-align: center;
 }
 
 /*首頁訂房*/
@@ -1760,7 +1781,15 @@ z-index: 999;
 
 
 .home-booking .home-booking-info {
-  display: none;
+  max-width: 960px;
+ margin:2rem auto 3rem;
+  display: flex;
+ padding: 1rem;
+ justify-content: space-between;
+  font-size: 1.3rem;
+gap: 1.5rem;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 7px 14px 20px #cecdcd;
   
 }
 
@@ -1812,7 +1841,6 @@ z-index: 999;
 
 
 /*首頁最新消息*/
-
 
 
 .home-news .home-news-container > h3 {
@@ -2616,7 +2644,6 @@ display: none;
 }
 
 /*加購行程*/
-
 .room-add-list .col{
   display: flex;
   margin:0 auto;
