@@ -19,10 +19,46 @@ setInterval(showTime, 1000);
 
 
 $(function () {
-    //首頁消息
+    
+  //最上面消息
     $("#topMessage")
       .slideDown(2000)
       .click(function () {
         $(this).slideUp(1000);
       });
+
+
+      //淡入淡出
+let showHeight =150
+
+$(window).scroll(function(){
+$('.area').each(function () {
+
+let setThis=$(this)
+let areaTop = setThis.offset().top
+
+console.log($(window).scrollTop());  //7138
+console.log($(window).height()); //937 7138-937=6201
+console.log(areaTop);
+
+if($(window).scrollTop() >= (areaTop + showHeight) - $(window).height()){
+  setThis.stop(true).animate({
+      opacity: 1,
+  },800)
+}else{
+  setThis.stop(true).animate({
+      opacity: 0,
+  },500)
+}
+
+
+
+  })
+
+
+})
+
+
+
+
     }  )

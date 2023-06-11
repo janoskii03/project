@@ -139,6 +139,7 @@ position: fixed;
 top: 0;
 z-index: 9999;
   display: none;
+ 
 }
 
 #topMessage a{
@@ -147,8 +148,12 @@ z-index: 9999;
 }
 
 #topMessage:hover a{
- 
-  color: #b7e3ec;
+  color: #7097a8;
+  cursor: pointer;
+}
+
+#topMessage:checked a{
+  color: #7097a8;
   cursor: pointer;
 }
 
@@ -166,8 +171,9 @@ z-index: 9999;
   max-width: 960px;
   width: 100%;
   color: rgb(255, 255, 255);
-  font-size: 2.5rem;
+  font-size: 4rem;
   font-weight: 700;
+  
   margin: auto;
   display: none;
   
