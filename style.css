@@ -176,6 +176,9 @@ z-index: 9999;
  opacity: 0;
  transition: all 3s;
  box-shadow: 7px 1px 20px #cecdcd;
+ display: flex;
+ flex-direction: column;
+
 }
 
 .modal .modal-header {
@@ -204,6 +207,7 @@ background-color: #fff;
 }
 
 .modal .modal-body{
+  
   letter-spacing: 3px;
   line-height: 2;
   padding: 10px 15px;
@@ -1098,6 +1102,25 @@ margin-bottom: 2rem;
     z-index: 9998;
   }
 
+  .modal .modal-btns{
+    display: flex;
+    justify-content: space-evenly
+   
+  }
+
+  #onlinePayment,#back{
+  
+    padding:.5rem 1rem;
+border: 1px solid transparent;
+background-color: #7097a8;
+  }
+
+  #onlinePayment a, #back a{
+    color: #fff;
+    font-weight: 100;
+    letter-spacing: 2px;
+  }
+  
 
 .online{
   margin-top: 4rem;
@@ -2521,6 +2544,11 @@ display: none;
 }
 
 /*線上訂房*/
+
+#onlinePayment:hover,#back:hover{
+  background-color: rgba(112, 151, 168, 0.5);
+  cursor: pointer;
+}
 
 .online-breadcrumb {
   display: block;

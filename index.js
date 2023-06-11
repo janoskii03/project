@@ -31,6 +31,8 @@ $(function () {
       //淡入淡出
 let showHeight =150
 
+
+
 $(window).scroll(function(){
 $('.area').each(function () {
 
@@ -41,14 +43,22 @@ console.log($(window).scrollTop());  //7138
 console.log($(window).height()); //937 7138-937=6201
 console.log(areaTop);
 
-if($(window).scrollTop() >= (areaTop + showHeight) - $(window).height()){
-  setThis.stop(true).animate({
-      opacity: 1,
-  },500)
+if (jQuery(window).width() > 768){
+  
+  if($(window).scrollTop() >= (areaTop + showHeight) - $(window).height()){
+    setThis.stop(true).animate({
+        opacity: 1,
+    },500)
+  }else{
+    setThis.stop(true).animate({
+        opacity: 0,
+    },700)
+  }
+  
 }else{
   setThis.stop(true).animate({
-      opacity: 0,
-  },700)
+    opacity: 1,
+},500)
 }
 
   })
@@ -59,7 +69,7 @@ if($(window).scrollTop() >= (areaTop + showHeight) - $(window).height()){
 $('.discount').click(function(){
 
   $('.modal').css('opacity','1')
-  $('.online-overlay').css('opacity','1')
+  $('#overlay').css('opacity','1')
 
 })
 $('.modal-close-btn').click(function(){
