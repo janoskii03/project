@@ -132,14 +132,16 @@ z-index: 999;
   width: 100%;
   background-color: rgba(42, 92, 180,.9);
   color: #fff;
-  font: 1.3rem;
-  padding: 25px;
+  letter-spacing: 3px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  padding: 25px 0;
   text-align: center;
 position: fixed;
 top: 0;
 z-index: 9999;
   display: none;
- 
+
 }
 
 #topMessage a{
@@ -155,6 +157,69 @@ z-index: 9999;
 #topMessage:checked a{
   color: #7097a8;
   cursor: pointer;
+}
+
+/*優惠資訊*/
+
+.modal{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  z-index: 9999;
+  background-color: #fff;
+  width: 500px;
+  max-width: 80%;
+  padding: 1rem;
+ opacity: 0;
+ transition: all 3s;
+ box-shadow: 7px 1px 20px #cecdcd;
+}
+
+.modal .modal-header {
+  padding: 10px 15px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 1px solid #000;
+margin-bottom: 0.5rem;
+}
+
+
+
+.modal-header .modal-header-title{
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.modal-header .modal-close-btn{
+cursor: pointer;
+border: none;
+outline: none;
+font-size: 1.3rem;
+font-weight: bold;
+background-color: #fff;
+}
+
+.modal .modal-body{
+  letter-spacing: 3px;
+  line-height: 2;
+  padding: 10px 15px;
+}
+
+#overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.3);
+  pointer-events:none;
+  opacity: 0;
+  transition: all 3s;
+  z-index: 9998;
 }
 
 
@@ -1008,6 +1073,32 @@ margin-bottom: 2rem;
 }
 
 /*線上訂房*/
+
+/*預約*/
+
+.modal-header .online-modal-close-btn{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background-color: #fff;
+  }
+
+ .online-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.3);
+    pointer-events:none;
+    opacity: 0;
+    transition: all 3s;
+    z-index: 9998;
+  }
+
+
 .online{
   margin-top: 4rem;
 }
@@ -1293,7 +1384,7 @@ margin-bottom: 2rem;
   max-width: 600px;
   margin-left: 3.1rem;
   overflow: hidden;
-  transition: max-height 0.8s linear;
+  transition:all linear;
 }
 .active .list-faq-answer {
   margin-left: 3.1rem;

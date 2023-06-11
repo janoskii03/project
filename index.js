@@ -3,19 +3,19 @@
 //顯示時間
 const nowTime = document.getElementById("nowTime");
 
-function showTime() {
-  let today = new Date();
-  let year = today.getFullYear();
-  let month = today.getMonth() + 1;
-  let day = today.getDate();
-  let hh = today.getHours();
-  let mm = today.getMinutes();
-  let ss = today.getSeconds();
+// function showTime() {
+//   let today = new Date();
+//   let year = today.getFullYear();
+//   let month = today.getMonth() + 1;
+//   let day = today.getDate();
+//   let hh = today.getHours();
+//   let mm = today.getMinutes();
+//   let ss = today.getSeconds();
 
-  nowTime.innerText = `${year}-${month}-${day} - ${hh}:${mm}:${ss}`;
-}
-showTime();
-setInterval(showTime, 1000);
+//   nowTime.innerText = `${year}-${month}-${day} - ${hh}:${mm}:${ss}`;
+// }
+// showTime();
+// setInterval(showTime, 1000);
 
 
 $(function () {
@@ -44,21 +44,29 @@ console.log(areaTop);
 if($(window).scrollTop() >= (areaTop + showHeight) - $(window).height()){
   setThis.stop(true).animate({
       opacity: 1,
-  },800)
+  },500)
 }else{
   setThis.stop(true).animate({
       opacity: 0,
-  },500)
+  },700)
 }
 
-
-
   })
-
-
 })
 
+//消息詳情
 
+$('.discount').click(function(){
+
+  $('.modal').css('opacity','1')
+  $('.online-overlay').css('opacity','1')
+
+})
+$('.modal-close-btn').click(function(){
+  
+  $('.modal').css('opacity','0')
+  $('#overlay').css('opacity','0')
+})
 
 
     }  )

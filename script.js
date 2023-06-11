@@ -17,10 +17,12 @@ window.addEventListener("load", init, false);
 $(function () {
   // 線上訂房
 
+let currentInDate,currentOutDate,numAdult,numChildren;
+
+
   $("#checkIn").mouseout(function () {
     let date = new Date($("#checkIn").val()); //取得選取的日期，並產生一個日期物件
-
-    let currentInDate =
+    currentInDate =
       date.getFullYear() + "/" + (date.getMonth() + 1) + "/" + date.getDate();
 
     console.log(currentInDate);
@@ -29,14 +31,14 @@ $(function () {
   $("#checkOut").mouseout(function () {
     let date = new Date($("#checkOut").val());
 
-    let currentOutDate =
+     currentOutDate =
       date.getFullYear() + "/" + (date.getMonth() + 1) + "/" + date.getDate();
 
     console.log(currentOutDate);
   });
 
-  let numAdult = Number($("#adult").val());
-  let numChildren = Number($("#children").val());
+ numAdult = Number($("#adult").val());
+   numChildren = Number($("#children").val());
   numAdult,numChildren = 0;
 
   $("#minus").click(function () {
@@ -121,7 +123,46 @@ $(this).toggleClass("active")
 
 $(".question-list-faq").not(this).removeClass("active")
 
+})
 
+//預約
+
+
+
+$('.reserve-btn').click(function(){
+
+let reservation = `入住日期: ${currentInDate} 離開日期: ${currentOutDate} 人數: ${numAdult} 位大人 ${numChildren} 位小孩`
+
+if ( numAdult==0 && numChildren==0 && currentInDate==undefined && currentOutDate==undefined){
+  $('.modal-body').text("請選擇入住日期、離開日期及人數，謝謝")
+}else if (  currentInDate==undefined && currentOutDate==undefined){
+  $('.modal-body').text("請選擇入住日期、離開日期，謝謝")
+}else if (  currentInDate==undefined ){
+  $('.modal-body').text("請選擇入住日期，謝謝")
+}else if (  currentOutDate==undefined ){
+  $('.modal-body').text("請選擇離開日期，謝謝")
+} else if ( numAdult==0 && numChildren==0){
+  $('.modal-body').text("請選擇人數，謝謝")
+}
+else{
+  $('.modal-body').text(reservation)
+}
+
+$('.modal').css('opacity','1')
+  $('.online-overlay').css('opacity','1')
+console.log($(this).index());
+
+})
+
+$('.online-modal-close-btn').click(function(){
+  $('.modal').css('opacity','0')
+  $('.online-overlay').css('opacity','0')
+})
+
+$(".online-overlay").click(function(){
+  console.log(123);
+  $('.modal').css('opacity','0')
+  
 })
 
 
