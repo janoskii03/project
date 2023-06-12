@@ -267,7 +267,6 @@ background-color: #fff;
 
 .home-booking .home-booking-info .booking-info-in input,
 .home-booking .home-booking-info .booking-info-quit input {
-  margin-left: 1rem;
   text-align: center;
 }
 
@@ -841,6 +840,7 @@ width: 50%;
 
 .footer .copyright {
   max-width: 100%;
+  text-align: center;
   background-color: #2a5cb4;
   color: #fff;
   font-size: 0.9rem;
@@ -1835,7 +1835,34 @@ box-sizing: border-box;
   filter: drop-shadow(0 0  1px #000);
 }
 
+.payment-modal{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  z-index: 9999;
+  background-color: #fff;
+  width: 500px;
+  max-width: 80%;
+  padding: 1rem;
+ opacity: 0;
+ transition: all 3s;
+ box-shadow: 7px 1px 20px #cecdcd;
+ display: flex;
+ flex-direction: column;
 
+}
+
+.payment-modal .modal-header {
+  padding: 10px 15px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 1px solid #000;
+margin-bottom: 0.5rem;
+}
 
 .payment form .payment-submit{
   width: 100%;
@@ -1852,7 +1879,7 @@ box-sizing: border-box;
   background-color: rgba(112, 151, 168,.5);
 }
 
-.modal-header .payment-modal-close-btn{
+ .modal-header .payment-modal-close-btn{
   cursor: pointer;
   border: none;
   outline: none;
@@ -1887,9 +1914,6 @@ background-color: #7097a8;
   transition: all 3s;
   z-index: 9998;
 }
-
-
-
 
 
 /* 媒體查詢 */

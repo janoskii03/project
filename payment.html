@@ -49,34 +49,34 @@
                         <h3 class="payment-title">帳單地址</h3>
                         <div class="inputBox">
                             <span>名字 :</span>
-                            <input type="text" placeholder="john deo" >
+                            <input type="text" placeholder="john deo" class="payment-name-input">
                             <div class="payment-name"></div>
                         </div>
                         <div class="inputBox">
                             <span>Email :</span>
-                            <input type="text" placeholder="example@example.com" >
+                            <input type="text" placeholder="example@example.com" class="payment-email-input">
                             <div class="payment-email"></div>
                           </div>
                         <div class="inputBox">
                             <span>地址 :</span>
-                            <input type="text" placeholder="room - street - locality" >
+                            <input type="text" placeholder="苗栗縣頭份市" class="payment-address-input">
                             <div class="payment-address"></div>
                           </div>
                         <div class="inputBox">
                             <span>國家 :</span>
-                            <input type="text" placeholder="台灣" >
+                            <input type="text" placeholder="台灣" class="payment-nation-input">
                             <div class="payment-nation"></div>
                           </div>
 
                         <div class="payment-bottom">
                             <div class="inputBox">
                                 <span>鄉鎮 :</span>
-                                <input type="text" placeholder="miaoli" >
+                                <input type="text" placeholder="miaoli" class="payment-township-input">
                                 <div class="payment-township"></div>
                               </div>
                             <div class="inputBox">
                                 <span>郵遞區號 :</span>
-                                <input type="text" placeholder="351" >
+                                <input type="text" placeholder="351" class="payment-postal-input">
                                 <div class="payment-postal"></div>
                               </div>
                         </div>
@@ -90,38 +90,41 @@
                         </div>
                         <div class="inputBox">
                             <span>持卡人姓名 :</span>
-                            <input type="text" placeholder="mr. john deo" >
+                            <input type="text" placeholder="mr. john deo" class="payment-card-name-input">
                             <div class="card-name"></div>
                           </div>
                         <div class="inputBox">
                             <span>信用卡號碼 :</span>
-                            <input type="text" placeholder="1111-2222-3333-4444" >
+                            <input type="text" placeholder="1111-2222-3333-4444" class="payment-card-number-input" >
                             <div class="card-number"></div>
                           </div>
                         <div class="inputBox">
                             <span>有效月份 :</span>
-                            <input type="text" placeholder="01" >
+                            <input type="text" placeholder="01" class="payment-month-input">
                             <div class="card-valid-month"></div>
                           </div>
 
                         <div class="payment-bottom">
                             <div class="inputBox">
                                 <span>有效年份 :</span>
-                                <input type="number" placeholder="2023" >
+                                <input type="number" placeholder="2023"  class="payment-year-input" >
                                 <div class="card-valid-year"></div>
                               </div>
                             <div class="inputBox">
                                 <span>認證碼 :</span>
-                                <input type="text" placeholder="123" >
+                                <input type="text" placeholder="123"  class="payment-valid-input">
                                 <div class="card-valid-num"></div>
                               </div>
                         </div>
                     </div>
-                    <input type="submit" value="完成結帳" class="payment-submit" >
+                    
+                    <input class="payment-submit" type="submit" value="結帳">
+                   
             </form>
         </div>
 
-        <div class="modal">
+        
+        <div class="payment-modal">
           <div class="modal-header">
             <div class="modal-header-title">結帳程序</div>
             <button class="payment-modal-close-btn">&times;</button>
@@ -131,14 +134,12 @@
             
           </div>
           <div class="modal-btns">
-
             <button id="paymentBack"><a href="#">返回</a></button>
           </div>
       
             </div>
             <div class="payment-overlay"></div>
       
-
 
     </section>
     <section class="footer">
