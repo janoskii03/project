@@ -207,7 +207,7 @@ background-color: #fff;
 }
 
 .modal .modal-body{
-  
+  text-align: center;
   letter-spacing: 3px;
   line-height: 2;
   padding: 10px 15px;
@@ -285,6 +285,10 @@ background-color: #fff;
 .home-booking .home-booking-info .booking-btn a {
   color: #fff;
   font-size: 1.2rem;
+}
+
+#indexPlus,#indexMinus,#indexChildPlus,#indexChildMinus{
+  cursor: pointer;
 }
 
 
@@ -1383,6 +1387,7 @@ background-color: #7097a8;
   width: 100%;
   align-items: center;
   margin-left: 4rem;
+  cursor: pointer;
 }
 
 .question-list .question-list-faq .list-faq-question h4 {
@@ -1864,6 +1869,15 @@ border-bottom: 1px solid #000;
 margin-bottom: 0.5rem;
 }
 
+.payment-modal .modal-body{
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.payment-modal .modal-body,.payment-modal .modal-btns{
+  text-align: center;
+}
+
 .payment form .payment-submit{
   width: 100%;
   padding: 0.9rem;
@@ -1875,9 +1889,17 @@ margin-bottom: 0.5rem;
 
 }
 
+
+.payment .payment-name,.payment .payment-email,.payment .payment-address,.payment .payment-nation,.payment .payment-township,.payment .card-name,.payment .card-number,.payment .card-valid-month,.payment .card-valid-year,.payment .card-valid-num{
+  color: red;
+  margin-left: 3px;
+}
+
 .payment form .payment-submit:hover{
   background-color: rgba(112, 151, 168,.5);
 }
+
+
 
  .modal-header .payment-modal-close-btn{
   cursor: pointer;
@@ -1896,6 +1918,7 @@ background-color: #7097a8;
 }
 
 #paymentBack a{
+  font-size: 1rem;
   color: #fff;
   font-weight: 100;
   letter-spacing: 2px;

@@ -38,7 +38,7 @@ $(function () {
 
   numAdult = Number($("#adult").val());
   numChildren = Number($("#children").val());
-  numAdult, (numChildren = 0);
+  numAdult, numChildren = 0;
 
   $("#minus").click(function () {
     if (numAdult > 0) {
@@ -67,7 +67,7 @@ $(function () {
       numChildren = 0;
     }
 
-    console.log(numChildren);
+    
     $("#children").val(numChildren);
   });
 
@@ -175,7 +175,17 @@ $(function () {
 
   //結帳頁面
 
-  let nameInput, emailInput, addressInput, nationInput,townshipInput, postalInput,cardNameInput,cardNumberInput;
+  let nameInput,
+    emailInput,
+    addressInput,
+    nationInput,
+    townshipInput,
+    postalInput,
+    cardNameInput,
+    cardNumberInput,
+    monthInput,
+    yearInput,
+    validInput;
 
   $(".payment-name-input").on("input", function () {
     nameInput = $(".payment-name-input").val();
@@ -217,7 +227,6 @@ $(function () {
     }
   });
 
-
   $(".payment-postal-input").on("input", function () {
     postalInput = $(".payment-postal-input").val();
 
@@ -237,17 +246,64 @@ $(function () {
     cardNumberInput = $(".payment-card-number-input").val();
     if (cardNumberInput == "") {
       $(".card-number").text("請輸入信用卡號碼");
+    } else if (cardNumberInput != "" && cardNameInput.length < 12) {
+      $(".card-number").text("信用卡號碼小於12碼");
     }
   });
 
+  $(".payment-month-input").on("input", function () {
+    monthInput = $(".payment-month-input").val();
+    if (monthInput == "") {
+      $(".card-valid-month").text("請輸入有效月份");
+    } else if (monthInput !== "" && monthInput.length >= 3) {
+      $(".card-valid-month").text("有效月份為兩位數");
+    }
+  });
 
+  $(".payment-year-input").on("input", function () {
+    yearInput = $(".payment-year-input").val();
+    if (yearInput == "") {
+      $(".card-valid-year").text("請輸入有效年份");
+    } else if (yearInput !== "" && yearInput < 2023) {
+      $(".card-valid-year").text("無效的年份");
+    }
+  });
 
+  $(".payment-valid-input").on("input", function () {
+    validInput = $(".payment-valid-input").val();
+    if (validInput == "") {
+      $(".card-valid-num").text("請輸入驗證碼");
+    } else if (validInput !== "" && validInput.length > 3) {
+      $(".card-valid-num").text("認證碼為三位數");
+    }
+  });
 
   $(".payment-submit").click(function (event) {
     event.preventDefault();
+ $(".payment-modal").css("opacity", "1");
+      $(".payment-overlay").css("opacity", "1");
+      $(".modal-body").text("預約完成!");
+    // if (
+    //   validInput == "" &&
+    //   yearInput == "" &&
+    //   monthInput == "" &&
+    //   cardNumberInput == "" &&
+    //   cardNameInput== "" &&
+    //   postalInput == "" &&
+    //   townshipInput == "" &&
+    //   nationInput == "" &&
+    //   addressInput == "" &&
+    //   emailInput == "" &&
+    //   nameInput == ""
+    // ) {
+  
+    //   $(".payment-modal").css("opacity", "1");
+    //   $(".payment-overlay").css("opacity", "1");
+    //   $(".modal-body").text("輸入不符合規則，請重新輸入");
 
-    $(".payment-modal").css("opacity", "1");
-    $(".payment-overlay").css("opacity", "1");
+    // }else{
+     
+    // }
   });
 
   $("#paymentBack").click(function () {

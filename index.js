@@ -20,6 +20,56 @@ setInterval(showTime, 1000);
 
 $(function () {
     
+
+  //訂房
+  let  numAdult, numChildren;
+
+  numAdult = Number($("#indexAdult").val());
+  numChildren = Number($("#indexChild").val());
+
+   numAdult, numChildren = 0;
+
+  $("#indexMinus").click(function () {
+    if (numAdult > 0) {
+      numAdult--;
+    } else if (numAdult <= 0) {
+      numAdult = 0;
+    }
+    
+    $("#indexAdult").val(numAdult);
+  });
+
+  $("#indexPlus").click(function () {
+    if (numAdult >= 0) {
+      numAdult++;
+    } else if (numAdult < 0) {
+      numAdult = 0;
+    }
+    
+    $("#indexAdult").val(numAdult);
+  });
+
+  $("#indexChildMinus").click(function () {
+    if (numChildren > 0) {
+      numChildren--;
+    } else if (numChildren <= 0) {
+      numChildren = 0;
+    }
+
+    
+    $("#indexChild").val(numChildren);
+  });
+
+  $("#indexChildPlus").click(function () {
+    if (numChildren >= 0) {
+      numChildren++;
+    } else if (numChildren < 0) {
+      numChildren = 0;
+    }
+    
+    $("#indexChild").val(numChildren);
+  });
+
   //最上面消息
     $("#topMessage")
       .slideDown(2000)
