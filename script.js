@@ -14,7 +14,8 @@ function init() {
 
 window.addEventListener("load", init, false);
 
-$(function () {
+$(function(){
+  
   // 線上訂房
 
   let currentInDate, currentOutDate, numAdult, numChildren;
@@ -175,5 +176,28 @@ $(function () {
     $(".online-overlay").css("opacity", "0");
   });
 
+//結帳頁面
+
+$('.payment-submit').click(function(){
+ 
+  console.log(112);
+    $('.modal').css('opacity','1')
+    $('.payment-overlay').css('opacity','1')
+  
+  })
+  
+  $("#paymentBack").click(function () {
+    $(".modal").css("opacity", "0");
+    $(".payment-overlay").css("opacity", "0");
+  });
+
+  $(".payment-modal-close-btn").click(function () {
+    
+    $(".modal").css("opacity", "0");
+    $(".payment-overlay").css("opacity", "0");
+  });
+
 
 });
+
+

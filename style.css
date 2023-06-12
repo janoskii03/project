@@ -1824,11 +1824,6 @@ box-sizing: border-box;
   border:1px solid #000;
 }
 
-/* .container form .row .col .payment-bottom{
-  display: flex;
-  gap:0.9rem;
- 
-} */
 
 .payment form  .payment-bottom .inputBox{
   margin-top: 5px;
@@ -1840,11 +1835,13 @@ box-sizing: border-box;
   filter: drop-shadow(0 0  1px #000);
 }
 
+
+
 .payment form .payment-submit{
   width: 100%;
   padding: 0.9rem;
   font-size: 1rem;
-  background-color: #27ae60;
+  background-color: #7097a8;
   color: #fff;
   margin-top: 5px;
   cursor: pointer;
@@ -1852,11 +1849,44 @@ box-sizing: border-box;
 }
 
 .payment form .payment-submit:hover{
-  background-color: #2ecc71;
+  background-color: rgba(112, 151, 168,.5);
+}
+
+.modal-header .payment-modal-close-btn{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background-color: #fff;
+  }
+
+#paymentBack{
+  
+  padding:.5rem 1rem;
+border: 1px solid transparent;
+background-color: #7097a8;
+}
+
+#paymentBack a{
+  color: #fff;
+  font-weight: 100;
+  letter-spacing: 2px;
 }
 
 
-
+.payment-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.3);
+  pointer-events:none;
+  opacity: 0;
+  transition: all 3s;
+  z-index: 9998;
+}
 
 
 
@@ -3069,6 +3099,13 @@ padding: 0;
 
 .hb{
   display: none;
+}
+
+/*付款*/
+
+#paymentBack:hover{
+  background-color: rgba(112, 151, 168, 0.5);
+  cursor: pointer;
 }
 
 
