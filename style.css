@@ -257,7 +257,7 @@ background-color: #fff;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   gap: 1rem;
   background-color: rgb(255, 255, 255);
   box-shadow: 7px 14px 20px #cecdcd;
@@ -834,7 +834,7 @@ width: 50%;
 }
 
 .footer .container .footer-social img {
-  width: 40px;
+  width: 1.5rem;
   margin: 0.5rem;
 }
 
@@ -1870,7 +1870,7 @@ margin-bottom: 0.5rem;
 }
 
 .payment-modal .modal-body{
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 2rem;
 }
 
@@ -1879,18 +1879,18 @@ margin-bottom: 0.5rem;
 }
 
 .payment form .payment-submit{
-  width: 100%;
+  width: 40%;
   padding: 0.9rem;
   font-size: 1rem;
   background-color: #7097a8;
   color: #fff;
   margin-top: 5px;
   cursor: pointer;
-
+border: 1px solid transparent;
 }
 
 
-.payment .payment-name,.payment .payment-email,.payment .payment-address,.payment .payment-nation,.payment .payment-township,.payment .card-name,.payment .card-number,.payment .card-valid-month,.payment .card-valid-year,.payment .card-valid-num{
+.payment .payment-name,.payment .payment-email,.payment .payment-address,.payment .payment-nation,.payment .payment-township,.payment .card-name,.payment .card-number,.payment .card-valid-month,.payment .card-valid-year,.payment .card-valid-num,.payment .payment-postal{
   color: red;
   margin-left: 3px;
 }

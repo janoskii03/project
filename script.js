@@ -188,14 +188,18 @@ $(function () {
     validInput;
 
   $(".payment-name-input").on("input", function () {
+    $(".payment-name").text("");
     nameInput = $(".payment-name-input").val();
 
     if (nameInput == "") {
       $(".payment-name").text("請輸入名字");
+      
+     
     }
   });
 
   $(".payment-email-input").on("input", function () {
+    $(".payment-email").text("");
     emailInput = $(".payment-email-input").val();
 
     if (emailInput == "") {
@@ -204,6 +208,7 @@ $(function () {
   });
 
   $(".payment-address-input").on("input ", function () {
+    $(".payment-address").text("");
     addressInput = $(".payment-address-input").val();
 
     if (addressInput == "") {
@@ -212,6 +217,7 @@ $(function () {
   });
 
   $(".payment-nation-input").on("input ", function () {
+    $(".payment-nation").text("");
     nationInput = $(".payment-nation-input").val();
 
     if (nationInput == "") {
@@ -220,6 +226,7 @@ $(function () {
   });
 
   $(".payment-township-input").on("input", function () {
+    $(".payment-township").text("");
     townshipInput = $(".payment-township-input").val();
 
     if (townshipInput == "") {
@@ -228,6 +235,7 @@ $(function () {
   });
 
   $(".payment-postal-input").on("input", function () {
+    $(".payment-postal").text("");
     postalInput = $(".payment-postal-input").val();
 
     if (postalInput == "") {
@@ -236,6 +244,7 @@ $(function () {
   });
 
   $(".payment-card-name-input").on("input", function () {
+    $(".card-name").text("");
     cardNameInput = $(".payment-card-name-input").val();
     if (cardNameInput == "") {
       $(".card-name").text("請輸入姓名");
@@ -243,15 +252,21 @@ $(function () {
   });
 
   $(".payment-card-number-input").on("input", function () {
+    $(".card-number").text("");
     cardNumberInput = $(".payment-card-number-input").val();
     if (cardNumberInput == "") {
       $(".card-number").text("請輸入信用卡號碼");
-    } else if (cardNumberInput != "" && cardNameInput.length < 12) {
+    } else if (cardNumberInput !="") {
       $(".card-number").text("信用卡號碼小於12碼");
+    }else{
+      $(".card-number").text("");
     }
+
+
   });
 
   $(".payment-month-input").on("input", function () {
+    $(".card-valid-month").text("");
     monthInput = $(".payment-month-input").val();
     if (monthInput == "") {
       $(".card-valid-month").text("請輸入有效月份");
@@ -261,15 +276,17 @@ $(function () {
   });
 
   $(".payment-year-input").on("input", function () {
+    $(".card-valid-year").text("");
     yearInput = $(".payment-year-input").val();
     if (yearInput == "") {
       $(".card-valid-year").text("請輸入有效年份");
-    } else if (yearInput !== "" && yearInput < 2023) {
+    } else if (yearInput !== "" && yearInput < 2023 ) {
       $(".card-valid-year").text("無效的年份");
     }
   });
 
   $(".payment-valid-input").on("input", function () {
+    $(".card-valid-num").text("");
     validInput = $(".payment-valid-input").val();
     if (validInput == "") {
       $(".card-valid-num").text("請輸入驗證碼");
@@ -282,7 +299,7 @@ $(function () {
     event.preventDefault();
  $(".payment-modal").css("opacity", "1");
       $(".payment-overlay").css("opacity", "1");
-      $(".modal-body").text("預約完成!");
+      $(".modal-body").text("預約成功，已將住宿資訊寄入電子信箱");
     // if (
     //   validInput == "" &&
     //   yearInput == "" &&
